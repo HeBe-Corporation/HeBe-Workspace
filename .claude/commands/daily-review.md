@@ -14,10 +14,11 @@ allowed-tools: Read, Write, Edit, Bash, Grep, Glob
    ```
 
 2. **주요 프로젝트별 변경사항 분석**
+   - `pkm/10-projects/11-consulting/`: 컨설팅 프로젝트 (강릉 카페 등)
    - `pkm/10-projects/12-education/`: 교육 사업 (GPTers, Insight Platform 등)
    - `pkm/10-projects/13-imi-work/`: IMI WORK 브랜드 (OSMU 시스템)
    - `pkm/10-projects/14-brand-identity/`: Brand Identity Builder 웹앱
-   - `pkm/20-operations/21-cafe-operations/`: 카페 운영 (페어링, 커머스, 롯데마켓)
+   - `pkm/20-operations/21-imi-operation/`: IMI 운영 (ecommerce, 롯데마켓, 페어링)
    - `pkm/20-operations/22-automation/`: n8n 자동화 시스템
    - `pkm/`: PKM 시스템 전반
    - `.claude/`: Claude 설정

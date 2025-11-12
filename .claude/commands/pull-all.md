@@ -12,25 +12,16 @@
 - Mac: `/Users/rhim/Projects/pkm/`
 - 명령: `git pull`
 
-### 2. imi-office-team (팀 프로젝트 메인)
-- Windows: `c:\Users\hovoo\Documents\claude-projects\imi-office-team\`
-- Mac: `/Users/rhim/Projects/imi-office-team/`
-- 명령: `git pull` + `git submodule update --init --recursive`
-
-### 3. 강릉 카페 프로젝트 (imi-office-team submodule)
-- 경로: `imi-office-team/projects/gangneung-cafe-2025/`
-- 명령: `git pull origin main`
-
-### 4. 카페 운영 (imi-office-team submodule)
-- 경로: `imi-office-team/projects/cafe-operations/`
-- 명령: `git pull origin main`
+### 2. imi-workspace (GPTers 스터디용)
+- Windows: `c:\Users\hovoo\Documents\claude-projects\imi-workspace\`
+- WSL: `/home/rhim/claude-projects/imi-workspace/`
+- Mac: `/Users/rhim/Projects/imi-workspace/`
+- 명령: `git pull`
 
 ## 지시사항
 
 - **Step 1**: PKM 메인 저장소에서 `git pull` 실행
-- **Step 2**: imi-office-team 저장소에서 `git pull` 실행
-- **Step 3**: imi-office-team에서 `git submodule update --init --recursive` 실행
-- **Step 4**: 각 submodule 폴더에서 `git pull origin main` 실행 (최신 커밋 받기)
+- **Step 2**: imi-workspace 저장소에서 `git pull` 실행
 - 변경사항이 없으면 "Already up to date" 표시
 - 각 단계의 성공/실패 여부를 명확히 알려주세요
 - 모든 작업 완료 후 요약 리포트를 제공하세요
@@ -45,16 +36,8 @@
 [Step 1] PKM 메인 pull
 ✅ Already up to date
 
-[Step 2] imi-office-team pull
-✅ Pull 완료 (3 files changed)
-
-[Step 3] Submodule 업데이트
-✅ 강릉 카페 프로젝트 submodule 업데이트
-✅ 카페 운영 submodule 업데이트
-
-[Step 4] 각 프로젝트 최신 커밋
-✅ 강릉 카페: Already up to date
-✅ 카페 운영: Already up to date
+[Step 2] imi-workspace pull
+✅ Pull 완료 (2 files changed)
 
 ========================================
 ✅ 모든 저장소 동기화 완료!
@@ -63,7 +46,5 @@
 
 ## 참고
 
-- imi-office-team은 팀 메인 저장소
-- 강릉 카페, 카페 운영은 imi-office-team의 submodule
-- Submodule은 특정 커밋을 가리키므로 Step 4에서 최신 커밋을 받아야 함
-- PKM에는 더 이상 팀 프로젝트 submodule이 없음
+- PKM: 개인 지식 관리 시스템 (모든 프로젝트 통합됨)
+- imi-workspace: GPTers 19기 스터디용 템플릿 저장소
