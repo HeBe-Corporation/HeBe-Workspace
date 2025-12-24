@@ -1,26 +1,26 @@
-Product_ID,Product_Name,Category,Current_Stock,Reorder_Level,Max_Stock,Unit_Cost,Selling_Price,Supplier,Last_Restock,Units_Sold_30Days,Revenue_30Days,Stock_Status
-INV001,Widget Pro,Electronics,45,20,100,89.99,149.99,TechSupply Inc,2025-09-10,67,10049.33,Normal
-INV002,Basic Widget,Electronics,15,25,75,29.99,49.99,TechSupply Inc,2025-09-08,89,4449.11,Low Stock
-INV003,Premium Widget,Electronics,32,15,50,199.99,299.99,PremiumParts Co,2025-08-26,43,12899.57,Normal
-INV004,Office Chair Deluxe,Furniture,8,10,30,149.99,249.99,ComfortSeating,2025-06-27,12,2999.88,Low Stock
-INV005,Standing Desk,Furniture,22,5,25,299.99,499.99,ErgonomicSolutions,2025-09-05,18,8999.82,Normal
-INV006,Laptop Stand,Accessories,67,30,100,19.99,39.99,AccessoryHub,2025-08-22,156,6238.44,Normal
-INV007,Wireless Mouse,Electronics,3,15,60,24.99,44.99,TechSupply Inc,2025-09-07,78,3509.22,Critical
-INV008,Bluetooth Keyboard,Electronics,28,20,80,49.99,89.99,TechSupply Inc,2025-08-17,34,3059.66,Normal
-INV009,Monitor 24 inch,Electronics,12,8,35,199.99,349.99,DisplayTech,2025-08-30,23,8049.77,Normal
-INV010,USB Hub,Accessories,89,40,150,14.99,29.99,AccessoryHub,2025-07-25,145,4348.55,Normal
-INV011,Desk Lamp LED,Lighting,6,12,40,39.99,69.99,LightingSolutions,2025-07-07,34,2379.66,Low Stock
-INV012,Office Plant,Decor,25,8,30,12.99,24.99,GreenSpace Co,2025-06-21,67,1674.33,Normal
-INV013,Cable Organizer,Accessories,145,50,200,4.99,12.99,AccessoryHub,2025-09-04,234,3040.66,Normal
-INV014,Ergonomic Cushion,Accessories,34,15,60,29.99,54.99,ComfortSeating,2025-06-26,45,2474.55,Normal
-INV015,Whiteboard Small,Office Supplies,2,10,25,49.99,89.99,OfficeMax Pro,2025-07-10,18,1619.82,Critical
-INV016,Marker Set,Office Supplies,78,25,100,8.99,16.99,OfficeMax Pro,2025-08-12,89,1512.11,Normal
-INV017,Notebook Premium,Office Supplies,124,40,180,5.99,12.99,PaperWorks Inc,2025-08-06,267,3468.33,Normal
-INV018,Pen Set Executive,Office Supplies,45,20,80,19.99,39.99,PaperWorks Inc,2025-07-05,56,2239.44,Normal
-INV019,Calculator Scientific,Electronics,19,15,50,34.99,64.99,TechSupply Inc,2025-06-28,28,1819.72,Normal
-INV020,Printer Paper,Office Supplies,0,30,120,12.99,22.99,PaperWorks Inc,2025-09-02,145,3333.55,Out of Stock
-INV021,Stapler Heavy Duty,Office Supplies,67,25,100,24.99,44.99,OfficeMax Pro,2025-07-02,89,4004.11,Normal
-INV022,Hole Punch,Office Supplies,43,20,75,14.99,27.99,OfficeMax Pro,2025-07-01,67,1875.33,Normal
-INV023,File Folders,Office Supplies,234,100,400,2.99,6.99,PaperWorks Inc,2025-06-28,456,3187.44,Normal
-INV024,Binder 3-inch,Office Supplies,56,30,120,7.99,15.99,PaperWorks Inc,2025-07-31,123,1966.77,Normal
-INV025,Shredder Personal,Electronics,4,8,20,99.99,179.99,SecureOffice,2025-08-02,12,2159.88,Low Stock
+제품ID,제품명,카테고리,현재고,재주문기준,최대재고,원가,판매가,공급업체,최근입고일,30일판매량,30일매출,재고상태
+INV001,프리미엄 세트,전자제품,45,20,100,89000,149000,테크서플라이,2025-09-10,67,9983000,정상
+INV002,베이직 세트,전자제품,15,25,75,29000,49000,테크서플라이,2025-09-08,89,4361000,재고부족
+INV003,디럭스 세트,전자제품,32,15,50,199000,299000,프리미엄파츠,2025-08-26,43,12857000,정상
+INV004,사무용 의자 디럭스,가구,8,10,30,149000,249000,컴포트시팅,2025-06-27,12,2988000,재고부족
+INV005,스탠딩 데스크,가구,22,5,25,299000,499000,인체공학솔루션,2025-09-05,18,8982000,정상
+INV006,노트북 스탠드,악세서리,67,30,100,19000,39000,악세서리허브,2025-08-22,156,6084000,정상
+INV007,무선 마우스,전자제품,3,15,60,24000,44000,테크서플라이,2025-09-07,78,3432000,긴급
+INV008,블루투스 키보드,전자제품,28,20,80,49000,89000,테크서플라이,2025-08-17,34,3026000,정상
+INV009,24인치 모니터,전자제품,12,8,35,199000,349000,디스플레이테크,2025-08-30,23,8027000,정상
+INV010,USB 허브,악세서리,89,40,150,14000,29000,악세서리허브,2025-07-25,145,4205000,정상
+INV011,LED 데스크램프,조명,6,12,40,39000,69000,라이팅솔루션,2025-07-07,34,2346000,재고부족
+INV012,사무실 화분,인테리어,25,8,30,12000,24000,그린스페이스,2025-06-21,67,1608000,정상
+INV013,케이블 정리함,악세서리,145,50,200,4000,12000,악세서리허브,2025-09-04,234,2808000,정상
+INV014,인체공학 쿠션,악세서리,34,15,60,29000,54000,컴포트시팅,2025-06-26,45,2430000,정상
+INV015,소형 화이트보드,사무용품,2,10,25,49000,89000,오피스맥스,2025-07-10,18,1602000,긴급
+INV016,마커 세트,사무용품,78,25,100,8000,16000,오피스맥스,2025-08-12,89,1424000,정상
+INV017,프리미엄 노트,사무용품,124,40,180,5000,12000,페이퍼웍스,2025-08-06,267,3204000,정상
+INV018,이그제큐티브 펜 세트,사무용품,45,20,80,19000,39000,페이퍼웍스,2025-07-05,56,2184000,정상
+INV019,공학용 계산기,전자제품,19,15,50,34000,64000,테크서플라이,2025-06-28,28,1792000,정상
+INV020,복사용지,사무용품,0,30,120,12000,22000,페이퍼웍스,2025-09-02,145,3190000,품절
+INV021,대형 스테이플러,사무용품,67,25,100,24000,44000,오피스맥스,2025-07-02,89,3916000,정상
+INV022,펀치기,사무용품,43,20,75,14000,27000,오피스맥스,2025-07-01,67,1809000,정상
+INV023,파일폴더,사무용품,234,100,400,2000,6000,페이퍼웍스,2025-06-28,456,2736000,정상
+INV024,3인치 바인더,사무용품,56,30,120,7000,15000,페이퍼웍스,2025-07-31,123,1845000,정상
+INV025,개인용 파쇄기,전자제품,4,8,20,99000,179000,시큐어오피스,2025-08-02,12,2148000,재고부족

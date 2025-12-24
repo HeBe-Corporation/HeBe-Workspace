@@ -1,31 +1,31 @@
-Response_ID,Department,Role_Level,Years_at_Company,Overall_Satisfaction,Work_Life_Balance,Management_Quality,Career_Growth,Compensation,Remote_Work_Preference,Training_Satisfaction,Recommend_Company,Comments_Category
-R001,Engineering,Senior,3,8,7,8,6,7,Hybrid,8,9,Career Development
-R002,Marketing,Junior,1,7,8,7,8,6,Remote,7,8,Work Environment
-R003,Sales,Senior,5,9,6,9,7,8,Hybrid,9,10,Management
-R004,HR,Manager,7,8,8,8,8,8,Office,8,9,Benefits
-R005,Finance,Junior,2,6,7,6,5,7,Remote,6,7,Compensation
-R006,Engineering,Junior,1,9,9,8,9,7,Remote,9,10,Work Environment
-R007,Marketing,Manager,4,7,7,7,6,8,Hybrid,7,8,Career Development
-R008,Sales,Senior,6,8,5,8,7,9,Office,8,8,Compensation
-R009,IT,Senior,4,9,8,9,8,8,Hybrid,9,9,Technology
-R010,Customer Service,Junior,2,6,8,6,5,6,Remote,6,6,Management
-R011,Engineering,Manager,8,8,7,8,7,9,Hybrid,8,9,Work Environment
-R012,Marketing,Senior,3,7,9,7,7,7,Remote,7,8,Work Life Balance
-R013,Sales,Junior,1,8,8,8,8,6,Hybrid,8,9,Training
-R014,Finance,Manager,5,7,6,7,6,8,Office,7,7,Processes
-R015,HR,Senior,4,9,8,9,8,8,Hybrid,9,10,Benefits
-R016,Engineering,Junior,1,8,9,7,9,6,Remote,8,9,Technology
-R017,IT,Manager,6,8,7,8,7,9,Hybrid,8,8,Management
-R018,Customer Service,Senior,3,7,8,7,6,7,Remote,7,7,Work Environment
-R019,Marketing,Junior,2,9,9,8,8,7,Remote,9,10,Work Life Balance
-R020,Sales,Manager,7,8,6,8,7,9,Office,8,9,Compensation
-R021,Engineering,Senior,4,7,8,7,6,8,Hybrid,7,8,Career Development
-R022,Finance,Junior,1,8,8,8,8,7,Remote,8,8,Training
-R023,HR,Manager,5,9,8,9,8,9,Hybrid,9,10,Benefits
-R024,IT,Senior,3,8,7,8,7,8,Hybrid,8,8,Technology
-R025,Customer Service,Junior,2,6,7,6,5,6,Remote,6,6,Management
-R026,Marketing,Senior,4,8,8,8,7,8,Hybrid,8,9,Work Environment
-R027,Sales,Junior,1,9,9,8,9,7,Remote,9,10,Work Life Balance
-R028,Engineering,Manager,9,7,6,7,6,9,Office,7,7,Processes
-R029,Finance,Senior,3,8,7,8,7,8,Hybrid,8,8,Career Development
-R030,IT,Junior,1,9,9,8,9,7,Remote,9,10,Technology
+응답ID,부서,직급,근속연수,전체만족도,워라밸,관리자역량,성장기회,보상만족도,근무형태선호,교육만족도,추천의향,주요의견
+R001,개발팀,시니어,3,8,7,8,6,7,하이브리드,8,9,경력개발
+R002,마케팅팀,주니어,1,7,8,7,8,6,재택,7,8,근무환경
+R003,영업팀,시니어,5,9,6,9,7,8,하이브리드,9,10,관리자
+R004,인사팀,매니저,7,8,8,8,8,8,출근,8,9,복리후생
+R005,재무팀,주니어,2,6,7,6,5,7,재택,6,7,보상
+R006,개발팀,주니어,1,9,9,8,9,7,재택,9,10,근무환경
+R007,마케팅팀,매니저,4,7,7,7,6,8,하이브리드,7,8,경력개발
+R008,영업팀,시니어,6,8,5,8,7,9,출근,8,8,보상
+R009,IT팀,시니어,4,9,8,9,8,8,하이브리드,9,9,기술환경
+R010,고객서비스팀,주니어,2,6,8,6,5,6,재택,6,6,관리자
+R011,개발팀,매니저,8,8,7,8,7,9,하이브리드,8,9,근무환경
+R012,마케팅팀,시니어,3,7,9,7,7,7,재택,7,8,워라밸
+R013,영업팀,주니어,1,8,8,8,8,6,하이브리드,8,9,교육
+R014,재무팀,매니저,5,7,6,7,6,8,출근,7,7,업무프로세스
+R015,인사팀,시니어,4,9,8,9,8,8,하이브리드,9,10,복리후생
+R016,개발팀,주니어,1,8,9,7,9,6,재택,8,9,기술환경
+R017,IT팀,매니저,6,8,7,8,7,9,하이브리드,8,8,관리자
+R018,고객서비스팀,시니어,3,7,8,7,6,7,재택,7,7,근무환경
+R019,마케팅팀,주니어,2,9,9,8,8,7,재택,9,10,워라밸
+R020,영업팀,매니저,7,8,6,8,7,9,출근,8,9,보상
+R021,개발팀,시니어,4,7,8,7,6,8,하이브리드,7,8,경력개발
+R022,재무팀,주니어,1,8,8,8,8,7,재택,8,8,교육
+R023,인사팀,매니저,5,9,8,9,8,9,하이브리드,9,10,복리후생
+R024,IT팀,시니어,3,8,7,8,7,8,하이브리드,8,8,기술환경
+R025,고객서비스팀,주니어,2,6,7,6,5,6,재택,6,6,관리자
+R026,마케팅팀,시니어,4,8,8,8,7,8,하이브리드,8,9,근무환경
+R027,영업팀,주니어,1,9,9,8,9,7,재택,9,10,워라밸
+R028,개발팀,매니저,9,7,6,7,6,9,출근,7,7,업무프로세스
+R029,재무팀,시니어,3,8,7,8,7,8,하이브리드,8,8,경력개발
+R030,IT팀,주니어,1,9,9,8,9,7,재택,9,10,기술환경
