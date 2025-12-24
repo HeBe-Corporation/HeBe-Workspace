@@ -8,13 +8,11 @@ allowed-tools: Read, Write, Edit, Bash
 **수행할 작업:**
 
 1. 오늘 날짜 확인 (YYYY-MM-DD 형식)
-2. 환경별 경로:
-   - WSL: `/home/rhim/claude-projects/pkm/40-personal/41-daily/YYYY-MM-DD.md`
-   - Mac: `/Users/rhim/Projects/pkm/40-personal/41-daily/YYYY-MM-DD.md`
+2. 경로:
+   - 파일 경로: `./40-personal/41-daily/YYYY-MM-DD.md`
 3. 파일이 없으면:
    - 템플릿 읽기:
-     - WSL: `/home/rhim/claude-projects/pkm/00-system/01-templates/daily-note-template.md`
-     - Mac: `/Users/rhim/Projects/pkm/00-system/01-templates/daily-note-template.md`
+     - `./00-system/01-templates/daily-note-template.md`
    - **Google Calendar에서 오늘 일정 가져오기 (gcalcli 사용):**
      ```bash
      # Work, 개인+가족용 캘린더 일정 조회

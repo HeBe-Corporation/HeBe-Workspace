@@ -7,15 +7,11 @@
 **환경별 경로:**
 
 ### 1. PKM 메인
-- Windows: `c:\Users\hovoo\Documents\claude-projects\pkm\`
-- WSL: `/home/rhim/claude-projects/pkm/`
-- Mac: `/Users/rhim/Projects/pkm/`
+- 경로: `../pkm/`
 - 명령: `git pull`
 
-### 2. imi-workspace (GPTers 스터디용)
-- Windows: `c:\Users\hovoo\Documents\claude-projects\imi-workspace\`
-- WSL: `/home/rhim/claude-projects/imi-workspace/`
-- Mac: `/Users/rhim/Projects/imi-workspace/`
+### 2. imi-workspace (교육용)
+- 경로: `./`
 - 명령: `git pull`
 
 ## 지시사항
@@ -47,4 +43,4 @@
 ## 참고
 
 - PKM: 개인 지식 관리 시스템 (모든 프로젝트 통합됨)
-- imi-workspace: GPTers 19기 스터디용 템플릿 저장소
+- imi-workspace: 교육용 템플릿 저장소

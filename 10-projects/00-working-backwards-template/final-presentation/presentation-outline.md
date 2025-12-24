@@ -3,7 +3,7 @@
 
 **Presentation Date**: YYYY-MM-DD
 **Duration**: 10 minutes
-**Audience**: GPTers 19기 스터디
+**Audience**: 교육 참가자
 
 ---
 

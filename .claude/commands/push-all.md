@@ -16,14 +16,10 @@
 **환경별 경로:**
 
 1. **PKM 메인**
-   - Windows: `c:\Users\hovoo\Documents\claude-projects\pkm\`
-   - WSL: `/home/rhim/claude-projects/pkm/`
-   - Mac: `/Users/rhim/Projects/pkm/`
+   - 경로: `../pkm/` (imi-workspace와 같은 부모 디렉토리에 있다고 가정)
 
-2. **imi-workspace (GPTers 스터디용)**
-   - Windows: `c:\Users\hovoo\Documents\claude-projects\imi-workspace\`
-   - WSL: `/home/rhim/claude-projects/imi-workspace/`
-   - Mac: `/Users/rhim/Projects/imi-workspace/`
+2. **imi-workspace (교육용)**
+   - 경로: `./` (현재 디렉토리)
 
 ### Step 2: Git Push
 

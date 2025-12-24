@@ -20,11 +20,10 @@ IMI Workspace를 처음 사용할 때 실행하는 간단한 설정 도구입니
 주요 커맨드 소개:
 - `/daily-note` - 매일 노트 작성
 - `/thinking-partner` - AI 사고 파트너
-- `/working-backwards-pr` - PR/FAQ 작성 (GPTers 스터디용)
-- `/generate-roadmap` - 역순 로드맵 생성 (GPTers 스터디용)
+- `/working-backwards-pr` - PR/FAQ 작성
+- `/generate-roadmap` - 역순 로드맵 생성
 
 README.md 참고 안내:
-- **GPTers 스터디 참가자**: 🎓 섹션 먼저 확인
 - Johnny Decimal 폴더 구조
 - Working Backwards 템플릿 활용법
 - 프로젝트 시작 방법
@@ -49,15 +48,11 @@ README.md 참고 안내:
 
 ## 💡 다음 단계
 
-**GPTers 스터디 참가자**:
-1. **README.md 🎓 섹션 읽기** - 4주 워크플로우 확인
-2. **Working Backwards 템플릿 복사** - `10-projects/00-working-backwards-template/`
-3. **PR 작성 시작** - `/working-backwards-pr` 실행
-
-**일반 사용자**:
 1. **README.md 읽기** - 폴더 구조 이해
 2. **첫 Daily Note 작성** - `/daily-note` 실행
-3. **프로젝트 시작** - README의 "Getting Started" 참고
+3. **프로젝트 시작** - Working Backwards 템플릿 활용
+   - `10-projects/00-working-backwards-template/` 복사
+   - `/working-backwards-pr` 실행
 4. **템플릿 활용** - `00-system/01-templates/` 확인
 
 **선택적: Skills 설정** (프로젝트 전용):

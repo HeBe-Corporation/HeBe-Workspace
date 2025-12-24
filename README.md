@@ -5,95 +5,43 @@
 
 ---
 
-## 🎓 GPTers 19기 스터디 참가자
-
-**"Working Backwards로 만드는 나의 비즈니스 청사진"** 스터디에 오신 것을 환영합니다!
-
-### 빠른 시작 (5분)
-
-```bash
-# 1. Clone
-git clone https://github.com/Rhim80/imi-workspace.git
-cd imi-workspace
-
-# 2. 초기 설정 실행
-/setup-workspace
-
-# 3. Working Backwards 템플릿 복사
-cp -r 10-projects/00-working-backwards-template/ 10-projects/11-my-project/
-cd 10-projects/11-my-project/
-```
-
-### 4주 워크플로우
-
-#### Week 1: PR/FAQ 작성
-```bash
-# Step 1: PR 작성
-/working-backwards-pr
-# → pr-document.md 완성
-
-# Step 2: FAQ 작성
-# faq.md 직접 작성
-
-# Step 3: 진행 기록
-/daily-note
-```
-
-#### Week 2: 로드맵 생성
-```bash
-# Step 1: 피드백 반영
-# pr-document.md v2.0 업데이트
-
-# Step 2: 역순 로드맵 생성
-/generate-roadmap
-# → roadmap.md 완성
-```
-
-#### Week 3-4: 실행 및 발표
-- 고객 인터뷰: `customer-research/interview-*.md`
-- 일일 진행: `daily-progress/` 또는 `/daily-note`
-- 최종 발표: `final-presentation/presentation-outline.md`
-
-### 핵심 커맨드
-
-| 커맨드 | 용도 | 소요 시간 |
-|--------|------|-----------|
-| `/setup-workspace` | 초기 설정 | 5분 |
-| `/working-backwards-pr` | PR/FAQ 생성 | 45-60분 |
-| `/generate-roadmap` | 역순 로드맵 | 20-30분 |
-| `/thinking-partner` | 아이디어 구체화 | 수시 |
-| `/daily-note` | 진행 기록 | 매일 10분 |
-
-### 템플릿 위치
-
-- **프로젝트 템플릿**: `10-projects/00-working-backwards-template/`
-- **PR/FAQ 템플릿**: `00-system/01-templates/pr-faq-template.md`
-- **인터뷰 템플릿**: `00-system/01-templates/interview-template.md`
-
----
-
 ## What is IMI Workspace?
 
-Claude Code와 Johnny Decimal 시스템을 결합한 실전 PKM 워크스페이스입니다.
-15년 F&B 경력 + AI 활용 전문가의 실제 시스템을 기반으로 만들어졌습니다.
+Claude Code와 Johnny Decimal 시스템을 결합한 **실전 PKM 워크스페이스**입니다.
 
-**GPTers 스터디 참가자**: 위의 🎓 섹션을 먼저 보세요!
-**일반 사용자**: 아래 Quick Start부터 시작하세요.
+**핵심 특징:**
+- 15년 F&B 경력 + AI 활용 전문가의 **실제 운영 시스템** 기반
+- 강의/워크숍용으로 정리된 **교육용 버전**
+- 바로 clone해서 사용 가능한 **즉시 활용형** 구조
+
+> 이 레포지토리는 이림(hovoo)이 실제로 사용하는 PKM 시스템을 교육용으로 정리한 버전입니다.
+> Daily Note, Todo 관리, 프로젝트 구조화 등 모든 기능이 실제 업무에서 검증된 것들입니다.
 
 ## Quick Start
 
-1. Clone this repository
-   ```bash
-   git clone https://github.com/Rhim80/imi-workspace.git
-   cd imi-workspace
-   ```
+### 1. Clone & Setup (5분)
+```bash
+git clone https://github.com/Rhim80/imi-workspace.git
+cd imi-workspace
+```
 
-2. Open in Claude Code
+### 2. Claude Code에서 열기
+VS Code 또는 터미널에서 Claude Code 실행
 
-3. Start using:
-   - Create your first daily note
-   - Organize your projects
-   - Build your knowledge base
+### 3. 초기 설정
+```bash
+/setup-workspace
+```
+
+### 4. 핵심 커맨드 익히기
+
+| 커맨드 | 용도 | 소요 시간 |
+|--------|------|-----------|
+| `/daily-note` | 오늘의 Daily Note 생성 | 1분 |
+| `/thinking-partner` | 생각 정리 파트너 | 수시 |
+| `/working-backwards-pr` | PR/FAQ 문서 생성 | 30-60분 |
+| `/generate-roadmap` | 역순 로드맵 생성 | 15-30분 |
+| `/todos` | 할 일 관리 | 수시 |
 
 ## Philosophy
 
@@ -338,7 +286,7 @@ cp -r 10-projects/00-working-backwards-template/ 10-projects/11-my-project/
 - `/setup-google-calendar` - Google Calendar 통합 설정
 - `/setup-web-crawler` - Web Crawler 스킬 설정
 
-> **프로젝트 스킬 (`.claude/skills/`)**: 이 워크스페이스에만 적용되는 skills로, 전역 스킬(`~/.claude/skills/`)과 독립적으로 작동합니다. GPTers 참가자들이 각자 독립적으로 skills를 설정할 수 있습니다.
+> **프로젝트 스킬 (`.claude/skills/`)**: 이 워크스페이스에만 적용되는 skills로, 전역 스킬(`~/.claude/skills/`)과 독립적으로 작동합니다. 각자 독립적으로 skills를 설정/커스터마이징할 수 있습니다.
 
 ## Getting Started
 

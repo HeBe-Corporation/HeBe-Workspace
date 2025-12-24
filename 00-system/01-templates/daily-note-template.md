@@ -30,7 +30,7 @@
 ## 💼 프로젝트 업데이트
 
 ### 교육 사업 (12-education)
-- GPTers 스터디:
+- 교육/프로젝트:
 - Insight Platform:
 - 기타:
 

@@ -53,7 +53,7 @@ python3 -m pip --version
 
 **2-1. 작업 디렉토리 이동:**
 ```bash
-cd .claude/.claude/skills/web-crawler-ocr/scripts
+cd .claude/skills/web-crawler-ocr/scripts
 ```
 
 **2-2. 가상환경 생성:**
@@ -139,7 +139,7 @@ pip list | grep -E "(requests|beautifulsoup4|firecrawl|google-generativeai|pytho
 ```
 API 키 발급이 완료되면, 다음 명령어로 .env 파일을 생성하세요:
 
-cd .claude/.claude/skills/web-crawler-ocr/scripts
+cd .claude/skills/web-crawler-ocr/scripts
 cat > .env <<'EOF'
 GEMINI_API_KEY=your_gemini_api_key_here
 FIRECRAWL_API_KEY=your_firecrawl_api_key_here
@@ -165,7 +165,7 @@ FIRECRAWL_API_KEY=fc-XXXXXXXXXXXXXXXXXXXXXXXX
 API 키가 설정되었는지 확인:
 
 ```bash
-cd .claude/.claude/skills/web-crawler-ocr/scripts
+cd .claude/skills/web-crawler-ocr/scripts
 if [ -f .env ]; then
   echo "✅ .env 파일이 존재합니다."
   echo ""
@@ -201,7 +201,7 @@ fi
 **5-2. 테스트 실행 (사용자가 원하는 경우):**
 
 ```bash
-cd .claude/.claude/skills/web-crawler-ocr/scripts && \
+cd .claude/skills/web-crawler-ocr/scripts && \
 source venv/bin/activate && \
 python3 web-crawler.py https://example.com test-output.md
 ```
@@ -251,7 +251,7 @@ ls -lh test-output.md && head -20 test-output.md
    "이 3개 사이트 크롤링해줘"
 
 2️⃣ 직접 실행:
-   cd .claude/.claude/skills/web-crawler-ocr/scripts
+   cd .claude/skills/web-crawler-ocr/scripts
    source venv/bin/activate
    python3 web-crawler.py <URL> [출력파일명]
 
@@ -300,7 +300,7 @@ python3 -m venv venv
 python3 -m pip install --upgrade pip
 
 # requirements.txt 재설치
-cd .claude/.claude/skills/web-crawler-ocr/scripts
+cd .claude/skills/web-crawler-ocr/scripts
 source venv/bin/activate
 pip install -r requirements.txt --upgrade
 ```
@@ -318,7 +318,7 @@ pip install -r requirements.txt --upgrade
 cat .claude/skills/web-crawler-ocr/scripts/.env
 
 # 없으면 생성
-cd .claude/.claude/skills/web-crawler-ocr/scripts
+cd .claude/skills/web-crawler-ocr/scripts
 cat > .env <<'EOF'
 GEMINI_API_KEY=your_gemini_key
 FIRECRAWL_API_KEY=your_firecrawl_key

@@ -64,28 +64,23 @@ def check_api_keys():
         sys.exit(1)
 
 def crawl_with_firecrawl(url):
-    """Firecrawl로 웹페이지 크롤링 (v2 API)"""
+    """Firecrawl로 웹페이지 크롤링"""
     print_color(f"🔍 Firecrawl로 텍스트 추출 중: {url}", Colors.BLUE)
 
     try:
         from firecrawl import FirecrawlApp
 
         app = FirecrawlApp(api_key=FIRECRAWL_API_KEY)
+        result = app.scrape_url(url, params={
+            'formats': ['markdown', 'html'],
+            'onlyMainContent': True
+        })
 
-        # Firecrawl v2 API: scrape() 메서드 사용
-        result = app.scrape(
-            url,
-            formats=['markdown', 'html'],
-            only_main_content=True,
-            wait_for=3000  # 동적 콘텐츠 로딩 대기 (3초)
-        )
+        if result.get('success'):
+            markdown = result.get('markdown', '')
+            html = result.get('html', '')
+            metadata = result.get('metadata', {})
 
-        # v2 API는 Document 객체 반환 (dict가 아님)
-        markdown = getattr(result, 'markdown', '') or ''
-        html = getattr(result, 'html', '') or ''
-        metadata = getattr(result, 'metadata', {}) or {}
-
-        if markdown:
             print_color(f"✅ 텍스트 추출 완료 ({len(markdown)} 글자)", Colors.GREEN)
             return {
                 'markdown': markdown,
@@ -93,7 +88,7 @@ def crawl_with_firecrawl(url):
                 'metadata': metadata
             }
         else:
-            print_color("⚠️ Firecrawl 결과 없음, BeautifulSoup으로 대체", Colors.YELLOW)
+            print_color("⚠️ Firecrawl 실패, BeautifulSoup으로 대체", Colors.YELLOW)
             return crawl_with_beautifulsoup(url)
 
     except ImportError:
@@ -102,7 +97,6 @@ def crawl_with_firecrawl(url):
     except Exception as e:
         print_color(f"⚠️ Firecrawl 오류: {e}, BeautifulSoup으로 대체", Colors.YELLOW)
         return crawl_with_beautifulsoup(url)
-
 
 def crawl_with_beautifulsoup(url):
     """BeautifulSoup으로 대체 크롤링"""
