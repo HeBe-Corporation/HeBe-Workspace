@@ -1,0 +1,21 @@
+Customer_ID,Company_Name,Contact_Name,Email,Phone,Industry,Region,First_Purchase,Last_Purchase,Total_Orders,Lifetime_Value,Customer_Status
+C001,ABC Corp,John Smith,j.smith@abccorp.com,555-0101,Technology,North,2024-01-15,2025-08-23,12,18547.52,Active
+C002,Small Biz Inc,Mary Johnson,mary@smallbizinc.com,555-0102,Retail,South,2024-03-22,2025-07-30,8,2749.55,Active
+C003,Tech Solutions,David Lee,d.lee@techsol.com,555-0103,Technology,West,2024-02-10,2025-07-13,15,21899.49,Active
+C004,Local Store,Susan Williams,susan@localstore.com,555-0104,Retail,North,2024-06-05,2025-08-13,6,3549.85,Active
+C005,Startup Co,Mike Davis,mike@startupco.com,555-0105,Technology,West,2024-04-18,2025-08-31,11,8199.20,Active
+C006,Regional Chain,Jennifer Brown,j.brown@regionalchain.com,555-0106,Retail,South,2024-01-30,2025-08-02,14,19848.64,Active
+C007,Mom & Pop Shop,Robert Garcia,rob@momandpop.com,555-0107,Retail,South,2024-05-12,2025-09-11,7,4649.64,Active
+C008,Tech Innovators,Lisa Martinez,l.martinez@techinnovators.com,555-0108,Technology,West,2024-02-25,2025-07-19,9,11799.53,Active
+C009,Office Supply Co,James Wilson,j.wilson@officesupply.com,555-0109,Business Services,North,2024-03-08,2025-09-09,13,15199.24,Active
+C010,Corner Store,Patricia Taylor,pat@cornerstore.com,555-0110,Retail,North,2024-07-20,2025-08-17,5,2549.56,Active
+C011,Digital Agency,Christopher Anderson,chris@digitalagency.com,555-0111,Marketing,West,2024-04-05,2025-07-10,6,4199.58,Active
+C012,Manufacturing Inc,Amanda Thomas,a.thomas@manufacturing.com,555-0112,Manufacturing,South,2024-01-12,2025-07-25,16,26999.15,Active
+C013,Retail Chain,Daniel Jackson,d.jackson@retailchain.com,555-0113,Retail,South,2024-02-28,2025-06-21,18,24498.93,Active
+C014,Consulting Firm,Michelle White,m.white@consulting.com,555-0114,Consulting,North,2024-06-15,2025-08-01,4,3599.72,Active
+C015,Old Customer Co,Steve Miller,steve@oldcustomer.com,555-0115,Technology,West,2023-12-05,2024-09-27,3,1899.85,Inactive
+C016,Past Client Inc,Nancy Clark,nancy@pastclient.com,555-0116,Retail,North,2024-01-08,2025-02-28,5,2349.75,Inactive
+C017,Former Buyer LLC,Kevin Rodriguez,kevin@formerbuyer.com,555-0117,Manufacturing,South,2024-03-15,2024-10-04,2,899.90,Inactive
+C018,Lost Customer Corp,Rachel Lewis,rachel@lostcustomer.com,555-0118,Technology,West,2024-02-20,2024-10-09,4,1999.80,Inactive
+C019,Dormant Business,Mark Walker,mark@dormant.com,555-0119,Consulting,North,2024-04-10,2024-12-28,3,1499.85,Inactive
+C020,Inactive Inc,Sarah Hall,sarah@inactive.com,555-0120,Retail,South,2024-05-25,2024-12-13,6,3299.70,Inactive

@@ -1,0 +1,26 @@
+Product_ID,Product_Name,Category,Current_Stock,Reorder_Level,Max_Stock,Unit_Cost,Selling_Price,Supplier,Last_Restock,Units_Sold_30Days,Revenue_30Days,Stock_Status
+INV001,Widget Pro,Electronics,45,20,100,89.99,149.99,TechSupply Inc,2025-09-10,67,10049.33,Normal
+INV002,Basic Widget,Electronics,15,25,75,29.99,49.99,TechSupply Inc,2025-09-08,89,4449.11,Low Stock
+INV003,Premium Widget,Electronics,32,15,50,199.99,299.99,PremiumParts Co,2025-08-26,43,12899.57,Normal
+INV004,Office Chair Deluxe,Furniture,8,10,30,149.99,249.99,ComfortSeating,2025-06-27,12,2999.88,Low Stock
+INV005,Standing Desk,Furniture,22,5,25,299.99,499.99,ErgonomicSolutions,2025-09-05,18,8999.82,Normal
+INV006,Laptop Stand,Accessories,67,30,100,19.99,39.99,AccessoryHub,2025-08-22,156,6238.44,Normal
+INV007,Wireless Mouse,Electronics,3,15,60,24.99,44.99,TechSupply Inc,2025-09-07,78,3509.22,Critical
+INV008,Bluetooth Keyboard,Electronics,28,20,80,49.99,89.99,TechSupply Inc,2025-08-17,34,3059.66,Normal
+INV009,Monitor 24 inch,Electronics,12,8,35,199.99,349.99,DisplayTech,2025-08-30,23,8049.77,Normal
+INV010,USB Hub,Accessories,89,40,150,14.99,29.99,AccessoryHub,2025-07-25,145,4348.55,Normal
+INV011,Desk Lamp LED,Lighting,6,12,40,39.99,69.99,LightingSolutions,2025-07-07,34,2379.66,Low Stock
+INV012,Office Plant,Decor,25,8,30,12.99,24.99,GreenSpace Co,2025-06-21,67,1674.33,Normal
+INV013,Cable Organizer,Accessories,145,50,200,4.99,12.99,AccessoryHub,2025-09-04,234,3040.66,Normal
+INV014,Ergonomic Cushion,Accessories,34,15,60,29.99,54.99,ComfortSeating,2025-06-26,45,2474.55,Normal
+INV015,Whiteboard Small,Office Supplies,2,10,25,49.99,89.99,OfficeMax Pro,2025-07-10,18,1619.82,Critical
+INV016,Marker Set,Office Supplies,78,25,100,8.99,16.99,OfficeMax Pro,2025-08-12,89,1512.11,Normal
+INV017,Notebook Premium,Office Supplies,124,40,180,5.99,12.99,PaperWorks Inc,2025-08-06,267,3468.33,Normal
+INV018,Pen Set Executive,Office Supplies,45,20,80,19.99,39.99,PaperWorks Inc,2025-07-05,56,2239.44,Normal
+INV019,Calculator Scientific,Electronics,19,15,50,34.99,64.99,TechSupply Inc,2025-06-28,28,1819.72,Normal
+INV020,Printer Paper,Office Supplies,0,30,120,12.99,22.99,PaperWorks Inc,2025-09-02,145,3333.55,Out of Stock
+INV021,Stapler Heavy Duty,Office Supplies,67,25,100,24.99,44.99,OfficeMax Pro,2025-07-02,89,4004.11,Normal
+INV022,Hole Punch,Office Supplies,43,20,75,14.99,27.99,OfficeMax Pro,2025-07-01,67,1875.33,Normal
+INV023,File Folders,Office Supplies,234,100,400,2.99,6.99,PaperWorks Inc,2025-06-28,456,3187.44,Normal
+INV024,Binder 3-inch,Office Supplies,56,30,120,7.99,15.99,PaperWorks Inc,2025-07-31,123,1966.77,Normal
+INV025,Shredder Personal,Electronics,4,8,20,99.99,179.99,SecureOffice,2025-08-02,12,2159.88,Low Stock

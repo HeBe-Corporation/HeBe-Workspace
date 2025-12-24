@@ -1,0 +1,40 @@
+Date,Product,Customer,Region,Quantity,Unit_Price,Total_Revenue,Sales_Rep,Customer_Type
+2025-04-01,Widget Pro,ABC Corp,North,25,149.99,3749.75,Sarah Johnson,Enterprise
+2025-04-01,Basic Widget,Small Biz Inc,South,10,49.99,499.90,Mike Chen,SMB
+2025-04-01,Premium Widget,Tech Solutions,West,15,299.99,4499.85,Sarah Johnson,Enterprise
+2025-04-02,Widget Pro,Local Store,North,5,149.99,749.95,Tom Wilson,SMB
+2025-04-04,Basic Widget,Startup Co,West,20,49.99,999.80,Lisa Rodriguez,SMB
+2025-04-07,Premium Widget,ABC Corp,North,8,299.99,2399.92,Sarah Johnson,Enterprise
+2025-04-09,Widget Pro,Regional Chain,South,30,149.99,4499.70,Mike Chen,Enterprise
+2025-04-11,Basic Widget,Mom & Pop Shop,South,3,49.99,149.97,Mike Chen,SMB
+2025-04-14,Premium Widget,Tech Innovators,West,12,299.99,3599.88,Lisa Rodriguez,Enterprise
+2025-04-17,Widget Pro,Office Supply Co,North,18,149.99,2699.82,Tom Wilson,Enterprise
+2025-04-19,Basic Widget,Corner Store,North,7,49.99,349.93,Tom Wilson,SMB
+2025-04-21,Premium Widget,Digital Agency,West,6,299.99,1799.94,Lisa Rodriguez,SMB
+2025-04-24,Widget Pro,Manufacturing Inc,South,40,149.99,5999.60,Mike Chen,Enterprise
+2025-04-27,Basic Widget,Retail Chain,South,25,49.99,1249.75,Mike Chen,Enterprise
+2025-04-29,Premium Widget,Consulting Firm,North,9,299.99,2699.91,Sarah Johnson,Enterprise
+2025-05-02,Widget Pro,ABC Corp,North,20,149.99,2999.80,Sarah Johnson,Enterprise
+2025-05-05,Basic Widget,Small Biz Inc,South,15,49.99,749.85,Mike Chen,SMB
+2025-05-08,Premium Widget,Tech Solutions,West,18,299.99,5399.82,Lisa Rodriguez,Enterprise
+2025-05-10,Widget Pro,Local Store,North,8,149.99,1199.92,Tom Wilson,SMB
+2025-05-12,Basic Widget,Startup Co,West,30,49.99,1499.70,Lisa Rodriguez,SMB
+2025-05-15,Premium Widget,Regional Chain,South,10,299.99,2999.90,Mike Chen,Enterprise
+2025-05-18,Widget Pro,Mom & Pop Shop,South,12,149.99,1799.88,Mike Chen,SMB
+2025-05-20,Basic Widget,Tech Innovators,West,22,49.99,1099.78,Lisa Rodriguez,Enterprise
+2025-05-22,Premium Widget,Office Supply Co,North,14,299.99,4199.86,Tom Wilson,Enterprise
+2025-05-25,Widget Pro,Corner Store,North,6,149.99,899.94,Tom Wilson,SMB
+2025-05-28,Basic Widget,Digital Agency,West,18,49.99,899.82,Lisa Rodriguez,SMB
+2025-05-30,Premium Widget,Manufacturing Inc,South,25,299.99,7499.75,Mike Chen,Enterprise
+2025-06-02,Widget Pro,Retail Chain,South,35,149.99,5249.65,Mike Chen,Enterprise
+2025-06-05,Basic Widget,Consulting Firm,North,12,49.99,599.88,Sarah Johnson,SMB
+2025-06-08,Premium Widget,ABC Corp,North,16,299.99,4799.84,Sarah Johnson,Enterprise
+2025-06-10,Widget Pro,Small Biz Inc,South,9,149.99,1349.91,Mike Chen,SMB
+2025-06-12,Basic Widget,Tech Solutions,West,28,49.99,1399.72,Lisa Rodriguez,Enterprise
+2025-06-15,Premium Widget,Local Store,North,7,299.99,2099.93,Tom Wilson,SMB
+2025-06-18,Widget Pro,Startup Co,West,22,149.99,3299.78,Lisa Rodriguez,SMB
+2025-06-20,Basic Widget,Regional Chain,South,16,49.99,799.84,Mike Chen,Enterprise
+2025-06-22,Premium Widget,Mom & Pop Shop,South,5,299.99,1499.95,Mike Chen,SMB
+2025-06-25,Widget Pro,Tech Innovators,West,28,149.99,4199.72,Lisa Rodriguez,Enterprise
+2025-06-28,Basic Widget,Office Supply Co,North,20,49.99,999.80,Tom Wilson,Enterprise
+2025-06-30,Premium Widget,Corner Store,North,11,299.99,3299.89,Tom Wilson,SMB
