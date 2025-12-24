@@ -1,11 +1,10 @@
-# 인사이터 3회차: Claude Code 실습 가이드
+# Claude Code 실습 가이드
 
-> **날짜**: 2025-12-29 (일) 19:00~
 > **준비물**: Claude Code 설치 완료, imi-workspace 클론
 
 ---
 
-## Part 1: 환경 준비 (10분)
+## Part 1: 환경 준비
 
 ### 1-1. imi-workspace 클론
 
@@ -34,7 +33,7 @@ Claude에게 물어보세요:
 
 ---
 
-## Part 2: 폴더 정리 실습 (20분)
+## Part 2: 폴더 정리 실습
 
 ### 목표
 Downloads 폴더 (또는 지정된 폴더)를 Claude Code로 정리하기
@@ -63,7 +62,7 @@ Downloads 폴더 (또는 지정된 폴더)를 Claude Code로 정리하기
 
 ---
 
-## Part 3: 데이터 분석 실습 (30분)
+## Part 3: 데이터 분석 실습
 
 ### 목표
 CSV 파일을 자연어로 분석하기
@@ -118,9 +117,7 @@ claude
 
 ---
 
-## Part 4: 나만의 분석 도전 (20분)
-
-### 도전 과제
+## Part 4: 도전 과제
 
 아래 중 하나를 선택해서 Claude에게 요청해보세요:
 
@@ -178,16 +175,6 @@ claude
 
 ## 다음 단계
 
-오늘 배운 내용을 바탕으로:
-
 1. **본인 데이터로 실습**: 업무에서 사용하는 CSV, Excel 파일 분석
 2. **Daily Note 활용**: `/daily-note` 명령어로 일일 기록
 3. **자동화 탐색**: 반복 작업을 Claude Code로 자동화
-
-### 추가 학습 자료
-- [Claude Code for Non-Coders](https://claudecodefornoncoders.substack.com/)
-- [imi-workspace GitHub](https://github.com/Rhim80/imi-workspace)
-
----
-
-*질문이 있으면 언제든 물어보세요!*
