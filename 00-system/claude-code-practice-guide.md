@@ -62,20 +62,32 @@ Claude에게 물어보세요:
 
 **경로 표현 방법**
 
-| 표현 | 의미 | 예시 |
-|------|------|------|
-| `~` | 내 홈 폴더 | `~/Downloads` = 내 다운로드 폴더 |
-| `.` | 현재 폴더 | `./Documents` = 여기 안의 Documents |
-| `..` | 상위 폴더 | `../Desktop` = 위로 가서 Desktop으로 |
+| 표현 | Mac/Linux | Windows |
+|------|-----------|---------|
+| 홈 폴더 | `~` (예: `~/Downloads`) | `C:\Users\{사용자명}` |
+| 현재 폴더 | `.` | `.` |
+| 상위 폴더 | `..` | `..` |
 
 **폴더 구조 예시**
+
+**Mac/Linux:**
 ```
 내 컴퓨터
 └── Users
     └── 내이름 (📍 ~ 여기가 홈)
-        ├── Downloads (~/Downloads)
-        ├── Documents (~/Documents)
-        └── Desktop (~/Desktop)
+        ├── Downloads
+        ├── Documents
+        └── Desktop
+```
+
+**Windows:**
+```
+내 컴퓨터
+└── C:\Users
+    └── 내이름 (📍 홈 폴더)
+        ├── Downloads
+        ├── Documents
+        └── Desktop
 ```
 
 ---
@@ -93,9 +105,17 @@ Downloads 폴더 (또는 지정된 폴더)를 Claude Code로 정리하기
 ### 실습 순서
 
 **Step 1**: 분석 요청
+
+**Mac/Linux:**
 ```
 "~/Downloads 폴더를 분석해서 어떤 파일들이 있는지 정리해줘"
 ```
+
+**Windows:**
+```
+"C:\Users\{내이름}\Downloads 폴더를 분석해줘"
+```
+또는 간단하게: `"Downloads 폴더를 분석해줘"` (Claude가 경로 찾아줌)
 
 **Step 2**: 정리 계획 요청
 ```
@@ -276,11 +296,11 @@ Claude Code가 잘 분석하려면 데이터가 다음 조건을 갖추면 좋�
 ## 유용한 명령어 모음
 
 ### 경로 관련
-| 명령어 | 설명 |
-|--------|------|
-| `cd ~/Downloads` | Downloads 폴더로 이동 |
-| `cd ..` | 상위 폴더로 이동 |
-| `pwd` | 현재 위치 확인 |
+| 명령어 | Mac/Linux | Windows |
+|--------|-----------|---------|
+| Downloads 이동 | `cd ~/Downloads` | `cd C:\Users\{이름}\Downloads` |
+| 상위 이동 | `cd ..` | `cd ..` |
+| 현재 위치 | `pwd` | `cd` (경로만 표시) |
 
 ### Claude Code 내부
 | 명령어 | 설명 |
@@ -304,7 +324,9 @@ Claude Code가 잘 분석하려면 데이터가 다음 조건을 갖추면 좋�
 
 ### 파일을 못 찾아요
 - 현재 위치 확인: "지금 어디야?"
-- 전체 경로 사용: "~/Downloads/파일명.csv"
+- 전체 경로 사용:
+  - Mac/Linux: `~/Downloads/파일명.csv`
+  - Windows: `C:\Users\{이름}\Downloads\파일명.csv`
 
 ### 분석이 안 돼요
 - Python 설치 확인: "Python 설치되어 있어?"

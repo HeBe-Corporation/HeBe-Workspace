@@ -51,17 +51,13 @@ https://prod.danawa.com/info/?pcode=6268026
 
 ### 크롤링 실행
 
-**WSL 환경:**
+**크롤링 실행:**
 ```bash
-cd /home/rhim/claude-projects/imi-workspace/.claude/skills/competitor-review-analyzer/scripts && \
+cd .claude/skills/competitor-review-analyzer/scripts && \
 python3 danawa-reviews.py <PRODUCT_CODE>
 ```
 
-**Mac 환경:**
-```bash
-cd /Users/rhim/Projects/imi-workspace/.claude/skills/competitor-review-analyzer/scripts && \
-python3 danawa-reviews.py <PRODUCT_CODE>
-```
+> 현재 워크스페이스 루트에서 실행하세요.
 
 **구글 시트 업로드 포함:**
 ```bash
@@ -171,8 +167,9 @@ cat /tmp/<브랜드>-<상품명>-reviews.md
 
 ### 저장 위치
 ```
-/home/rhim/claude-projects/pkm/10-projects/12-education/12.07-iloom/competitor-analysis/
+./10-projects/{프로젝트명}/competitor-analysis/
 ```
+> 프로젝트에 맞게 경로를 조정하세요.
 
 ### 파일명 형식
 ```
@@ -238,7 +235,7 @@ Claude:
 ### 크롤링 실패
 ```bash
 # .env 파일 확인
-cat /home/rhim/claude-projects/imi-workspace/.claude/skills/competitor-review-analyzer/scripts/.env
+cat .claude/skills/competitor-review-analyzer/scripts/.env
 
 # API 키 설정 필요
 FIRECRAWL_API_KEY=your_key

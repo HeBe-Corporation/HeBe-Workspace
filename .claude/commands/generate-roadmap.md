@@ -2,7 +2,7 @@
 description: PR/FAQ 기반 역순 로드맵 생성 (Working Backwards)
 allowed-tools: Read, Write, Edit, Glob, Grep
 config:
-  default_project_base: /Users/rhim/Projects/pkm/10-projects/
+  default_project_base: ./10-projects/
 ---
 
 # Generate Reverse Roadmap

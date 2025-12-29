@@ -12,7 +12,7 @@ allowed-tools: Write, Read, Bash
 1. 대화 내용을 분석하여 핵심 아이디어 추출
 2. 적절한 카테고리 판단 (business, branding, ai, cafe, study, daily, random 중 선택)
 3. 해당 카테고리의 템플릿 사용하여 구조화된 문서 생성
-4. `/Users/rhim/Projects/pkm/30-knowledge/33-insights/` 해당 폴더에 날짜_제목.md 형식으로 저장
+4. `./30-knowledge/` 폴더에 날짜_제목.md 형식으로 저장 (폴더가 없으면 생성)
 5. 저장된 파일 경로와 간단한 요약 제공
 
 **중요사항:**

@@ -2,8 +2,8 @@
 description: Amazon Working Backwards PR/FAQ 문서 생성 (대화형)
 allowed-tools: Read, Write, Edit, Glob, Grep
 config:
-  template_path: /Users/rhim/Projects/pkm/00-system/01-templates/pr-faq-template.md
-  default_project_base: /Users/rhim/Projects/pkm/10-projects/
+  template_path: ./00-system/01-templates/pr-faq-template.md
+  default_project_base: ./10-projects/
 ---
 
 # Working Backwards PR/FAQ Generator
