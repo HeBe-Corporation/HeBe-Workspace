@@ -19,27 +19,26 @@ Claude Code와 Johnny Decimal 시스템을 결합한 **실전 PKM 워크스페�
 
 ## Quick Start
 
-### 1. Clone & Setup (5분)
+### 1. Clone
 ```bash
 git clone https://github.com/Rhim80/imi-workspace.git
 cd imi-workspace
 ```
 
-### 2. CLAUDE.md 설정 (핵심!)
-```bash
-cp CLAUDE.md.template CLAUDE.md
-```
-본인 정보로 수정 (이름, 역할, 목적) - Claude가 프로젝트 맥락을 이해하는 핵심 파일입니다.
-
-### 3. Claude Code에서 열기
+### 2. Claude Code에서 열기
 VS Code 또는 터미널에서 Claude Code 실행
 
-### 4. 초기 설정
+### 3. 초기 설정 (핵심!)
 ```bash
 /setup-workspace
 ```
+**대화형으로 CLAUDE.md를 자동 생성**합니다:
+- 이름, 역할, 관심사, 용도를 순서대로 질문
+- 답변을 기반으로 CLAUDE.md 파일 자동 생성
+- 첫 Daily Note 생성
+- 다음 단계 안내
 
-### 5. 핵심 커맨드 익히기
+### 4. 핵심 커맨드 익히기
 
 | 커맨드 | 용도 | 소요 시간 |
 |--------|------|-----------|
@@ -274,28 +273,20 @@ imi-workspace/
 
 ### 빠른 시작 (5분)
 
-#### 1. Clone & Setup
+#### 1. Clone
 ```bash
 git clone https://github.com/Rhim80/imi-workspace.git
 cd imi-workspace
 ```
 
-#### 2. CLAUDE.md 설정
-```bash
-cp CLAUDE.md.template CLAUDE.md
-```
-본인 정보로 수정하세요.
-
-#### 3. Claude Code에서 열기
+#### 2. Claude Code에서 열기
 Claude Code로 이 폴더를 엽니다.
 
-#### 4. 초기 설정 실행
+#### 3. 초기 설정 실행
 ```bash
 /setup-workspace
 ```
-- 이름 입력
-- 첫 Daily Note 자동 생성
-- 다음 단계 안내 받기
+대화형으로 정보를 수집하여 CLAUDE.md를 자동 생성합니다.
 
 ---
 
@@ -382,7 +373,7 @@ Claude: "지속적인 업무이므로 20-operations/23-customer-service/
 
 ## Tips
 
-1. **CLAUDE.md 먼저**: 꼭 본인 정보로 수정하세요
+1. **setup-workspace 먼저**: `/setup-workspace`로 CLAUDE.md를 자동 생성하세요
 2. **Inbox Zero**: `00-inbox/`는 정기적으로 비우세요
 3. **Daily Habit**: 매일 Daily Note를 작성하세요
 4. **Archive 활용**: 완료된 프로젝트는 `90-archive/`로 이동
