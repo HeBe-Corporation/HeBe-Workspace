@@ -25,22 +25,29 @@ git clone https://github.com/Rhim80/imi-workspace.git
 cd imi-workspace
 ```
 
-### 2. Claude Code에서 열기
+### 2. CLAUDE.md 설정 (핵심!)
+```bash
+cp CLAUDE.md.template CLAUDE.md
+```
+본인 정보로 수정 (이름, 역할, 목적) - Claude가 프로젝트 맥락을 이해하는 핵심 파일입니다.
+
+### 3. Claude Code에서 열기
 VS Code 또는 터미널에서 Claude Code 실행
 
-### 3. 초기 설정
+### 4. 초기 설정
 ```bash
 /setup-workspace
 ```
 
-### 4. 핵심 커맨드 익히기
+### 5. 핵심 커맨드 익히기
 
 | 커맨드 | 용도 | 소요 시간 |
 |--------|------|-----------|
 | `/daily-note` | 오늘의 Daily Note 생성 | 1분 |
 | `/thinking-partner` | 생각 정리 파트너 | 수시 |
-| `/working-backwards-pr` | PR/FAQ 문서 생성 | 30-60분 |
-| `/generate-roadmap` | 역순 로드맵 생성 | 15-30분 |
+| `/gather` | 정보 수집 모드 | 수시 |
+| `/reframe` | 이해 확인 모드 | 수시 |
+| `/truth` | 사실 기반 분석 모드 | 수시 |
 | `/todos` | 할 일 관리 | 수시 |
 
 ## Philosophy
@@ -60,17 +67,13 @@ imi-workspace/
 ├── 00-inbox/          # 빠른 캡처 공간
 ├── 00-system/         # 시스템 설정 및 템플릿
 │   ├── 01-templates/
-│   └── 02-scripts/
+│   ├── 02-scripts/
+│   └── 03-guides/
 ├── 10-projects/       # 활성 프로젝트 (시한부)
-│   ├── 11-xxx/        # 프로젝트 1
-│   ├── 12-xxx/        # 프로젝트 2
-│   └── 13-xxx/        # 프로젝트 3
+│   └── 11-consulting/ # 컨설팅 프로젝트
 ├── 20-operations/     # 비즈니스 운영 (지속적)
-│   ├── 21-xxx/        # 운영 업무 1
-│   └── 22-xxx/        # 운영 업무 2
+│   └── 21-hr/         # HR/노무 관련
 ├── 30-knowledge/      # 지식 아카이브
-│   ├── 31-xxx/        # 지식 분야 1
-│   └── 32-xxx/        # 지식 분야 2
 ├── 40-personal/       # 개인 노트
 │   ├── 41-daily/      # Daily Notes
 │   ├── 42-weekly/     # Weekly Reviews
@@ -79,7 +82,7 @@ imi-workspace/
 └── 90-archive/        # 완료/중단 항목
 ```
 
-### 📂 Johnny Decimal 시스템 이해하기
+### Johnny Decimal 시스템 이해하기
 
 #### 기본 원칙
 - **10단위 = 카테고리** (예: 10-projects, 20-operations)
@@ -114,6 +117,7 @@ imi-workspace/
 **용도**: 워크스페이스 설정 및 템플릿
 - `01-templates/` - 재사용 가능한 템플릿
 - `02-scripts/` - 자동화 스크립트
+- `03-guides/` - 가이드 문서
 
 **수정 가능**: 필요에 따라 템플릿 커스터마이징
 
@@ -239,58 +243,36 @@ imi-workspace/
 - **daily-note-template.md** - 매일 작성하는 노트
 - **weekly-review-template.md** - 주간 회고
 - **Project Template.md** - 새 프로젝트 시작
-- **pr-faq-template.md** - Amazon Working Backwards PR/FAQ 문서
-- **interview-template.md** - 고객 인터뷰 가이드 (NEW ✨)
-
-### Working Backwards 프로젝트 템플릿
-
-`10-projects/00-working-backwards-template/` - 완전한 프로젝트 구조
-
-**포함 내용:**
-- `pr-document.md` - PR 작성 공간
-- `faq.md` - FAQ 작성 공간
-- `roadmap.md` - 역순 로드맵
-- `customer-research/` - 고객 인터뷰 노트
-- `daily-progress/` - 일일 진행 기록
-- `final-presentation/` - 최종 발표 자료
-
-**사용법:**
-```bash
-cp -r 10-projects/00-working-backwards-template/ 10-projects/11-my-project/
-```
 
 ## Slash Commands
 
 `.claude/commands/`에서 사용 가능한 커맨드:
 
-### 📝 Daily Workflow
+### Daily Workflow
 - `/daily-note` - 오늘 날짜의 Daily Note 생성/열기
 - `/daily-review` - 어제와 오늘 변경사항 분석
-- `/weekly-synthesis` - 주간 회고 생성
 - `/todo` / `/todos` - 할 일 관리
 
-### 🎯 Project Management
-- `/working-backwards-pr` - Amazon Working Backwards PR/FAQ 문서 생성 (대화형)
-- `/generate-roadmap` - PR/FAQ 기반 역순 로드맵 생성
-
-### 💡 Thinking & Ideas
+### Thinking & Ideas
 - `/thinking-partner` - 생각 정리 파트너
 - `/idea` - 대화에서 아이디어 추출 및 저장
 
-### 🔧 System
+### Orchestration Commands
+- `/gather` - 정보 수집 모드 (구조화된 질문 생성)
+- `/reframe` - 이해 확인 모드 (대화 요약 및 확인)
+- `/truth` - 사실 기반 분석 모드 (객관적 분석)
+
+### System
 - `/setup-workspace` - 초기 워크스페이스 설정
-- `/inbox-processor` - Inbox 파일 정리
-- `/pull-all` / `/push-all` - Git 동기화
 
-### 🛠️ Setup Commands (Project Skills)
+### Setup Commands (Project Skills)
 - `/setup-google-calendar` - Google Calendar 통합 설정
-- `/setup-web-crawler` - Web Crawler 스킬 설정
 
-> **프로젝트 스킬 (`.claude/skills/`)**: 이 워크스페이스에만 적용되는 skills로, 전역 스킬(`~/.claude/skills/`)과 독립적으로 작동합니다. 각자 독립적으로 skills를 설정/커스터마이징할 수 있습니다.
+> **프로젝트 스킬 (`.claude/skills/`)**: 이 워크스페이스에만 적용되는 skills로, 전역 스킬(`~/.claude/skills/`)과 독립적으로 작동합니다.
 
 ## Getting Started
 
-### 🚀 빠른 시작 (5분)
+### 빠른 시작 (5분)
 
 #### 1. Clone & Setup
 ```bash
@@ -298,10 +280,16 @@ git clone https://github.com/Rhim80/imi-workspace.git
 cd imi-workspace
 ```
 
-#### 2. VS Code에서 열기
+#### 2. CLAUDE.md 설정
+```bash
+cp CLAUDE.md.template CLAUDE.md
+```
+본인 정보로 수정하세요.
+
+#### 3. Claude Code에서 열기
 Claude Code로 이 폴더를 엽니다.
 
-#### 3. 초기 설정 실행
+#### 4. 초기 설정 실행
 ```bash
 /setup-workspace
 ```
@@ -311,7 +299,7 @@ Claude Code로 이 폴더를 엽니다.
 
 ---
 
-### 📝 첫 Daily Note 만들기
+### 첫 Daily Note 만들기
 
 **방법 1: 커맨드 사용 (추천)**
 ```bash
@@ -325,7 +313,7 @@ Claude Code로 이 폴더를 엽니다.
 
 ---
 
-### 🗂️ 프로젝트 폴더 만들기
+### 프로젝트 폴더 만들기
 
 #### 대화형 방식 (추천)
 Claude Code에게 물어보세요:
@@ -335,9 +323,9 @@ Claude Code에게 물어보세요:
 ```
 
 Claude가 제안:
-- 📂 위치: `10-projects/11-imi-cafe-branding/`
-- 📄 필수 파일: `README.md`, `requirements.md`
-- 📋 템플릿 활용
+- 위치: `10-projects/11-imi-cafe-branding/`
+- 필수 파일: `README.md`, `requirements.md`
+- 템플릿 활용
 
 #### 수동 방식
 1. **프로젝트 폴더 생성**
@@ -364,33 +352,7 @@ Claude가 제안:
 
 ---
 
-### 📚 지식 정리하기
-
-#### 학습한 내용을 정리할 때
-1. **카테고리 결정**
-   - 비즈니스 관련? → `31-business/`
-   - 기술 관련? → `32-technical/`
-   - 산업 인사이트? → `33-industry/`
-
-2. **폴더가 없으면 생성**
-   ```
-   30-knowledge/31-business-frameworks/
-   ```
-
-3. **문서 작성**
-   ```markdown
-   # Lean Canvas
-
-   ## 개요
-   ...
-
-   ## 사용법
-   ...
-   ```
-
----
-
-### 💡 대화형으로 Claude와 작업하기
+### 대화형으로 Claude와 작업하기
 
 **예시 1: 프로젝트 생성**
 ```
@@ -420,9 +382,9 @@ Claude: "지속적인 업무이므로 20-operations/23-customer-service/
 
 ## Tips
 
-1. **Inbox Zero**: `00-inbox/`는 정기적으로 비우세요
-2. **Daily Habit**: 매일 Daily Note를 작성하세요
-3. **Weekly Review**: 주말에 한 주를 돌아보세요
+1. **CLAUDE.md 먼저**: 꼭 본인 정보로 수정하세요
+2. **Inbox Zero**: `00-inbox/`는 정기적으로 비우세요
+3. **Daily Habit**: 매일 Daily Note를 작성하세요
 4. **Archive 활용**: 완료된 프로젝트는 `90-archive/`로 이동
 5. **템플릿 커스터마이징**: 자신에게 맞게 템플릿을 수정하세요
 
@@ -451,5 +413,5 @@ Issues나 질문이 있으시면 GitHub Issues를 활용해주세요.
 
 ---
 
-**Made with ❤️ by hovoo (이림)**
+**Made with by hovoo (이림)**
 F&B Professional × AI Practitioner
