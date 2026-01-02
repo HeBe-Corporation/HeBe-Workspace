@@ -1,0 +1,1486 @@
+[
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000235842&tab=review",
+    "headers": {
+      "upgrade-insecure-requests": "1",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "sec-ch-ua-platform": "\"Windows\""
+    },
+    "postData": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://receiver.ai.oliveyoung.co.kr/rest/logs?data=%7B%22cuid%22%3A%228b47cf9f-efd1-48e4-8f83-10ee8a07945b%22%2C%22domain%22%3A%22www.oliveyoung.co.kr%22%2C%22device%22%3A%22PW%22%2C%22pcId%22%3A%221767326049072171301%22%2C%22sessionId%22%3A%221bfwO9Ekus%22%2C%22url%22%3A%22https%3A%2F%2Fwww.oliveyoung.co.kr%2Fstore%2Fgoods%2FgetGoodsDetail.do%3FgoodsNo%3DA000000235842%26tab%3Dreview%22%2C%22timestamp%22%3A%221767326049084%22%2C%22itemId%22%3A%22%22%2C%22type%22%3A%22pageview%22%7D",
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://www.oliveyoung.co.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "postData": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://m.oliveyoung.co.kr/review/api/v2/reviews/options/A000000235842/count",
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://www.oliveyoung.co.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "postData": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "POST",
+    "url": "https://m.oliveyoung.co.kr/review/api/v2/reviews/photo-reviews",
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://www.oliveyoung.co.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "content-type": "application/json",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "postData": "{\"goodsNumber\":\"A000000235842\",\"page\":0,\"size\":10}"
+  },
+  {
+    "type": "REQUEST",
+    "method": "POST",
+    "url": "https://m.oliveyoung.co.kr/review/api/v2/reviews",
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://www.oliveyoung.co.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "content-type": "application/json",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "postData": "{\"goodsNumber\":\"A000000235842\",\"page\":0,\"size\":10,\"sortType\":\"USEFUL_SCORE_DESC\",\"reviewType\":\"ALL\"}"
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://m.oliveyoung.co.kr/review/api/v2/reviews/A000000235842/stats",
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://www.oliveyoung.co.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "postData": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://receiver.ai.oliveyoung.co.kr/rest/logs?data=%7B%22cuid%22%3A%228b47cf9f-efd1-48e4-8f83-10ee8a07945b%22%2C%22domain%22%3A%22www.oliveyoung.co.kr%22%2C%22device%22%3A%22PW%22%2C%22pcId%22%3A%221767326049072171301%22%2C%22sessionId%22%3A%221bfwO9Ekus%22%2C%22url%22%3A%22https%3A%2F%2Fwww.oliveyoung.co.kr%2Fstore%2Fgoods%2FgetGoodsDetail.do%3FgoodsNo%3DA000000235842%26tab%3Dreview%22%2C%22timestamp%22%3A%221767326049286%22%2C%22itemId%22%3A%228800250590588%22%2C%22type%22%3A%22visit%22%7D",
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://www.oliveyoung.co.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "postData": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://receiver.ai.oliveyoung.co.kr/rest/logs?data=%7B%22cuid%22%3A%228b47cf9f-efd1-48e4-8f83-10ee8a07945b%22%2C%22itemId%22%3A%228800250590588%22%2C%22onlineItemId%22%3A%22A000000235842%22%2C%22brandId%22%3A%22A020056%22%2C%22categoryId%22%3A%2210000010009%22%2C%22type%22%3A%22view%22%2C%22device%22%3A%22PW%22%2C%22timestamp%22%3A%221767326049289%22%2C%22domain%22%3A%22www.oliveyoung.co.kr%22%2C%22pcId%22%3A%221767326049072171301%22%2C%22sessionId%22%3A%221bfwO9Ekus%22%2C%22dispStDt%22%3A%222025-09-22T00%3A00%3A00%22%2C%22entrMenu%22%3A%22%22%2C%22viewCatNo%22%3A%22%22%2C%22gift%22%3A%22N%22%2C%22url%22%3A%22https%3A%2F%2Fwww.oliveyoung.co.kr%2Fstore%2Fgoods%2FgetGoodsDetail.do%3FgoodsNo%3DA000000235842%26tab%3Dreview%22%7D",
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://www.oliveyoung.co.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "postData": null
+  },
+  {
+    "type": "RESPONSE",
+    "url": "https://m.oliveyoung.co.kr/review/api/v2/reviews/options/A000000235842/count",
+    "status": 200,
+    "data": {
+      "status": "SUCCESS",
+      "code": 200,
+      "message": "요청에 성공하였습니다.",
+      "pagination": null,
+      "data": {
+        "isReviewSkinFilterAvailability": true,
+        "productItemReviewCountList": [
+          {
+            "goodsNumber": "A000000235842",
+            "itemNumber": "001",
+            "optionImg": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/options/item/2025/9/3891718360475028069.png",
+            "optionName": "리프트 부스트(탄력)",
+            "sortSeq": 1,
+            "reviewCount": 768
+          },
+          {
+            "goodsNumber": "A000000235842",
+            "itemNumber": "004",
+            "optionImg": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/options/item/2025/9/6392421408823326968.png",
+            "optionName": "울트라 브이 아쿠아 밤(수분)",
+            "sortSeq": 2,
+            "reviewCount": 368
+          },
+          {
+            "goodsNumber": "A000000235842",
+            "itemNumber": "002",
+            "optionImg": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/options/item/2025/9/3492096326289617258.png",
+            "optionName": "퍼펙트 멜라 제로(잡티)",
+            "sortSeq": 3,
+            "reviewCount": 340
+          },
+          {
+            "goodsNumber": "A000000235842",
+            "itemNumber": "003",
+            "optionImg": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/options/item/2025/9/2905161238605161821.png",
+            "optionName": "트리플 슈퍼 리페어(진정)",
+            "sortSeq": 4,
+            "reviewCount": 213
+          }
+        ],
+        "relatedProductReviewCountList": []
+      },
+      "totalCnt": null,
+      "pageData": null
+    }
+  },
+  {
+    "type": "RESPONSE",
+    "url": "https://m.oliveyoung.co.kr/review/api/v2/reviews/A000000235842/stats",
+    "status": 200,
+    "data": {
+      "status": "SUCCESS",
+      "code": 200,
+      "message": "요청에 성공하였습니다.",
+      "pagination": null,
+      "data": {
+        "goodsNumber": "A000000235842",
+        "goodsName": "[피부 고민별 맞춤 케어]가쉬 10초 마이크로 버블팩 4종 골라담기 150회분",
+        "goodsImg": "https://image.oliveyoung.co.kr/cfimages/cf-goods/uploads/images/thumbnails/10/0000/0023/A00000023584234ko.png?l=ko",
+        "reviewCount": 1689,
+        "ratingDistribution": {
+          "averageRating": 4.9,
+          "ratingStatDtos": [
+            {
+              "rating": 5,
+              "percentage": 93
+            },
+            {
+              "rating": 4,
+              "percentage": 5
+            },
+            {
+              "rating": 3,
+              "percentage": 2
+            },
+            {
+              "rating": 2,
+              "percentage": 0
+            },
+            {
+              "rating": 1,
+              "percentage": 0
+            }
+          ]
+        },
+        "satisfactionStats": [
+          {
+            "questionCode": "Q000000000055",
+            "questionName": "피부타입",
+            "answerDtos": [
+              {
+                "answerCode": "A000000000163",
+                "answerName": "건성에 좋아요",
+                "answerPercentage": 47
+              },
+              {
+                "answerCode": "A000000000164",
+                "answerName": "복합성에 좋아요",
+                "answerPercentage": 46
+              },
+              {
+                "answerCode": "A000000000165",
+                "answerName": "지성에 좋아요",
+                "answerPercentage": 6
+              }
+            ]
+          },
+          {
+            "questionCode": "Q000000000056",
+            "questionName": "피부고민",
+            "answerDtos": [
+              {
+                "answerCode": "A000000000166",
+                "answerName": "보습에 좋아요",
+                "answerPercentage": 56
+              },
+              {
+                "answerCode": "A000000000168",
+                "answerName": "주름/미백에 좋아요",
+                "answerPercentage": 26
+              },
+              {
+                "answerCode": "A000000000167",
+                "answerName": "진정에 좋아요",
+                "answerPercentage": 18
+              }
+            ]
+          },
+          {
+            "questionCode": "Q000000000057",
+            "questionName": "자극도",
+            "answerDtos": [
+              {
+                "answerCode": "A000000000169",
+                "answerName": "자극없이 순해요",
+                "answerPercentage": 85
+              },
+              {
+                "answerCode": "A000000000170",
+                "answerName": "보통이에요",
+                "answerPercentage": 14
+              },
+              {
+                "answerCode": "A000000000171",
+                "answerName": "자극이 느껴져요",
+                "answerPercentage": 1
+              }
+            ]
+          }
+        ]
+      },
+      "totalCnt": null,
+      "pageData": null
+    }
+  },
+  {
+    "type": "RESPONSE",
+    "url": "https://m.oliveyoung.co.kr/review/api/v2/reviews/photo-reviews",
+    "status": 200,
+    "data": {
+      "status": "SUCCESS",
+      "code": 200,
+      "message": "요청에 성공하였습니다.",
+      "pagination": null,
+      "data": [
+        {
+          "reviewId": 53744018,
+          "photoReviewList": [
+            {
+              "imageSequence": 1,
+              "imagePath": "2026/01/01/d8dd155bd28a4fb4a30811728d3ae3f41767271495486.png"
+            },
+            {
+              "imageSequence": 2,
+              "imagePath": "2026/01/01/e0843b56991a4dcbaa43b9e0239143191767271499841.png"
+            },
+            {
+              "imageSequence": 3,
+              "imagePath": "2026/01/01/4ead33af513746cb8aa90e58ea03c39f1767271503484.png"
+            },
+            {
+              "imageSequence": 4,
+              "imagePath": "2026/01/01/6fa78d47b7ed4deeaba309e5fcbb95f91767271507795.png"
+            },
+            {
+              "imageSequence": 5,
+              "imagePath": "2026/01/01/4e976cab18e84aa5be2e20c0fb83fa291767271512976.png"
+            },
+            {
+              "imageSequence": 6,
+              "imagePath": "2026/01/01/316df400bfa84923a7cd1820b35b4d601767271516825.png"
+            },
+            {
+              "imageSequence": 7,
+              "imagePath": "2026/01/01/0746ccfe6e2a4397adacf0e391a53d581767271520496.png"
+            },
+            {
+              "imageSequence": 8,
+              "imagePath": "2026/01/01/751e6ebe9eac45e683eb26d3d3cdd02d1767271524079.png"
+            }
+          ],
+          "createdDateTime": "2026.01.01"
+        },
+        {
+          "reviewId": 53714360,
+          "photoReviewList": [
+            {
+              "imageSequence": 1,
+              "imagePath": "2026/01/01/9ccc9027e8684ca994f39720aa6c081f1767235271457.png"
+            }
+          ],
+          "createdDateTime": "2026.01.01"
+        },
+        {
+          "reviewId": 53698241,
+          "photoReviewList": [
+            {
+              "imageSequence": 1,
+              "imagePath": "2025/12/31/5803fc8e7c2d4fa495929d11acfcb2981767190047591.png"
+            }
+          ],
+          "createdDateTime": "2025.12.31"
+        },
+        {
+          "reviewId": 53670367,
+          "photoReviewList": [
+            {
+              "imageSequence": 1,
+              "imagePath": "2025/12/31/c09da02d4930477a99377a3739ff7eb21767121078787.png"
+            }
+          ],
+          "createdDateTime": "2025.12.31"
+        },
+        {
+          "reviewId": 53662947,
+          "photoReviewList": [
+            {
+              "imageSequence": 1,
+              "imagePath": "2025/12/30/ca6de7c3b25349d5ad07d145f96348d31767105345216.png"
+            },
+            {
+              "imageSequence": 2,
+              "imagePath": "2025/12/30/15955639611145aca069de8b857964a01767105356764.png"
+            },
+            {
+              "imageSequence": 3,
+              "imagePath": "2025/12/30/9059f57447fc463e8b2b5ad8a68203401767105384204.png"
+            }
+          ],
+          "createdDateTime": "2025.12.30"
+        },
+        {
+          "reviewId": 53662910,
+          "photoReviewList": [
+            {
+              "imageSequence": 1,
+              "imagePath": "2025/12/30/ffe832648af94cd69e2ffdf5b3203b511767105208719.png"
+            },
+            {
+              "imageSequence": 2,
+              "imagePath": "2025/12/30/d074df2178b7458b88a196f464c544631767105212656.png"
+            },
+            {
+              "imageSequence": 3,
+              "imagePath": "2025/12/30/4aa09711a5064a17a049db1d598afc8b1767105216419.png"
+            }
+          ],
+          "createdDateTime": "2025.12.30"
+        },
+        {
+          "reviewId": 53654567,
+          "photoReviewList": [
+            {
+              "imageSequence": 1,
+              "imagePath": "2025/12/30/e879944fc3e04a8abed8b28dafb18f061767093313329.png"
+            }
+          ],
+          "createdDateTime": "2025.12.30"
+        },
+        {
+          "reviewId": 53654319,
+          "photoReviewList": [
+            {
+              "imageSequence": 1,
+              "imagePath": "2025/12/30/1239cd8450094293809e6d89b1a5cdf61767092905782.png"
+            }
+          ],
+          "createdDateTime": "2025.12.30"
+        },
+        {
+          "reviewId": 53622167,
+          "photoReviewList": [
+            {
+              "imageSequence": 1,
+              "imagePath": "2025/12/29/0083064ee26a4901bdfbff6372cd5f6f1767016186426.png"
+            }
+          ],
+          "createdDateTime": "2025.12.29"
+        },
+        {
+          "reviewId": 53621961,
+          "photoReviewList": [
+            {
+              "imageSequence": 1,
+              "imagePath": "2025/12/29/622f788af1924b62953155ddf9019fb01767015661444.png"
+            }
+          ],
+          "createdDateTime": "2025.12.29"
+        }
+      ],
+      "totalCnt": null,
+      "pageData": null
+    }
+  },
+  {
+    "type": "RESPONSE",
+    "url": "https://m.oliveyoung.co.kr/review/api/v2/reviews",
+    "status": 200,
+    "data": {
+      "status": "SUCCESS",
+      "code": 200,
+      "message": "요청에 성공하였습니다.",
+      "pagination": null,
+      "data": [
+        {
+          "reviewId": 53364863,
+          "content": "메노킨 가쉬 스킨으로 사용중\r\n한달후기.\r\n가쉬보다  메노킨을 더 잘 씀\r\n메노킨은  수분이 충족되는 스킨\r\n(리프트- 모이스트 순으로  좋음,리페어는 재구매안할템)\r\n가쉬는  메노킨에 비해 수분충족은 덜하나\r\n쫀쫀한 느낌에 광이 남\r\n20대는 가쉬만 사용해도 만족스러울텐데\r\n30대부터 수분이 더  충족되어야 함\r\n가쉬 단독 사용 만족스럽지 않아서\r\n에스트라 아토베리어로션과 궁합이 좋았음",
+          "goodsDto": {
+            "goodsNumber": "A000000235842",
+            "itemNumber": "001",
+            "legacyGoodsNumber": "8800250590588",
+            "goodsName": "[피부 고민별 맞춤 케어]가쉬 10초 마이크로 버블팩 4종 골라담기 150회분",
+            "optionName": "리프트 부스트(탄력)"
+          },
+          "reviewScore": 4,
+          "hasPhoto": true,
+          "isRepurchase": false,
+          "isMonthUseReview": false,
+          "isMonthOverReview": true,
+          "reviewType": "NORMAL",
+          "usefulPoint": 4050,
+          "photoReviewList": [
+            {
+              "imageSequence": 1,
+              "imagePath": "2025/12/22/9535d39c1b604b96a72f36c04cc4f6771766380955946.png"
+            },
+            {
+              "imageSequence": 2,
+              "imagePath": "2025/12/22/4f8bf4c36a6d4983a05e3bb7f76a895e1766380969819.png"
+            },
+            {
+              "imageSequence": 3,
+              "imagePath": "2025/12/22/487ccc95b4ba4e20be272196ecdc51221766380980393.png"
+            }
+          ],
+          "profileDto": {
+            "memberNickname": "수수수민",
+            "profileImageUrl": "2022/12/15/1671088313948.png",
+            "isShutterbrity": false,
+            "isTopReviewer": true,
+            "reviewerRank": 974,
+            "profileKey": "TnI2dnZKeWFhcUlPbXB2Rm9BWWFidz09",
+            "skinType": "A02",
+            "skinTone": "B02",
+            "skinTrouble": [
+              "C01",
+              "C02"
+            ],
+            "isSkinTypeMatched": false,
+            "isSkinToneMatched": false
+          },
+          "createdDateTime": "2025.12.22",
+          "recommendCount": 5,
+          "isMyReview": false,
+          "isRecommended": false
+        },
+        {
+          "reviewId": 53367862,
+          "content": "오랫동안 꾸준히 써보니 왜 화잘먹 대란템인지 알겠어요! 바쁜 10초면 끝나니까 세상 편해서 자꾸 손이 가요ㅋㅋ\r\n\r\n일단 미세한 버블이 올라오면서 피부를 싹 진정시켜주는 느낌이 너무 좋아요👍🏻 김 없이 촉촉탱탱해지고, 확실히 이거 한 다음날은 화장이 찰떡같이 밀착돼서 대만족 중입니다ㅎㅎ 리페어 라인이라 피부 컨디션 안 좋을 때 써주면 금방 매끈해지는 게 눈에 보여요!\r\n\r\n빠르고 확실한 진정 케어랑 물광 피부 원하는 분들께 무조건 강추합니다! 오래 써보니 더 만족스럽네요! 넘 만족합니다!",
+          "goodsDto": {
+            "goodsNumber": "A000000235842",
+            "itemNumber": "003",
+            "legacyGoodsNumber": "8800250591769",
+            "goodsName": "[피부 고민별 맞춤 케어]가쉬 10초 마이크로 버블팩 4종 골라담기 150회분",
+            "optionName": "트리플 슈퍼 리페어(진정)"
+          },
+          "reviewScore": 5,
+          "hasPhoto": false,
+          "isRepurchase": false,
+          "isMonthUseReview": false,
+          "isMonthOverReview": true,
+          "reviewType": "NORMAL",
+          "usefulPoint": 2970,
+          "photoReviewList": [],
+          "profileDto": {
+            "memberNickname": "리뷰쓰는카피바라",
+            "profileImageUrl": "2025/04/29/1745903915259.png",
+            "isShutterbrity": false,
+            "isTopReviewer": true,
+            "reviewerRank": 141,
+            "profileKey": "U2VVWm54L3pXVHVKcm9iVktibVpndz09",
+            "skinType": "A03",
+            "skinTone": "B06",
+            "skinTrouble": [
+              "C02",
+              "C03"
+            ],
+            "isSkinTypeMatched": false,
+            "isSkinToneMatched": false
+          },
+          "createdDateTime": "2025.12.22",
+          "recommendCount": 6,
+          "isMyReview": false,
+          "isRecommended": false
+        },
+        {
+          "reviewId": 53367766,
+          "content": "어머니가 꾸준히 사용하고 계신데, 대만족 중이세요!\r\n\r\n일단 10초면 끝나는 간편함 덕분에 매일 거르지 않고 쓰시는데, 확실히 잡티 케어 라인이라 그런지 안색이 눈에 띄게 맑고 화사해지셨어요👍🏻 사용 후 피부가 쫀쫀하고 촉촉해서 화장도 훨씬 잘 먹는다고 너무 좋아하시네요ㅎㅎ 어머니 피부 결이 매끈해진 게 보여서 제가 다 뿌듯합니다!\r\n\r\n칙칙한 피부 톤이 고민이신 어머니들께 선물로도 무조건 강추합니다! 오래 써보니 더 확실하네요! 넘 만족합니다!",
+          "goodsDto": {
+            "goodsNumber": "A000000235842",
+            "itemNumber": "002",
+            "legacyGoodsNumber": "8800250591752",
+            "goodsName": "[피부 고민별 맞춤 케어]가쉬 10초 마이크로 버블팩 4종 골라담기 150회분",
+            "optionName": "퍼펙트 멜라 제로(잡티)"
+          },
+          "reviewScore": 5,
+          "hasPhoto": false,
+          "isRepurchase": false,
+          "isMonthUseReview": false,
+          "isMonthOverReview": true,
+          "reviewType": "NORMAL",
+          "usefulPoint": 2970,
+          "photoReviewList": [],
+          "profileDto": {
+            "memberNickname": "리뷰쓰는카피바라",
+            "profileImageUrl": "2025/04/29/1745903915259.png",
+            "isShutterbrity": false,
+            "isTopReviewer": true,
+            "reviewerRank": 141,
+            "profileKey": "U2VVWm54L3pXVHVKcm9iVktibVpndz09",
+            "skinType": "A03",
+            "skinTone": "B06",
+            "skinTrouble": [
+              "C02",
+              "C03"
+            ],
+            "isSkinTypeMatched": false,
+            "isSkinToneMatched": false
+          },
+          "createdDateTime": "2025.12.22",
+          "recommendCount": 6,
+          "isMyReview": false,
+          "isRecommended": false
+        },
+        {
+          "reviewId": 53654319,
+          "content": "바르자마자 미세한 버블이 올라오면서 \r\n피부를 부드럽게 감싸주고, 10초 정도면 충분해서\r\n세안 전후 어디에나 활용하기 편했어요.\r\n사용 후에는 피부가 한결 쫀쫀해지고 탄력이 살아난 느낌이라\r\n 만족스러웠고, 당김 없이 촉촉하게 마무리돼요. 자극적이지 않아서 데일리로 쓰기 좋고, 여러 번 나눠 쓸 수 있는 대용량 구성이라 가성비도 괜찮았어요. 간편하게 탄력 관리하고 싶은 분들께 추천하고 싶어요.",
+          "goodsDto": {
+            "goodsNumber": "A000000235842",
+            "itemNumber": "001",
+            "legacyGoodsNumber": "8800250590588",
+            "goodsName": "[피부 고민별 맞춤 케어]가쉬 10초 마이크로 버블팩 4종 골라담기 150회분",
+            "optionName": "리프트 부스트(탄력)"
+          },
+          "reviewScore": 5,
+          "hasPhoto": true,
+          "isRepurchase": false,
+          "isMonthUseReview": false,
+          "isMonthOverReview": true,
+          "reviewType": "NORMAL",
+          "usefulPoint": 2520,
+          "photoReviewList": [
+            {
+              "imageSequence": 1,
+              "imagePath": "2025/12/30/1239cd8450094293809e6d89b1a5cdf61767092905782.png"
+            }
+          ],
+          "profileDto": {
+            "memberNickname": "pinkyrian",
+            "profileImageUrl": "2020/03/25/1585114707549.png",
+            "isShutterbrity": false,
+            "isTopReviewer": true,
+            "reviewerRank": 699,
+            "profileKey": "emdiS1ZTT2xnckhjdnd0Ujh3ZUlkQT09",
+            "skinType": "A02",
+            "skinTone": "B01",
+            "skinTrouble": [
+              "C01",
+              "C02"
+            ],
+            "isSkinTypeMatched": false,
+            "isSkinToneMatched": false
+          },
+          "createdDateTime": "2025.12.30",
+          "recommendCount": 4,
+          "isMyReview": false,
+          "isRecommended": false
+        },
+        {
+          "reviewId": 53654567,
+          "content": "노워시 타입이라 씻어낼 필요가 없어서 데일리 케어로 손이 자주 갔고, 사용 후에는 피부결이 한결 정돈되면서 톤이 맑아 보이는 느낌이 들었어요. 💚",
+          "goodsDto": {
+            "goodsNumber": "A000000235842",
+            "itemNumber": "002",
+            "legacyGoodsNumber": "8800250591752",
+            "goodsName": "[피부 고민별 맞춤 케어]가쉬 10초 마이크로 버블팩 4종 골라담기 150회분",
+            "optionName": "퍼펙트 멜라 제로(잡티)"
+          },
+          "reviewScore": 5,
+          "hasPhoto": true,
+          "isRepurchase": false,
+          "isMonthUseReview": false,
+          "isMonthOverReview": true,
+          "reviewType": "NORMAL",
+          "usefulPoint": 2232,
+          "photoReviewList": [
+            {
+              "imageSequence": 1,
+              "imagePath": "2025/12/30/e879944fc3e04a8abed8b28dafb18f061767093313329.png"
+            }
+          ],
+          "profileDto": {
+            "memberNickname": "pinkyrian",
+            "profileImageUrl": "2020/03/25/1585114707549.png",
+            "isShutterbrity": false,
+            "isTopReviewer": true,
+            "reviewerRank": 699,
+            "profileKey": "emdiS1ZTT2xnckhjdnd0Ujh3ZUlkQT09",
+            "skinType": "A02",
+            "skinTone": "B01",
+            "skinTrouble": [
+              "C01",
+              "C02"
+            ],
+            "isSkinTypeMatched": false,
+            "isSkinToneMatched": false
+          },
+          "createdDateTime": "2025.12.30",
+          "recommendCount": 4,
+          "isMyReview": false,
+          "isRecommended": false
+        },
+        {
+          "reviewId": 53326820,
+          "content": "모든 기초제품류중에 수분라인은 기본템이라 지나칠수없죠 데일리로 제일 무난하게 사용가능할 것 같아요",
+          "goodsDto": {
+            "goodsNumber": "A000000235842",
+            "itemNumber": "004",
+            "legacyGoodsNumber": "8800250591745",
+            "goodsName": "[피부 고민별 맞춤 케어]가쉬 10초 마이크로 버블팩 4종 골라담기 150회분",
+            "optionName": "울트라 브이 아쿠아 밤(수분)"
+          },
+          "reviewScore": 5,
+          "hasPhoto": true,
+          "isRepurchase": false,
+          "isMonthUseReview": false,
+          "isMonthOverReview": false,
+          "reviewType": "NORMAL",
+          "usefulPoint": 2214,
+          "photoReviewList": [
+            {
+              "imageSequence": 1,
+              "imagePath": "2025/12/21/f03bb2a78586439ebbf3b2691d24228d1766294773197.png"
+            }
+          ],
+          "profileDto": {
+            "memberNickname": "채송송",
+            "profileImageUrl": "2021/03/11/1615451205851.png",
+            "isShutterbrity": false,
+            "isTopReviewer": false,
+            "reviewerRank": null,
+            "profileKey": "NXF0aWdrU1laQ3libXlhYkRiNVhBUT09",
+            "skinType": "A03",
+            "skinTone": "B02",
+            "skinTrouble": [
+              "C01",
+              "C03"
+            ],
+            "isSkinTypeMatched": false,
+            "isSkinToneMatched": false
+          },
+          "createdDateTime": "2025.12.21",
+          "recommendCount": 4,
+          "isMyReview": false,
+          "isRecommended": false
+        },
+        {
+          "reviewId": 53352481,
+          "content": "1달 써봤습니다. \r\n10초면 올려준다는 건 정말 과대광고구요\r\n헤어무스 같은 제형에 문지르면 조금 촉촉하고 광이도는 정도지 리프팅 효과는 못봤어요\r\n구냥 스킨부스터 정도로 보세요\r\n메노킨은 좀더 촉촉햇고 얜 좀 덜 촉촉한데 광이 돌아요\r\n화장할때 밀리진 않는데 가스로 나오는 거라 향이 거북해요\r\n딱 골프공만큼 쓰라는데 정말 살짝누르세요",
+          "goodsDto": {
+            "goodsNumber": "A000000235842",
+            "itemNumber": "001",
+            "legacyGoodsNumber": "8800250590588",
+            "goodsName": "[피부 고민별 맞춤 케어]가쉬 10초 마이크로 버블팩 4종 골라담기 150회분",
+            "optionName": "리프트 부스트(탄력)"
+          },
+          "reviewScore": 3,
+          "hasPhoto": false,
+          "isRepurchase": false,
+          "isMonthUseReview": false,
+          "isMonthOverReview": true,
+          "reviewType": "NORMAL",
+          "usefulPoint": 1890,
+          "photoReviewList": [],
+          "profileDto": {
+            "memberNickname": "충동구매니니즈",
+            "profileImageUrl": "2023/01/13/1673583208754.png",
+            "isShutterbrity": false,
+            "isTopReviewer": true,
+            "reviewerRank": 932,
+            "profileKey": "RnRnSnExTFVtZGkyaW1yMGNKUkVUdz09",
+            "skinType": "A03",
+            "skinTone": "B04",
+            "skinTrouble": [
+              "C01",
+              "C09"
+            ],
+            "isSkinTypeMatched": false,
+            "isSkinToneMatched": false
+          },
+          "createdDateTime": "2025.12.22",
+          "recommendCount": 3,
+          "isMyReview": false,
+          "isRecommended": false
+        },
+        {
+          "reviewId": 53369735,
+          "content": "이거 너무좋아요 진짜 최고임 이것만써요 피부 광나요 \r\n홈피에서 주문하다 급할때",
+          "goodsDto": {
+            "goodsNumber": "A000000235842",
+            "itemNumber": "002",
+            "legacyGoodsNumber": "8800250591752",
+            "goodsName": "[피부 고민별 맞춤 케어]가쉬 10초 마이크로 버블팩 4종 골라담기 150회분",
+            "optionName": "퍼펙트 멜라 제로(잡티)"
+          },
+          "reviewScore": 5,
+          "hasPhoto": true,
+          "isRepurchase": false,
+          "isMonthUseReview": false,
+          "isMonthOverReview": false,
+          "reviewType": "NORMAL",
+          "usefulPoint": 1845,
+          "photoReviewList": [
+            {
+              "imageSequence": 1,
+              "imagePath": "2025/12/22/25c71ce0c0e740dfb6f7f4c6a67adc721766390034939.png"
+            }
+          ],
+          "profileDto": {
+            "memberNickname": "행복한수미니",
+            "profileImageUrl": "2024/10/23/1729685509822.png",
+            "isShutterbrity": false,
+            "isTopReviewer": false,
+            "reviewerRank": null,
+            "profileKey": "WExoNFRWZ2lvZmNlUkM5RXY0NFRIdz09",
+            "skinType": "A02",
+            "skinTone": "B01",
+            "skinTrouble": [
+              "C01",
+              "C02"
+            ],
+            "isSkinTypeMatched": false,
+            "isSkinToneMatched": false
+          },
+          "createdDateTime": "2025.12.22",
+          "recommendCount": 4,
+          "isMyReview": false,
+          "isRecommended": false
+        },
+        {
+          "reviewId": 53326810,
+          "content": "울긋불긋 잡티케어에 도움이 됐음 좋게써요 꾸준히 써보려고 종류별로 다 구입했어용",
+          "goodsDto": {
+            "goodsNumber": "A000000235842",
+            "itemNumber": "002",
+            "legacyGoodsNumber": "8800250591752",
+            "goodsName": "[피부 고민별 맞춤 케어]가쉬 10초 마이크로 버블팩 4종 골라담기 150회분",
+            "optionName": "퍼펙트 멜라 제로(잡티)"
+          },
+          "reviewScore": 5,
+          "hasPhoto": true,
+          "isRepurchase": false,
+          "isMonthUseReview": false,
+          "isMonthOverReview": false,
+          "reviewType": "NORMAL",
+          "usefulPoint": 1674,
+          "photoReviewList": [
+            {
+              "imageSequence": 1,
+              "imagePath": "2025/12/21/eeb0f415f55d49db8bdc438cf1270cac1766294718054.png"
+            }
+          ],
+          "profileDto": {
+            "memberNickname": "채송송",
+            "profileImageUrl": "2021/03/11/1615451205851.png",
+            "isShutterbrity": false,
+            "isTopReviewer": false,
+            "reviewerRank": null,
+            "profileKey": "NXF0aWdrU1laQ3libXlhYkRiNVhBUT09",
+            "skinType": "A03",
+            "skinTone": "B02",
+            "skinTrouble": [
+              "C01",
+              "C03"
+            ],
+            "isSkinTypeMatched": false,
+            "isSkinToneMatched": false
+          },
+          "createdDateTime": "2025.12.21",
+          "recommendCount": 3,
+          "isMyReview": false,
+          "isRecommended": false
+        },
+        {
+          "reviewId": 53662947,
+          "content": "한달동안 탄력,미백,수분 모두 시켜서  번갈아 바르니 너무 촉촉하고 좋았어요~^^  탄력도 챙기면서 미백도 관리하고 수분감이 돌아서 피부가 정말 예뻐졌습니다~~🤗👍🏻👍🏻  꼭 사용해보세요~~~",
+          "goodsDto": {
+            "goodsNumber": "A000000235842",
+            "itemNumber": "004",
+            "legacyGoodsNumber": "8800250591745",
+            "goodsName": "[피부 고민별 맞춤 케어]가쉬 10초 마이크로 버블팩 4종 골라담기 150회분",
+            "optionName": "울트라 브이 아쿠아 밤(수분)"
+          },
+          "reviewScore": 5,
+          "hasPhoto": true,
+          "isRepurchase": false,
+          "isMonthUseReview": false,
+          "isMonthOverReview": true,
+          "reviewType": "NORMAL",
+          "usefulPoint": 1512,
+          "photoReviewList": [
+            {
+              "imageSequence": 1,
+              "imagePath": "2025/12/30/ca6de7c3b25349d5ad07d145f96348d31767105345216.png"
+            },
+            {
+              "imageSequence": 2,
+              "imagePath": "2025/12/30/15955639611145aca069de8b857964a01767105356764.png"
+            },
+            {
+              "imageSequence": 3,
+              "imagePath": "2025/12/30/9059f57447fc463e8b2b5ad8a68203401767105384204.png"
+            }
+          ],
+          "profileDto": {
+            "memberNickname": "장연례",
+            "profileImageUrl": "2025/10/05/1759656150602.png",
+            "isShutterbrity": false,
+            "isTopReviewer": false,
+            "reviewerRank": null,
+            "profileKey": "NWI2N05aRTZmSTVHVXBmaDVWalVCZz09",
+            "skinType": null,
+            "skinTone": null,
+            "skinTrouble": [],
+            "isSkinTypeMatched": false,
+            "isSkinToneMatched": false
+          },
+          "createdDateTime": "2025.12.30",
+          "recommendCount": 2,
+          "isMyReview": false,
+          "isRecommended": false
+        }
+      ],
+      "totalCnt": null,
+      "pageData": null
+    }
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://analysis.adinsight.co.kr/emnet/log.php?aidx=10417&url=https%3A%2F%2Fwww.oliveyoung.co.kr%2Fstore%2Fgoods%2FgetGoodsDetail.do%3FgoodsNo%3DA000000235842%26tab%3Dreview&ref=&id=eY647427432?2600&sid=G[646245465610[g[465605610=0422&s=1920x1080&bv=0&nv=0&amt=0&product=-&ordid=-&rnd=0.9030095230224467",
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://www.oliveyoung.co.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "postData": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://www.facebook.com/tr/?id=1926423667616265&ev=PageView&dl=https%3A%2F%2Fwww.oliveyoung.co.kr%2Fstore%2Fgoods%2FgetGoodsDetail.do%3FgoodsNo%3DA000000235842%26tab%3Dreview&rl=&if=false&ts=1767326049614&sw=1920&sh=1080&v=2.9.248&r=stable&ec=0&o=4126&fbp=fb.2.1767326049608.876210604849850917&hmd=3a0e6569613ab94c46256b20&pl=https%3A%2F%2Fwww.oliveyoung.co.kr%2Fstore%2FG.do%3FgoodsNo%3DA000000235842&eid=ob3_plugin-set_394f55fe71e4d48b0e98ad8dc04badbd502c1c01ebd454de78e56de7f390ad82&ler=empty&cdl=API_unavailable&pmd[title]=%5B%ED%94%BC%EB%B6%80%20%EA%B3%A0%EB%AF%BC%EB%B3%84%20%EB%A7%9E%EC%B6%A4%20%EC%BC%80%EC%96%B4%5D%EA%B0%80%EC%89%AC%2010%EC%B4%88%20%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%9C%20%EB%B2%84%EB%B8%94%ED%8C%A9%204%EC%A2%85%20%EA%B3%A8%EB%9D%BC%EB%8B%B4%EA%B8%B0%20150%ED%9A%8C%EB%B6%84%20%7C%20%EC%98%AC%EB%A6%AC%EB%B8%8C%EC%98%81&plt=406.2999999523163&it=1767326049381&coo=false&cf=1&expv2[0]=pl1&expv2[1]=el2&expv2[2]=bc1&expv2[3]=mr2&rqm=GET",
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://www.oliveyoung.co.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "postData": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://www.facebook.com/privacy_sandbox/pixel/register/trigger/?id=1926423667616265&ev=PageView&dl=https%3A%2F%2Fwww.oliveyoung.co.kr%2Fstore%2Fgoods%2FgetGoodsDetail.do%3FgoodsNo%3DA000000235842%26tab%3Dreview&rl=&if=false&ts=1767326049614&sw=1920&sh=1080&v=2.9.248&r=stable&ec=0&o=4126&fbp=fb.2.1767326049608.876210604849850917&hmd=3a0e6569613ab94c46256b20&pl=https%3A%2F%2Fwww.oliveyoung.co.kr%2Fstore%2FG.do%3FgoodsNo%3DA000000235842&eid=ob3_plugin-set_394f55fe71e4d48b0e98ad8dc04badbd502c1c01ebd454de78e56de7f390ad82&ler=empty&cdl=API_unavailable&pmd[title]=%5B%ED%94%BC%EB%B6%80%20%EA%B3%A0%EB%AF%BC%EB%B3%84%20%EB%A7%9E%EC%B6%A4%20%EC%BC%80%EC%96%B4%5D%EA%B0%80%EC%89%AC%2010%EC%B4%88%20%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%9C%20%EB%B2%84%EB%B8%94%ED%8C%A9%204%EC%A2%85%20%EA%B3%A8%EB%9D%BC%EB%8B%B4%EA%B8%B0%20150%ED%9A%8C%EB%B6%84%20%7C%20%EC%98%AC%EB%A6%AC%EB%B8%8C%EC%98%81&plt=406.2999999523163&it=1767326049381&coo=false&cf=1&expv2[0]=pl1&expv2[1]=el2&expv2[2]=bc1&expv2[3]=mr2&rqm=FGET",
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://www.oliveyoung.co.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "postData": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://www.facebook.com/tr/?id=1926423667616265&ev=ViewContent&dl=https%3A%2F%2Fwww.oliveyoung.co.kr%2Fstore%2Fgoods%2FgetGoodsDetail.do%3FgoodsNo%3DA000000235842%26tab%3Dreview&rl=&if=false&ts=1767326049625&cd[content_ids]=%5B%22A000000235842%22%5D&cd[content_type]=product&cd[value]=30600&cd[currency]=KRW&sw=1920&sh=1080&v=2.9.248&r=stable&ec=1&o=4126&fbp=fb.2.1767326049608.876210604849850917&eid=ob3_plugin-set_9618bff1693d6c5f04f4f0b7345456161f9c028505907f5e542e34b6503a1db1&ler=empty&cdl=API_unavailable&plt=406.2999999523163&it=1767326049381&coo=false&cf=1&expv2[0]=pl1&expv2[1]=el2&expv2[2]=bc1&expv2[3]=mr2&rqm=GET",
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://www.oliveyoung.co.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "postData": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "GET",
+    "url": "https://www.facebook.com/privacy_sandbox/pixel/register/trigger/?id=1926423667616265&ev=ViewContent&dl=https%3A%2F%2Fwww.oliveyoung.co.kr%2Fstore%2Fgoods%2FgetGoodsDetail.do%3FgoodsNo%3DA000000235842%26tab%3Dreview&rl=&if=false&ts=1767326049625&cd[content_ids]=%5B%22A000000235842%22%5D&cd[content_type]=product&cd[value]=30600&cd[currency]=KRW&sw=1920&sh=1080&v=2.9.248&r=stable&ec=1&o=4126&fbp=fb.2.1767326049608.876210604849850917&eid=ob3_plugin-set_9618bff1693d6c5f04f4f0b7345456161f9c028505907f5e542e34b6503a1db1&ler=empty&cdl=API_unavailable&plt=406.2999999523163&it=1767326049381&coo=false&cf=1&expv2[0]=pl1&expv2[1]=el2&expv2[2]=bc1&expv2[3]=mr2&rqm=FGET",
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://www.oliveyoung.co.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "postData": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "POST",
+    "url": "https://www.google.com/measurement/conversion?random=1767326049684&cv=11&tid=G-TTX3Z62VLN&fst=1767326049684&fmt=6&en=session_start&gtm=45je5ca1v882277464z8844468268za20gzb844468268zd844468268xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=103116026~103200004~104527907~104528500~104684208~104684211~105391252~115583767~115616985~115938466~115938469~116184927~116184929~116251938~116251940&u_w=1920&u_h=1080&url=https%3A%2F%2Fwww.oliveyoung.co.kr%2Fstore%2Fgoods%2FgetGoodsDetail.do%3FgoodsNo%3DA000000235842%26tab%3Dreview&gacid=590320055.1767326050&frm=0&tiba=%5B%ED%94%BC%EB%B6%80%20%EA%B3%A0%EB%AF%BC%EB%B3%84%20%EB%A7%9E%EC%B6%A4%20%EC%BC%80%EC%96%B4%5D%EA%B0%80%EC%89%AC%2010%EC%B4%88%20%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%9C%20%EB%B2%84%EB%B8%94%ED%8C%A9%204%EC%A2%85%20%EA%B3%A8%EB%9D%BC%EB%8B%B4%EA%B8%B0%20150%ED%9A%8C%EB%B6%84%20%7C%20%EC%98%AC%EB%A6%AC%EB%B8%8C%EC%98%81&npa=0&pscdl=noapi&auid=198121035.1767326050&uaa=x86&uab=64&uafvl=Chromium%3B143.0.7499.4%7CNot%2520A(Brand%3B24.0.0.0&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0",
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://www.oliveyoung.co.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "postData": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "POST",
+    "url": "https://analytics.google.com/g/collect?v=2&tid=G-TTX3Z62VLN&gtm=45je5ca1v882277464z8844468268za20gzb844468268zd844468268&_p=1767326048820&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=590320055.1767326050&ul=ko-kr&sr=1920x1080&uaa=x86&uab=64&uafvl=Chromium%3B143.0.7499.4%7CNot%2520A(Brand%3B24.0.0.0&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&are=1&frm=0&pscdl=noapi&_prs=ok&_s=1&tag_exp=103116026~103200004~104527907~104528500~104684208~104684211~105391252~115583767~115616985~115938466~115938469~116184927~116184929~116251938~116251940&sid=1767326049&sct=1&seg=0&dl=https%3A%2F%2Fwww.oliveyoung.co.kr%2Fstore%2Fgoods%2FgetGoodsDetail.do%3FgoodsNo%3DA000000235842%26tab%3Dreview&dt=%5B%ED%94%BC%EB%B6%80%20%EA%B3%A0%EB%AF%BC%EB%B3%84%20%EB%A7%9E%EC%B6%A4%20%EC%BC%80%EC%96%B4%5D%EA%B0%80%EC%89%AC%2010%EC%B4%88%20%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%9C%20%EB%B2%84%EB%B8%94%ED%8C%A9%204%EC%A2%85%20%EA%B3%A8%EB%9D%BC%EB%8B%B4%EA%B8%B0%20150%ED%9A%8C%EB%B6%84%20%7C%20%EC%98%AC%EB%A6%AC%EB%B8%8C%EC%98%81&en=page_view&_fv=1&_nsi=1&_ss=2&ep.channel_type=PC&tfd=1736",
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://www.oliveyoung.co.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "postData": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "POST",
+    "url": "https://www.google.com/measurement/conversion?random=1767326049683&cv=11&tid=G-TTX3Z62VLN&fst=1767326049683&fmt=6&en=view_item&gtm=45je5ca1v882277464z8844468268za20gzb844468268zd844468268xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=103116026~103200004~104527907~104528500~104684208~104684211~105391252~115583767~115616985~115938466~115938469~116184927~116184929~116251938~116251940&u_w=1920&u_h=1080&url=https%3A%2F%2Fwww.oliveyoung.co.kr%2Fstore%2Fgoods%2FgetGoodsDetail.do%3FgoodsNo%3DA000000235842%26tab%3Dreview&gacid=590320055.1767326050&frm=0&tiba=%5B%ED%94%BC%EB%B6%80%20%EA%B3%A0%EB%AF%BC%EB%B3%84%20%EB%A7%9E%EC%B6%A4%20%EC%BC%80%EC%96%B4%5D%EA%B0%80%EC%89%AC%2010%EC%B4%88%20%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%9C%20%EB%B2%84%EB%B8%94%ED%8C%A9%204%EC%A2%85%20%EA%B3%A8%EB%9D%BC%EB%8B%B4%EA%B8%B0%20150%ED%9A%8C%EB%B6%84%20%7C%20%EC%98%AC%EB%A6%AC%EB%B8%8C%EC%98%81&npa=0&pscdl=noapi&auid=198121035.1767326050&uaa=x86&uab=64&uafvl=Chromium%3B143.0.7499.4%7CNot%2520A(Brand%3B24.0.0.0&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0",
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://www.oliveyoung.co.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "postData": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "POST",
+    "url": "https://analytics.google.com/g/collect?v=2&tid=G-TTX3Z62VLN&gtm=45je5ca1v882277464z8844468268za20gzb844468268zd844468268&_p=1767326048820&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=590320055.1767326050&ul=ko-kr&sr=1920x1080&uaa=x86&uab=64&uafvl=Chromium%3B143.0.7499.4%7CNot%2520A(Brand%3B24.0.0.0&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&are=1&frm=0&pscdl=noapi&_prs=ok&_eu=AAAAAAQ&_s=2&tag_exp=103116026~103200004~104527907~104528500~104684208~104684211~105391252~115583767~115616985~115938466~115938469~116184927~116184929~116251938~116251940&sid=1767326049&sct=1&seg=0&dl=https%3A%2F%2Fwww.oliveyoung.co.kr%2Fstore%2Fgoods%2FgetGoodsDetail.do%3FgoodsNo%3DA000000235842%26tab%3Dreview&dt=%5B%ED%94%BC%EB%B6%80%20%EA%B3%A0%EB%AF%BC%EB%B3%84%20%EB%A7%9E%EC%B6%A4%20%EC%BC%80%EC%96%B4%5D%EA%B0%80%EC%89%AC%2010%EC%B4%88%20%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%9C%20%EB%B2%84%EB%B8%94%ED%8C%A9%204%EC%A2%85%20%EA%B3%A8%EB%9D%BC%EB%8B%B4%EA%B8%B0%20150%ED%9A%8C%EB%B6%84%20%7C%20%EC%98%AC%EB%A6%AC%EB%B8%8C%EC%98%81&tfd=1746",
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://www.oliveyoung.co.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "content-type": "text/plain;charset=UTF-8",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "postData": "en=view_item&_c=1&pr1=nm%5B%ED%94%BC%EB%B6%80%20%EA%B3%A0%EB%AF%BC%EB%B3%84%20%EB%A7%9E%EC%B6%A4%20%EC%BC%80%EC%96%B4%5D%EA%B0%80%EC%89%AC%2010%EC%B4%88%20%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%9C%20%EB%B2%84%EB%B8%94%ED%8C%A9%204%EC%A2%85%20%EA%B3%A8%EB%9D%BC%EB%8B%B4%EA%B8%B0%20150%ED%9A%8C%EB%B6%84~idA000000235842~pr36900~br%EA%B0%80%EC%89%AC~ca%EB%A7%88%EC%8A%A4%ED%81%AC%ED%8C%A9%7C%ED%8E%98%EC%9D%B4%EC%85%9C%ED%8C%A9%7C%EC%8A%AC%EB%A6%AC%ED%95%91~c2%EC%95%B0%ED%94%8C%ED%8C%A9~k0dimension43~v0A000000235842~k1dimension44~v1%5B%ED%94%BC%EB%B6%80%20%EA%B3%A0%EB%AF%BC%EB%B3%84%20%EB%A7%9E%EC%B6%A4%20%EC%BC%80%EC%96%B4%5D%EA%B0%80%EC%89%AC%2010%EC%B4%88%20%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%9C%20%EB%B2%84%EB%B8%94%ED%8C%A9%204%EC%A2%85%20%EA%B3%A8%EB%9D%BC%EB%8B%B4%EA%B8%B0%20150%ED%9A%8C%EB%B6%84~k2dimension46~v2%EC%A0%95%EC%83%81~k3dimension47~v3N~k4dimension48~v4N~k5dimension49~v5N~k6dimension51~v6N~k7dimension52~v7N~k8dimension53~v8Y~k9dimension55~v9Y~kAdimension56~vA1689~kBdimension57~vB%EB%A7%88%EC%8A%A4%ED%81%AC%ED%8C%A9%7C%ED%8E%98%EC%9D%B4%EC%85%9C%ED%8C%A9%7C%EC%8A%AC%EB%A6%AC%ED%95%91%2F%EC%95%B0%ED%94%8C%ED%8C%A9~kCdimension60~vC17&ep.channel_type=PC&_et=4"
+  },
+  {
+    "type": "REQUEST",
+    "method": "POST",
+    "url": "https://www.google-analytics.com/j/collect?v=1&_v=j102&a=462356077&t=event&ni=1&cu=KRW&_s=1&dl=https%3A%2F%2Fwww.oliveyoung.co.kr%2Fstore%2Fgoods%2FgetGoodsDetail.do%3FgoodsNo%3DA000000235842%26tab%3Dreview&ul=ko-kr&dt=%5B%ED%94%BC%EB%B6%80%20%EA%B3%A0%EB%AF%BC%EB%B3%84%20%EB%A7%9E%EC%B6%A4%20%EC%BC%80%EC%96%B4%5D%EA%B0%80%EC%89%AC%2010%EC%B4%88%20%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%9C%20%EB%B2%84%EB%B8%94%ED%8C%A9%204%EC%A2%85%20%EA%B3%A8%EB%9D%BC%EB%8B%B4%EA%B8%B0%20150%ED%9A%8C%EB%B6%84%20%7C%20%EC%98%AC%EB%A6%AC%EB%B8%8C%EC%98%81&sr=1920x1080&vp=1905x1080&ec=ecommerce&ea=ee-productView&_u=aCDAAEALAAAAACAMI~&jid=545227629&gjid=1120470724&cid=590320055.1767326050&tid=UA-92021806-9&_gid=1480241845.1767326050&_r=1&_slc=1&gtm=45He5ca1n81PJLS5M7v844468268za200zd844468268&cd3=PC&cd41=8800250590588&cd42=%5B%ED%94%BC%EB%B6%80%20%EA%B3%A0%EB%AF%BC%EB%B3%84%20%EB%A7%9E%EC%B6%A4%20%EC%BC%80%EC%96%B4%5D%EA%B0%80%EC%89%AC%2010%EC%B4%88%20%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%9C%20%EB%B2%84%EB%B8%94%ED%8C%A9%204%EC%A2%85%20%EA%B3%A8%EB%9D%BC%EB%8B%B4%EA%B8%B0%20150%ED%9A%8C%EB%B6%84&cd50=%EA%B0%80%EC%89%AC&cd75=&cd76=&cd121=%5B%ED%94%BC%EB%B6%80%20%EA%B3%A0%EB%AF%BC%EB%B3%84%20%EB%A7%9E%EC%B6%A4%20%EC%BC%80%EC%96%B4%5D%EA%B0%80%EC%89%AC%2010%EC%B4%88%20%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%9C%20%EB%B2%84%EB%B8%94%ED%8C%A9%204%EC%A2%85%20%EA%B3%A8%EB%9D%BC%EB%8B%B4%EA%B8%B0%20150%ED%9A%8C%EB%B6%84&cd123=Mozilla%2F5.0%20(Windows%20NT%2010.0%3B%20Win64%3B%20x64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F120.0.0.0%20Safari%2F537.36&gcd=13l3l3l3l1l1&dma=0&tag_exp=103116026~103200004~104527907~104528501~104684208~104684211~105391252~115583767~115938466~115938468~116184927~116184929~116251938~116251940&pa=detail&pr1br=%EA%B0%80%EC%89%AC&pr1ca=%EB%A7%88%EC%8A%A4%ED%81%AC%ED%8C%A9%7C%ED%8E%98%EC%9D%B4%EC%85%9C%ED%8C%A9%7C%EC%8A%AC%EB%A6%AC%ED%95%91%2F%EC%95%B0%ED%94%8C%ED%8C%A9&pr1cd43=A000000235842&pr1cd44=%5B%ED%94%BC%EB%B6%80%20%EA%B3%A0%EB%AF%BC%EB%B3%84%20%EB%A7%9E%EC%B6%A4%20%EC%BC%80%EC%96%B4%5D%EA%B0%80%EC%89%AC%2010%EC%B4%88%20%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%9C%20%EB%B2%84%EB%B8%94%ED%8C%A9%204%EC%A2%85%20%EA%B3%A8%EB%9D%BC%EB%8B%B4%EA%B8%B0%20150%ED%9A%8C%EB%B6%84&pr1cd46=%EC%A0%95%EC%83%81&pr1cd47=N&pr1cd48=N&pr1cd49=N&pr1cd51=N&pr1cd52=N&pr1cd53=Y&pr1cd55=Y&pr1cd56=1689&pr1cd57=%EB%A7%88%EC%8A%A4%ED%81%AC%ED%8C%A9%7C%ED%8E%98%EC%9D%B4%EC%85%9C%ED%8C%A9%7C%EC%8A%AC%EB%A6%AC%ED%95%91%2F%EC%95%B0%ED%94%8C%ED%8C%A9&pr1cd60=17&pr1id=8800250590588&pr1nm=%5B%ED%94%BC%EB%B6%80%20%EA%B3%A0%EB%AF%BC%EB%B3%84%20%EB%A7%9E%EC%B6%A4%20%EC%BC%80%EC%96%B4%5D%EA%B0%80%EC%89%AC%2010%EC%B4%88%20%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%9C%20%EB%B2%84%EB%B8%94%ED%8C%A9%204%EC%A2%85%20%EA%B3%A8%EB%9D%BC%EB%8B%B4%EA%B8%B0%20150%ED%9A%8C%EB%B6%84&pr1pr=36900&z=1125490784",
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://www.oliveyoung.co.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "content-type": "text/plain",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "postData": null
+  },
+  {
+    "type": "REQUEST",
+    "method": "POST",
+    "url": "https://m.oliveyoung.co.kr/review/api/v2/reviews",
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://www.oliveyoung.co.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "content-type": "application/json",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "postData": "{\"goodsNumber\":\"A000000235842\",\"page\":1,\"size\":10,\"sortType\":\"USEFUL_SCORE_DESC\",\"reviewType\":\"ALL\"}"
+  },
+  {
+    "type": "RESPONSE",
+    "url": "https://m.oliveyoung.co.kr/review/api/v2/reviews",
+    "status": 200,
+    "data": {
+      "status": "SUCCESS",
+      "code": 200,
+      "message": "요청에 성공하였습니다.",
+      "pagination": null,
+      "data": [
+        {
+          "reviewId": 53662910,
+          "content": "한달넘게 사용해보니 이젠 이거없으면 안될정도로 매력에 푹빠졌어요~~^^  정말 촉촉하고 쫀득하고 탱탱하게 피부가 바뀌더라구여~~ 인생템이 됐습니다~^^  꼭꼭 사용해보시길 강권합니다~🤗👍🏻👍🏻👍🏻",
+          "goodsDto": {
+            "goodsNumber": "A000000235842",
+            "itemNumber": "001",
+            "legacyGoodsNumber": "8800250590588",
+            "goodsName": "[피부 고민별 맞춤 케어]가쉬 10초 마이크로 버블팩 4종 골라담기 150회분",
+            "optionName": "리프트 부스트(탄력)"
+          },
+          "reviewScore": 5,
+          "hasPhoto": true,
+          "isRepurchase": true,
+          "isMonthUseReview": false,
+          "isMonthOverReview": true,
+          "reviewType": "NORMAL",
+          "usefulPoint": 1512,
+          "photoReviewList": [
+            {
+              "imageSequence": 1,
+              "imagePath": "2025/12/30/ffe832648af94cd69e2ffdf5b3203b511767105208719.png"
+            },
+            {
+              "imageSequence": 2,
+              "imagePath": "2025/12/30/d074df2178b7458b88a196f464c544631767105212656.png"
+            },
+            {
+              "imageSequence": 3,
+              "imagePath": "2025/12/30/4aa09711a5064a17a049db1d598afc8b1767105216419.png"
+            }
+          ],
+          "profileDto": {
+            "memberNickname": "장연례",
+            "profileImageUrl": "2025/10/05/1759656150602.png",
+            "isShutterbrity": false,
+            "isTopReviewer": false,
+            "reviewerRank": null,
+            "profileKey": "NWI2N05aRTZmSTVHVXBmaDVWalVCZz09",
+            "skinType": null,
+            "skinTone": null,
+            "skinTrouble": [],
+            "isSkinTypeMatched": false,
+            "isSkinToneMatched": false
+          },
+          "createdDateTime": "2025.12.30",
+          "recommendCount": 2,
+          "isMyReview": false,
+          "isRecommended": false
+        },
+        {
+          "reviewId": 53462419,
+          "content": "계속 사용중이며 피부 바르면 쫀쫀하고 수분 형성되어서 건조 잡아줘요 ㅎㅎ",
+          "goodsDto": {
+            "goodsNumber": "A000000235842",
+            "itemNumber": "004",
+            "legacyGoodsNumber": "8800250591745",
+            "goodsName": "[피부 고민별 맞춤 케어]가쉬 10초 마이크로 버블팩 4종 골라담기 150회분",
+            "optionName": "울트라 브이 아쿠아 밤(수분)"
+          },
+          "reviewScore": 5,
+          "hasPhoto": false,
+          "isRepurchase": false,
+          "isMonthUseReview": false,
+          "isMonthOverReview": true,
+          "reviewType": "NORMAL",
+          "usefulPoint": 1134,
+          "photoReviewList": [],
+          "profileDto": {
+            "memberNickname": "닉네임공백제외",
+            "profileImageUrl": "2025/04/21/1745219524399.png",
+            "isShutterbrity": false,
+            "isTopReviewer": true,
+            "reviewerRank": 567,
+            "profileKey": "MHJKcjN4NmYra0s0N3c3UzNEbVFwUT09",
+            "skinType": "A03",
+            "skinTone": "B01",
+            "skinTrouble": [
+              "C01",
+              "C02"
+            ],
+            "isSkinTypeMatched": false,
+            "isSkinToneMatched": false
+          },
+          "createdDateTime": "2025.12.25",
+          "recommendCount": 3,
+          "isMyReview": false,
+          "isRecommended": false
+        },
+        {
+          "reviewId": 51018025,
+          "content": "진짜 버블 팩 완전 완전 좋으니까 저는 스킨케어 마지막 때 발라 주는데 메이크업도 잘 먹고 좋아요",
+          "goodsDto": {
+            "goodsNumber": "A000000235842",
+            "itemNumber": "004",
+            "legacyGoodsNumber": "8800250591745",
+            "goodsName": "[피부 고민별 맞춤 케어]가쉬 10초 마이크로 버블팩 4종 골라담기 150회분",
+            "optionName": "울트라 브이 아쿠아 밤(수분)"
+          },
+          "reviewScore": 5,
+          "hasPhoto": false,
+          "isRepurchase": false,
+          "isMonthUseReview": false,
+          "isMonthOverReview": true,
+          "reviewType": "NORMAL",
+          "usefulPoint": 1098,
+          "photoReviewList": [],
+          "profileDto": {
+            "memberNickname": "손명진",
+            "profileImageUrl": "2025/11/12/1762949062771.png",
+            "isShutterbrity": false,
+            "isTopReviewer": true,
+            "reviewerRank": 270,
+            "profileKey": "T204YllnbzNSLzMwbmlzTXZRNW5sZz09",
+            "skinType": null,
+            "skinTone": null,
+            "skinTrouble": [],
+            "isSkinTypeMatched": false,
+            "isSkinToneMatched": false
+          },
+          "createdDateTime": "2025.11.05",
+          "recommendCount": 10,
+          "isMyReview": false,
+          "isRecommended": false
+        },
+        {
+          "reviewId": 53698241,
+          "content": "10초 만에 사용 가능해서 바쁜 날에도 간편하게 케어할 수 있고, 마이크로 버블 덕분에 모공 속 노폐물까지 부드럽게 정리되는 느낌이에요. 150회분이라 오래 사용할 수 있어 가성비도 좋습니다.\r\n\r\n피부 진정이 필요하거나 민감한 피부를 가진 분들에게 적극 추천드리고 싶은 제품이에요!",
+          "goodsDto": {
+            "goodsNumber": "A000000235842",
+            "itemNumber": "003",
+            "legacyGoodsNumber": "8800250591769",
+            "goodsName": "[피부 고민별 맞춤 케어]가쉬 10초 마이크로 버블팩 4종 골라담기 150회분",
+            "optionName": "트리플 슈퍼 리페어(진정)"
+          },
+          "reviewScore": 5,
+          "hasPhoto": true,
+          "isRepurchase": false,
+          "isMonthUseReview": false,
+          "isMonthOverReview": true,
+          "reviewType": "NORMAL",
+          "usefulPoint": 1080,
+          "photoReviewList": [
+            {
+              "imageSequence": 1,
+              "imagePath": "2025/12/31/5803fc8e7c2d4fa495929d11acfcb2981767190047591.png"
+            }
+          ],
+          "profileDto": {
+            "memberNickname": "pinkyrian",
+            "profileImageUrl": "2020/03/25/1585114707549.png",
+            "isShutterbrity": false,
+            "isTopReviewer": true,
+            "reviewerRank": 699,
+            "profileKey": "emdiS1ZTT2xnckhjdnd0Ujh3ZUlkQT09",
+            "skinType": "A02",
+            "skinTone": "B01",
+            "skinTrouble": [
+              "C01",
+              "C02"
+            ],
+            "isSkinTypeMatched": false,
+            "isSkinToneMatched": false
+          },
+          "createdDateTime": "2025.12.31",
+          "recommendCount": 2,
+          "isMyReview": false,
+          "isRecommended": false
+        },
+        {
+          "reviewId": 51940146,
+          "content": "버블팩은 메노킨에 이어 가쉬가 두 번째네요. 두 브랜드 모두 화잘먹을 키워드로 살짝 가격차가 있으면서 메노킨은 30초, 이에 질세라 가쉬는 10초를 강조한. 개인적으로 일단 고민 되는 리브트 부스트와 퍼펙트 멜라 제로를 구매했고 맘에 들면 4가지 라인업 모두 다 사용해 보려구요. 자세한 후기는 꾸준히 사용해 본 후 한달사용리뷰 통해 남겨볼께요.",
+          "goodsDto": {
+            "goodsNumber": "A000000235842",
+            "itemNumber": "001",
+            "legacyGoodsNumber": "8800250590588",
+            "goodsName": "[피부 고민별 맞춤 케어]가쉬 10초 마이크로 버블팩 4종 골라담기 150회분",
+            "optionName": "리프트 부스트(탄력)"
+          },
+          "reviewScore": 5,
+          "hasPhoto": true,
+          "isRepurchase": false,
+          "isMonthUseReview": false,
+          "isMonthOverReview": false,
+          "reviewType": "NORMAL",
+          "usefulPoint": 810,
+          "photoReviewList": [
+            {
+              "imageSequence": 1,
+              "imagePath": "2025/11/28/5ce01a73a7ed4fe499e6da02d38f61341764334211820.png"
+            },
+            {
+              "imageSequence": 2,
+              "imagePath": "2025/11/28/f6491f6e8cf44e57b1cd200dc516f89f1764334219313.png"
+            },
+            {
+              "imageSequence": 3,
+              "imagePath": "2025/11/28/d9b1d74cb2044445bfa8c59567118e2a1764334222908.png"
+            }
+          ],
+          "profileDto": {
+            "memberNickname": "Remy",
+            "profileImageUrl": "2022/03/15/1647330345106.png",
+            "isShutterbrity": false,
+            "isTopReviewer": false,
+            "reviewerRank": null,
+            "profileKey": "eUtReGdDd2xQck1nR2JFSEYrY2dwUT09",
+            "skinType": "A02",
+            "skinTone": "B02",
+            "skinTrouble": [
+              "C02",
+              "C03"
+            ],
+            "isSkinTypeMatched": false,
+            "isSkinToneMatched": false
+          },
+          "createdDateTime": "2025.11.28",
+          "recommendCount": 5,
+          "isMyReview": false,
+          "isRecommended": false
+        },
+        {
+          "reviewId": 53622167,
+          "content": "전부터 궁근했는데 젤 기본템인 것 부타 구매해뵜어요. 생각보다 작은 사이즈에 놀랐어요. 거품이 부드럽고 흡수가 잘됩니다. 바르면 쫀쫀한 느낌이에요. 저는 속건조가 좀 심해서 토너단계 좀 더 해야하더라구요.",
+          "goodsDto": {
+            "goodsNumber": "A000000235842",
+            "itemNumber": "001",
+            "legacyGoodsNumber": "8800250590588",
+            "goodsName": "[피부 고민별 맞춤 케어]가쉬 10초 마이크로 버블팩 4종 골라담기 150회분",
+            "optionName": "리프트 부스트(탄력)"
+          },
+          "reviewScore": 5,
+          "hasPhoto": true,
+          "isRepurchase": false,
+          "isMonthUseReview": false,
+          "isMonthOverReview": false,
+          "reviewType": "NORMAL",
+          "usefulPoint": 792,
+          "photoReviewList": [
+            {
+              "imageSequence": 1,
+              "imagePath": "2025/12/29/0083064ee26a4901bdfbff6372cd5f6f1767016186426.png"
+            }
+          ],
+          "profileDto": {
+            "memberNickname": "코코뮬",
+            "profileImageUrl": "2025/03/10/1741599394518.png",
+            "isShutterbrity": false,
+            "isTopReviewer": false,
+            "reviewerRank": null,
+            "profileKey": "M2dOVWkwejZrcFo4bm56ZXBBa0hxUT09",
+            "skinType": "A03",
+            "skinTone": "B02",
+            "skinTrouble": [
+              "C01",
+              "C05"
+            ],
+            "isSkinTypeMatched": false,
+            "isSkinToneMatched": false
+          },
+          "createdDateTime": "2025.12.29",
+          "recommendCount": 2,
+          "isMyReview": false,
+          "isRecommended": false
+        },
+        {
+          "reviewId": 53488403,
+          "content": "탄력감이 눈에 보이진않아요 두병삿는데 ㅠㅠ딱히 모르겟네요 바르면 겉광만 보여지고 속은 딱히",
+          "goodsDto": {
+            "goodsNumber": "A000000235842",
+            "itemNumber": "001",
+            "legacyGoodsNumber": "8800250590588",
+            "goodsName": "[피부 고민별 맞춤 케어]가쉬 10초 마이크로 버블팩 4종 골라담기 150회분",
+            "optionName": "리프트 부스트(탄력)"
+          },
+          "reviewScore": 3,
+          "hasPhoto": true,
+          "isRepurchase": false,
+          "isMonthUseReview": false,
+          "isMonthOverReview": true,
+          "reviewType": "NORMAL",
+          "usefulPoint": 792,
+          "photoReviewList": [
+            {
+              "imageSequence": 1,
+              "imagePath": "2025/12/26/8ebdc1a4df0e469293ed588009ca271b1766714217550.png"
+            }
+          ],
+          "profileDto": {
+            "memberNickname": "리미요미",
+            "profileImageUrl": "2023/07/12/1689165437168.png",
+            "isShutterbrity": false,
+            "isTopReviewer": false,
+            "reviewerRank": null,
+            "profileKey": "cGxaTFBVUlFKQ1d2U3Z2cUM5dk4vZz09",
+            "skinType": "A03",
+            "skinTone": null,
+            "skinTrouble": [
+              "C01",
+              "C02"
+            ],
+            "isSkinTypeMatched": false,
+            "isSkinToneMatched": false
+          },
+          "createdDateTime": "2025.12.26",
+          "recommendCount": 0,
+          "isMyReview": false,
+          "isRecommended": false
+        },
+        {
+          "reviewId": 51668558,
+          "content": "기존 메노킨(리프트) 사용중여서 비교해보면\r\n보습으론 메노킨(리프트)이 좋음\r\n메노킨 하나만 발라도 건조하지 않음\r\n가쉬(리프트)는 유분기 있고 광은 나지만\r\n보습이 충분하지 않음\r\n가격도 비쌈....",
+          "goodsDto": {
+            "goodsNumber": "A000000235842",
+            "itemNumber": "001",
+            "legacyGoodsNumber": "8800250590588",
+            "goodsName": "[피부 고민별 맞춤 케어]가쉬 10초 마이크로 버블팩 4종 골라담기 150회분",
+            "optionName": "리프트 부스트(탄력)"
+          },
+          "reviewScore": 3,
+          "hasPhoto": true,
+          "isRepurchase": false,
+          "isMonthUseReview": false,
+          "isMonthOverReview": false,
+          "reviewType": "NORMAL",
+          "usefulPoint": 738,
+          "photoReviewList": [
+            {
+              "imageSequence": 1,
+              "imagePath": "2025/11/22/fc031b46fbcf4d94bc75bd05015e61c61763739339550.png"
+            },
+            {
+              "imageSequence": 2,
+              "imagePath": "2025/11/22/ca77ca6b7f864379a4d886997889edc01763739320215.png"
+            },
+            {
+              "imageSequence": 3,
+              "imagePath": "2025/11/22/1df1a272dcc741d9ac930dbbc05f5e3f1763739415828.png"
+            }
+          ],
+          "profileDto": {
+            "memberNickname": "수수수민",
+            "profileImageUrl": "2022/12/15/1671088313948.png",
+            "isShutterbrity": false,
+            "isTopReviewer": true,
+            "reviewerRank": 974,
+            "profileKey": "TnI2dnZKeWFhcUlPbXB2Rm9BWWFidz09",
+            "skinType": "A02",
+            "skinTone": "B02",
+            "skinTrouble": [
+              "C01",
+              "C02"
+            ],
+            "isSkinTypeMatched": false,
+            "isSkinToneMatched": false
+          },
+          "createdDateTime": "2025.11.22",
+          "recommendCount": 31,
+          "isMyReview": false,
+          "isRecommended": false
+        },
+        {
+          "reviewId": 53640274,
+          "content": "과대 광고임...!\r\n솔직하게 광나는건 너무 좋은데, 왜 이렇게 효과가 좋은 척 과대 광고를 하는지..ㅠㅠ",
+          "goodsDto": {
+            "goodsNumber": "A000000235842",
+            "itemNumber": "002",
+            "legacyGoodsNumber": "8800250591752",
+            "goodsName": "[피부 고민별 맞춤 케어]가쉬 10초 마이크로 버블팩 4종 골라담기 150회분",
+            "optionName": "퍼펙트 멜라 제로(잡티)"
+          },
+          "reviewScore": 4,
+          "hasPhoto": false,
+          "isRepurchase": false,
+          "isMonthUseReview": false,
+          "isMonthOverReview": true,
+          "reviewType": "NORMAL",
+          "usefulPoint": 660,
+          "photoReviewList": [],
+          "profileDto": {
+            "memberNickname": "개냥언니",
+            "profileImageUrl": "2024/05/28/1716822993784.png",
+            "isShutterbrity": false,
+            "isTopReviewer": false,
+            "reviewerRank": null,
+            "profileKey": "ZktETXkyVlg3SmVTYkNUeUNaYloyQT09",
+            "skinType": null,
+            "skinTone": null,
+            "skinTrouble": [],
+            "isSkinTypeMatched": false,
+            "isSkinToneMatched": false
+          },
+          "createdDateTime": "2025.12.30",
+          "recommendCount": 1,
+          "isMyReview": false,
+          "isRecommended": false
+        },
+        {
+          "reviewId": 53621961,
+          "content": "한번쓰고 나서 끊을수가 없게 되었어요 보습에 좋고 요즘 너무 건조해서 또 찾게 되더라구요 올영에서 살수 있어서 더 편하고 좋아요 메이크업전에 바르는데 좋습니다",
+          "goodsDto": {
+            "goodsNumber": "A000000235842",
+            "itemNumber": "001",
+            "legacyGoodsNumber": "8800250590588",
+            "goodsName": "[피부 고민별 맞춤 케어]가쉬 10초 마이크로 버블팩 4종 골라담기 150회분",
+            "optionName": "리프트 부스트(탄력)"
+          },
+          "reviewScore": 5,
+          "hasPhoto": true,
+          "isRepurchase": true,
+          "isMonthUseReview": false,
+          "isMonthOverReview": false,
+          "reviewType": "NORMAL",
+          "usefulPoint": 660,
+          "photoReviewList": [
+            {
+              "imageSequence": 1,
+              "imagePath": "2025/12/29/622f788af1924b62953155ddf9019fb01767015661444.png"
+            }
+          ],
+          "profileDto": {
+            "memberNickname": "스마일데이지",
+            "profileImageUrl": "2020/06/05/1591341019620.png",
+            "isShutterbrity": false,
+            "isTopReviewer": false,
+            "reviewerRank": null,
+            "profileKey": "bUtSNFVEVHZGSGErd0Z4Vk84NzNDZz09",
+            "skinType": "A03",
+            "skinTone": "B01",
+            "skinTrouble": [
+              "C03",
+              "C04"
+            ],
+            "isSkinTypeMatched": false,
+            "isSkinToneMatched": false
+          },
+          "createdDateTime": "2025.12.29",
+          "recommendCount": 2,
+          "isMyReview": false,
+          "isRecommended": false
+        }
+      ],
+      "totalCnt": null,
+      "pageData": null
+    }
+  }
+]

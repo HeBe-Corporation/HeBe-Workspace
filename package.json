@@ -1,0 +1,17 @@
+{
+  "name": "imi-workspace",
+  "version": "1.0.0",
+  "description": "KR/KH/VN 멀티국가 회사 운영 시스템",
+  "type": "commonjs",
+  "scripts": {
+    "crawl:oliveyoung": "npx ts-node scripts/oliveyoung-review-crawler.ts"
+  },
+  "dependencies": {
+    "playwright": "^1.40.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.0"
+  }
+}
