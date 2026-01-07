@@ -1,0 +1,32 @@
+Employee ID,Full Name (VN),Last Name,First Name,Email,Phone,Department,Team,Role,Level,Reports To,Primary Brand,Secondary Brand,Tertiary Brand,Start Date,Slack ID,Notes
+VN-001,Nguyen Anna,Nguyen,Anna,anna@hebe.vn,,Executive,Leadership,CEO,Executive,,All Brands,,,,,
+KR-001,Kim Jin,Kim,Jin,jin@hebe.kr,,Executive,Leadership,CEO,Executive,,All Brands,,,,,"HEBE KR"
+KR-002,Park Jun,Park,Jun,jun@hebe.kr,,Executive,Leadership,Assistant Manager,Executive,KR-001,All Brands,,,,,"HEBE KR"
+VN-101,,,,,,"Operations","Warehouse",Warehouse Staff,Member,VN-001,,,,,,
+VN-102,,,,,,"Operations","Warehouse",Warehouse Staff,Member,VN-001,,,,,,
+VN-103,Nguyen My,Nguyen,My,,,"Finance","Accounting",Accountant,Member,VN-001,,,,,,
+VN-104,Tran Uyen,Tran,Uyen,,,"Finance","Accounting",Accountant,Member,VN-001,,,,,,
+VN-105,Le Tam,Le,Tam,,,"Finance","Accounting",Accountant,Member,VN-001,,,,,,
+VN-106,Nguyen Kim,Nguyen,Kim,,,"Finance","Accounting",Accountant,Member,VN-001,,,,,,
+VN-201,Nguyen Giang,Nguyen,Giang,,,"Commercial","Sales",Sales Executive,Member,VN-001,,,,,,"Commission-based"
+VN-202,Tran Chau,Tran,Chau,,,"Commercial","Sales",Sales Executive,Member,VN-001,,,,,,"Commission-based"
+VN-203,Le Tu Anh,Le,Tu Anh,,,"Commercial","Sales",Sales Executive,Member,VN-001,,,,,,"Commission-based"
+VN-301,Nguyen Thoai,Nguyen,Thoai,thoai@hebe.vn,,"Commercial","E-Commerce",E-Commerce Lead,Lead,VN-001,,,,,,
+VN-302,Tran Nguyen,Tran,Nguyen,,,"Commercial","E-Commerce",E-Commerce Specialist,Member,VN-301,,,,,,
+VN-303,Le Loc,Le,Loc,,,"Commercial","E-Commerce",E-Commerce Specialist,Member,VN-301,,,,,,
+VN-304,Nguyen Trinh,Nguyen,Trinh,,,"Commercial","E-Commerce",E-Commerce Specialist,Member,VN-301,,,,,,
+VN-305,Tran Duyen,Tran,Duyen,,,"Commercial","E-Commerce",E-Commerce Specialist,Member,VN-301,,,,,,
+VN-306,Le Tai,Le,Tai,,,"Commercial","E-Commerce",E-Commerce Specialist,Member,VN-301,,,,,,
+VN-307,Nguyen Nhi,Nguyen,Nhi,,,"Commercial","E-Commerce",E-Commerce Specialist,Member,VN-301,,,,,,
+VN-401,Tran Huy,Tran,Huy,huy@hebe.vn,,"Marketing","Digital",Digital Executive,Member,VN-001,,,,,,
+VN-500,TBD,TBD,TBD,,,"Marketing","Marketing",Marketing Manager,Lead,VN-001,,,,"2026-03-01",,"Joining March 2026"
+VN-501,Nguyen Ly,Nguyen,Ly,,,"Marketing","ABM",Account Manager,Member,VN-500,,,,,,
+VN-502,Tran Van,Tran,Van,,,"Marketing","ABM",Account Manager,Member,VN-500,,,,,,
+VN-503,Le Tram,Le,Tram,,,"Marketing","ABM",Account Manager,Member,VN-500,,,,,,
+VN-504,Nguyen Uyen,Nguyen,Uyen,,,"Marketing","ABM",Account Manager,Member,VN-500,,,,,,
+VN-505,Tran Bong,Tran,Bong,,,"Marketing","Media",Media Specialist,Member,VN-500,,,,,,
+VN-506,Le Duy,Le,Duy,,,"Marketing","Media",Media Specialist,Member,VN-500,,,,,,
+VN-507,Nguyen Hoa,Nguyen,Hoa,,,"Marketing","Design",Graphic Designer,Member,VN-500,,,,,,
+VN-508,Tran Vy,Tran,Vy,,,"Marketing","Design",Graphic Designer,Member,VN-500,,,,,,
+VN-509,Le Mai,Le,Mai,,,"Marketing","Content",Content Creator,Member,VN-500,,,,,,
+VN-510,Nguyen Khue,Nguyen,Khue,,,"Marketing","Content",Content Creator,Member,VN-500,,,,,,

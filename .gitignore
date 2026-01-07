@@ -45,3 +45,19 @@ pnpm-lock.yaml
 
 # Never commit real API keys
 *_API_KEY.mcp.json
+
+# Large files
+apps/oliveyoung-analyzer/release/
+*.exe
+*.zip
+
+
+# Secret files (contain API tokens)
+scripts/add-brand-covers.js
+scripts/add-linked-dbs.js
+scripts/enhance-main-page.js
+scripts/get-brands.js
+scripts/notion-workspace-builder/config.js
+scripts/add-brand-icons.js
+scripts/cleanup-and-stats.js
+

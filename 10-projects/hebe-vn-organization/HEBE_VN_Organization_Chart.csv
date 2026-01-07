@@ -1,0 +1,52 @@
+HEBE Vietnam Organization Chart
+Last Updated: 2026-01-05
+Total Members: 27
+
+=== EXECUTIVE ===
+Employee ID,Last Name,First Name,Email,Phone,Team,Role,Level,Reports To,Brands,Start Date,Slack ID
+VN-001,Nguyen,Anna,anna@hebe.vn,,Executive,CEO,Executive,-,All Brands,,@anna
+KR-001,Kim,Jin,jin@hebe.kr,,Executive,CEO,Executive,-,All Brands,,@jin
+KR-002,Park,Jun,jun@hebe.kr,,Executive,Assistant Manager,Executive,KR-001,All Brands,,@jun
+
+=== WAREHOUSE & ACCOUNTING (6 Members) ===
+Employee ID,Last Name,First Name,Email,Phone,Team,Role,Level,Reports To,Brands,Start Date,Slack ID
+VN-101,,,,,"Warehouse & Accounting",Warehouse Staff,Member,VN-001,,,
+VN-102,,,,,"Warehouse & Accounting",Warehouse Staff,Member,VN-001,,,
+VN-103,Nguyen,My,,,Accounting,Accountant,Member,VN-001,,,
+VN-104,Tran,Uyen,,,Accounting,Accountant,Member,VN-001,,,
+VN-105,Le,Tam,,,Accounting,Accountant,Member,VN-001,,,
+VN-106,Nguyen,Kim,,,Accounting,Accountant,Member,VN-001,,,
+
+=== SALES (3 Members | Commission-based) ===
+Employee ID,Last Name,First Name,Email,Phone,Team,Role,Level,Reports To,Brands,Start Date,Slack ID,Commission Type
+VN-201,Nguyen,Giang,,,Sales,Sales Member,Member,VN-001,,,,Individual
+VN-202,Tran,Chau,,,Sales,Sales Member,Member,VN-001,,,,Individual
+VN-203,Le,Tu Anh,,,Sales,Sales Member,Member,VN-001,,,,Individual
+
+=== E-COMMERCE (7 Members | Lead: Mr. Thoai) ===
+Employee ID,Last Name,First Name,Email,Phone,Team,Role,Level,Reports To,Brands,Start Date,Slack ID
+VN-301,Nguyen,Thoai,thoai@hebe.vn,,E-Commerce,E-Commerce Lead,Lead,VN-001,,,@thoai
+VN-302,Tran,Nguyen,,,E-Commerce,E-Commerce Member,Member,VN-301,,,
+VN-303,Le,Loc,,,E-Commerce,E-Commerce Member,Member,VN-301,,,
+VN-304,Nguyen,Trinh,,,E-Commerce,E-Commerce Member,Member,VN-301,,,
+VN-305,Tran,Duyen,,,E-Commerce,E-Commerce Member,Member,VN-301,,,
+VN-306,Le,Tai,,,E-Commerce,E-Commerce Member,Member,VN-301,,,
+VN-307,Nguyen,Nhi,,,E-Commerce,E-Commerce Member,Member,VN-301,,,
+
+=== DIGITAL (1 Member) ===
+Employee ID,Last Name,First Name,Email,Phone,Team,Role,Level,Reports To,Brands,Start Date,Slack ID
+VN-401,Tran,Huy,huy@hebe.vn,,Digital,Digital Executive,Member,VN-001,,,@huy
+
+=== MARKETING (10 Members | Manager: TBD - Joining 2026-03-01) ===
+Employee ID,Last Name,First Name,Email,Phone,Team,Sub-Team,Role,Level,Reports To,Brands,Start Date,Slack ID
+VN-500,TBD,TBD,,,Marketing,-,Marketing Manager,Lead,VN-001,,2026-03-01,
+VN-501,Nguyen,Ly,,,Marketing,ABM,Account-Based Marketing,Member,VN-500,,,
+VN-502,Tran,Van,,,Marketing,ABM,Account-Based Marketing,Member,VN-500,,,
+VN-503,Le,Tram,,,Marketing,ABM,Account-Based Marketing,Member,VN-500,,,
+VN-504,Nguyen,Uyen,,,Marketing,ABM,Account-Based Marketing,Member,VN-500,,,
+VN-505,Tran,Bong,,,Marketing,Media,Media Specialist,Member,VN-500,,,
+VN-506,Le,Duy,,,Marketing,Media,Media Specialist,Member,VN-500,,,
+VN-507,Nguyen,Hoa,,,Marketing,Design,Graphic Designer,Member,VN-500,,,
+VN-508,Tran,Vy,,,Marketing,Design,Graphic Designer,Member,VN-500,,,
+VN-509,Le,Mai,,,Marketing,Content,Content Creator,Member,VN-500,,,
+VN-510,Nguyen,Khue,,,Marketing,Content,Content Creator,Member,VN-500,,,

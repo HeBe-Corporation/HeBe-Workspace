@@ -1,0 +1,42 @@
+ID,Country,Name,Department,Team,Role,Reports To,Email,Phone,Birthday,Brand 1,Brand 2,Brand 3,Platform 1,Platform 2,Platform 3,Slack,Start Date,Days,Status,Notes
+KR-001,Korea,Kim Jin,Executive,Leadership,CEO,-,jin@hebe.kr,,,All Brands,,,,,,,,,Active,HeBe Korea Corporation
+KR-002,Korea,Park Jun,Executive,Leadership,Assistant Manager,KR-001,jun@hebe.kr,,,All Brands,,,,,,,,,Active,HeBe Korea Corporation
+KR-003,Korea,-,Executive,Leadership,Staff,KR-001,email,phone,yyyy-mm-dd,-,-,-,,,,slack,yyyy-mm-dd,,Pending,
+VN-001,Vietnam,Nguyen Anna,Executive,Leadership,CEO,KR-001,anna@hebe.vn,,,All Brands,,,,,,@anna,,,Active,HeBe Vietnam
+VN-101,Vietnam,-,Operations,Warehouse,Warehouse Staff,VN-001,email,phone,yyyy-mm-dd,-,-,-,,,,slack,yyyy-mm-dd,,Pending,
+VN-102,Vietnam,-,Operations,Warehouse,Warehouse Staff,VN-001,email,phone,yyyy-mm-dd,-,-,-,,,,slack,yyyy-mm-dd,,Pending,
+VN-103,Vietnam,Nguyen My,Finance,Accounting,Accountant,VN-001,email,phone,yyyy-mm-dd,-,-,-,,,,slack,yyyy-mm-dd,,Pending,
+VN-104,Vietnam,Tran Uyen,Finance,Accounting,Accountant,VN-001,email,phone,yyyy-mm-dd,-,-,-,,,,slack,yyyy-mm-dd,,Pending,
+VN-105,Vietnam,Le Tam,Finance,Accounting,Accountant,VN-001,email,phone,yyyy-mm-dd,-,-,-,,,,slack,yyyy-mm-dd,,Pending,
+VN-106,Vietnam,Nguyen Kim,Finance,Accounting,Accountant,VN-001,email,phone,yyyy-mm-dd,-,-,-,,,,slack,yyyy-mm-dd,,Pending,
+VN-201,Vietnam,Nguyen Giang,Commercial,Sales,Sales Executive,VN-001,email,phone,yyyy-mm-dd,-,-,-,,,,slack,yyyy-mm-dd,,Pending,Commission
+VN-202,Vietnam,Tran Chau,Commercial,Sales,Sales Executive,VN-001,email,phone,yyyy-mm-dd,-,-,-,,,,slack,yyyy-mm-dd,,Pending,Commission
+VN-203,Vietnam,Le Tu Anh,Commercial,Sales,Sales Executive,VN-001,email,phone,yyyy-mm-dd,-,-,-,,,,slack,yyyy-mm-dd,,Pending,Commission
+VN-301,Vietnam,Nguyen Thoai,Commercial,E-Commerce,E-Commerce Lead,VN-001,thoai@hebe.vn,,,-,-,-,Shopee,TikTok Shop,Lazada,@thoai,,,Active,
+VN-302,Vietnam,Tran Nguyen,Commercial,E-Commerce,E-Commerce Specialist,VN-301,email,phone,yyyy-mm-dd,-,-,-,Shopee,TikTok Shop,Lazada,slack,yyyy-mm-dd,,Pending,
+VN-303,Vietnam,Le Loc,Commercial,E-Commerce,E-Commerce Specialist,VN-301,email,phone,yyyy-mm-dd,-,-,-,Shopee,TikTok Shop,Lazada,slack,yyyy-mm-dd,,Pending,
+VN-304,Vietnam,Nguyen Trinh,Commercial,E-Commerce,E-Commerce Specialist,VN-301,email,phone,yyyy-mm-dd,-,-,-,Shopee,TikTok Shop,Lazada,slack,yyyy-mm-dd,,Pending,
+VN-305,Vietnam,Tran Duyen,Commercial,E-Commerce,E-Commerce Specialist,VN-301,email,phone,yyyy-mm-dd,-,-,-,Shopee,TikTok Shop,Lazada,slack,yyyy-mm-dd,,Pending,
+VN-306,Vietnam,Le Tai,Commercial,E-Commerce,E-Commerce Specialist,VN-301,email,phone,yyyy-mm-dd,-,-,-,Shopee,TikTok Shop,Lazada,slack,yyyy-mm-dd,,Pending,
+VN-307,Vietnam,Nguyen Nhi,Commercial,E-Commerce,E-Commerce Specialist,VN-301,email,phone,yyyy-mm-dd,-,-,-,Shopee,TikTok Shop,Lazada,slack,yyyy-mm-dd,,Pending,
+VN-401,Vietnam,Tran Huy,Marketing,Digital,Digital Executive,VN-001,huy@hebe.vn,,,-,-,-,Instagram,Facebook,TikTok,@huy,,,Active,
+VN-500,Vietnam,TBD,Marketing,Marketing,Marketing Manager,VN-001,email,phone,yyyy-mm-dd,-,-,-,Instagram,Facebook,TikTok,slack,2026-03-01,,Upcoming,Joining Mar 2026
+VN-501,Vietnam,Nguyen Ly,Marketing,ABM,Account Manager,VN-500,email,phone,yyyy-mm-dd,-,-,-,Instagram,Facebook,TikTok,slack,yyyy-mm-dd,,Pending,
+VN-502,Vietnam,Tran Van,Marketing,ABM,Account Manager,VN-500,email,phone,yyyy-mm-dd,-,-,-,Instagram,Facebook,TikTok,slack,yyyy-mm-dd,,Pending,
+VN-503,Vietnam,Le Tram,Marketing,ABM,Account Manager,VN-500,email,phone,yyyy-mm-dd,-,-,-,Instagram,Facebook,TikTok,slack,yyyy-mm-dd,,Pending,
+VN-504,Vietnam,Nguyen Uyen,Marketing,ABM,Account Manager,VN-500,email,phone,yyyy-mm-dd,-,-,-,Instagram,Facebook,TikTok,slack,yyyy-mm-dd,,Pending,
+VN-505,Vietnam,Tran Bong,Marketing,Media,Media Specialist,VN-500,email,phone,yyyy-mm-dd,-,-,-,Instagram,Facebook,TikTok,slack,yyyy-mm-dd,,Pending,
+VN-506,Vietnam,Le Duy,Marketing,Media,Media Specialist,VN-500,email,phone,yyyy-mm-dd,-,-,-,Instagram,Facebook,TikTok,slack,yyyy-mm-dd,,Pending,
+VN-507,Vietnam,Nguyen Hoa,Marketing,Design,Graphic Designer,VN-500,email,phone,yyyy-mm-dd,-,-,-,Instagram,Facebook,TikTok,slack,yyyy-mm-dd,,Pending,
+VN-508,Vietnam,Tran Vy,Marketing,Design,Graphic Designer,VN-500,email,phone,yyyy-mm-dd,-,-,-,Instagram,Facebook,TikTok,slack,yyyy-mm-dd,,Pending,
+VN-509,Vietnam,Le Mai,Marketing,Content,Content Creator,VN-500,email,phone,yyyy-mm-dd,-,-,-,Instagram,Facebook,TikTok,slack,yyyy-mm-dd,,Pending,
+VN-510,Vietnam,Nguyen Khue,Marketing,Content,Content Creator,VN-500,email,phone,yyyy-mm-dd,-,-,-,Instagram,Facebook,TikTok,slack,yyyy-mm-dd,,Pending,
+KH-001,Cambodia,-,Executive,Leadership,Country Manager,KR-001,email,phone,yyyy-mm-dd,All Brands,,,,,,,yyyy-mm-dd,,Pending,HeBe Khmer Beauty
+KH-101,Cambodia,-,Operations,Warehouse,Warehouse Staff,KH-001,email,phone,yyyy-mm-dd,-,-,-,,,,slack,yyyy-mm-dd,,Pending,
+KH-201,Cambodia,-,Commercial,Sales,Sales Executive,KH-001,email,phone,yyyy-mm-dd,-,-,-,,,,slack,yyyy-mm-dd,,Pending,
+KH-202,Cambodia,-,Commercial,Sales,Sales Executive,KH-001,email,phone,yyyy-mm-dd,-,-,-,,,,slack,yyyy-mm-dd,,Pending,
+KH-301,Cambodia,-,Commercial,E-Commerce,E-Commerce Lead,KH-001,email,phone,yyyy-mm-dd,-,-,-,Shopee,TikTok Shop,,slack,yyyy-mm-dd,,Pending,
+KH-302,Cambodia,-,Commercial,E-Commerce,E-Commerce Specialist,KH-301,email,phone,yyyy-mm-dd,-,-,-,Shopee,TikTok Shop,,slack,yyyy-mm-dd,,Pending,
+KH-401,Cambodia,-,Marketing,Marketing,Marketing Lead,KH-001,email,phone,yyyy-mm-dd,-,-,-,Instagram,Facebook,TikTok,slack,yyyy-mm-dd,,Pending,
+KH-402,Cambodia,-,Marketing,ABM,Account Manager,KH-401,email,phone,yyyy-mm-dd,-,-,-,Instagram,Facebook,TikTok,slack,yyyy-mm-dd,,Pending,
+KH-403,Cambodia,-,Marketing,Content,Content Creator,KH-401,email,phone,yyyy-mm-dd,-,-,-,Instagram,Facebook,TikTok,slack,yyyy-mm-dd,,Pending,

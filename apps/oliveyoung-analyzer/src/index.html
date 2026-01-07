@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beauty Review Analyzer</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #6366f1;
+      --primary-light: #818cf8;
+      --primary-dark: #4f46e5;
+      --accent: #ec4899;
+      --accent-light: #f472b6;
+      --success: #10b981;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+      --neutral-50: #fafafa;
+      --neutral-100: #f4f4f5;
+      --neutral-200: #e4e4e7;
+      --neutral-300: #d4d4d8;
+      --neutral-400: #a1a1aa;
+      --neutral-500: #71717a;
+      --neutral-600: #52525b;
+      --neutral-700: #3f3f46;
+      --neutral-800: #27272a;
+      --neutral-900: #18181b;
+      --glass-bg: rgba(255, 255, 255, 0.85);
+      --glass-border: rgba(255, 255, 255, 0.18);
+      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+      --shadow-xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', 'Noto Sans KR', -apple-system, sans-serif;
+      background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4c1d95 100%);
+      min-height: 100vh;
+      color: var(--neutral-800);
+      overflow-x: hidden;
+    }
+
+    /* Animated Background */
+    .bg-pattern {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image:
+        radial-gradient(circle at 20% 80%, rgba(236, 72, 153, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(139, 92, 246, 0.1) 0%, transparent 40%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      padding: 40px 0 32px;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .logo-icon {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      box-shadow: 0 8px 32px rgba(236, 72, 153, 0.3);
+    }
+
+    .logo-text {
+      font-size: 1.5rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #fff 0%, rgba(255,255,255,0.8) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -0.5px;
+    }
+
+    .header-subtitle {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.95rem;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+    }
+
+    /* Glass Card */
+    .card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: 24px;
+      border: 1px solid var(--glass-border);
+      box-shadow: var(--shadow-xl);
+      overflow: hidden;
+    }
+
+    .card-body {
+      padding: 32px;
+    }
+
+    /* Input Section */
+    .input-card {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .input-header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .input-header h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--neutral-800);
+      margin-bottom: 8px;
+    }
+
+    .input-header p {
+      font-size: 0.875rem;
+      color: var(--neutral-500);
+    }
+
+    .input-wrapper {
+      position: relative;
+      margin-bottom: 24px;
+    }
+
+    .input-wrapper input {
+      width: 100%;
+      padding: 18px 24px;
+      padding-right: 140px;
+      border: 2px solid var(--neutral-200);
+      border-radius: 16px;
+      font-size: 1rem;
+      font-family: inherit;
+      transition: all 0.2s ease;
+      background: white;
+    }
+
+    .input-wrapper input:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+    }
+
+    .input-wrapper input::placeholder {
+      color: var(--neutral-400);
+    }
+
+    .btn {
+      font-family: inherit;
+      font-weight: 600;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .btn-primary {
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 12px 24px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: white;
+      font-size: 0.9rem;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-50%) translateY(-2px);
+      box-shadow: 0 8px 24px rgba(99, 102, 241, 0.4);
+    }
+
+    .btn-primary:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: translateY(-50%);
+    }
+
+    .help-box {
+      background: var(--neutral-100);
+      border-radius: 12px;
+      padding: 16px 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .help-box-icon {
+      width: 20px;
+      height: 20px;
+      color: var(--primary);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .help-box-content {
+      font-size: 0.85rem;
+      color: var(--neutral-600);
+      line-height: 1.6;
+    }
+
+    .help-box code {
+      background: white;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-family: 'SF Mono', 'Consolas', monospace;
+      font-size: 0.8rem;
+      color: var(--primary);
+    }
+
+    /* Progress Section */
+    .progress-section {
+      display: none;
+      margin-top: 32px;
+      padding-top: 32px;
+      border-top: 1px solid var(--neutral-200);
+    }
+
+    .progress-section.active {
+      display: block;
+    }
+
+    .progress-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
+
+    .progress-header span {
+      font-size: 0.875rem;
+      color: var(--neutral-600);
+    }
+
+    .progress-bar-wrapper {
+      height: 8px;
+      background: var(--neutral-200);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 100%;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      border-radius: 4px;
+      transition: width 0.3s ease;
+      width: 0%;
+    }
+
+    .progress-status {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 0.9rem;
+      color: var(--neutral-500);
+    }
+
+    /* Error */
+    .error-message {
+      display: none;
+      margin-top: 24px;
+      padding: 16px 20px;
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-radius: 12px;
+      color: #dc2626;
+      font-size: 0.9rem;
+    }
+
+    .error-message.active {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    /* ==================== DASHBOARD ==================== */
+    .dashboard {
+      display: none;
+    }
+
+    .dashboard.active {
+      display: block;
+    }
+
+    /* Dashboard Header */
+    .dashboard-header {
+      background: var(--glass-bg);
+      backdrop-filter: blur(20px);
+      border-radius: 20px;
+      padding: 28px 32px;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid var(--glass-border);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .product-info {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .product-badge {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, var(--success) 0%, #059669 100%);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      box-shadow: 0 8px 24px rgba(16, 185, 129, 0.3);
+    }
+
+    .product-details h1 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--neutral-800);
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+
+    .product-meta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 0.85rem;
+      color: var(--neutral-500);
+    }
+
+    .product-meta span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 12px;
+    }
+
+    .btn-ghost {
+      padding: 10px 18px;
+      background: var(--neutral-100);
+      color: var(--neutral-700);
+      font-size: 0.85rem;
+      border-radius: 10px;
+    }
+
+    .btn-ghost:hover {
+      background: var(--neutral-200);
+    }
+
+    .btn-accent {
+      padding: 10px 18px;
+      background: linear-gradient(135deg, var(--accent) 0%, #db2777 100%);
+      color: white;
+      font-size: 0.85rem;
+      border-radius: 10px;
+    }
+
+    .btn-accent:hover {
+      box-shadow: 0 4px 16px rgba(236, 72, 153, 0.4);
+    }
+
+    /* Grid Layout */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    /* Metric Cards */
+    .metrics-row {
+      margin-bottom: 24px;
+    }
+
+    .metric-card {
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      border: 1px solid var(--neutral-200);
+      transition: all 0.2s ease;
+    }
+
+    .metric-card:hover {
+      border-color: var(--primary-light);
+      box-shadow: var(--shadow);
+    }
+
+    .metric-label {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--neutral-500);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+
+    .metric-value {
+      font-size: 2.25rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.2;
+    }
+
+    .metric-sublabel {
+      font-size: 0.75rem;
+      color: var(--neutral-400);
+      margin-top: 4px;
+    }
+
+    .metric-card.highlight {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      border: none;
+    }
+
+    .metric-card.highlight .metric-label,
+    .metric-card.highlight .metric-sublabel {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .metric-card.highlight .metric-value {
+      background: none;
+      -webkit-text-fill-color: white;
+      color: white;
+    }
+
+    /* Section Cards */
+    .section-card {
+      background: white;
+      border-radius: 20px;
+      border: 1px solid var(--neutral-200);
+      overflow: hidden;
+    }
+
+    .section-header {
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--neutral-100);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--neutral-800);
+    }
+
+    .section-title-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+    }
+
+    .section-title-icon.purple { background: #ede9fe; }
+    .section-title-icon.pink { background: #fce7f3; }
+    .section-title-icon.blue { background: #dbeafe; }
+    .section-title-icon.green { background: #d1fae5; }
+    .section-title-icon.orange { background: #ffedd5; }
+    .section-title-icon.yellow { background: #fef3c7; }
+
+    .section-content {
+      padding: 24px;
+    }
+
+    /* Chart Container */
+    .chart-container {
+      position: relative;
+      height: 280px;
+    }
+
+    /* Rating Distribution */
+    .rating-bars {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .rating-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .rating-stars {
+      width: 80px;
+      font-size: 0.85rem;
+      color: var(--neutral-600);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .rating-stars .star {
+      color: #fbbf24;
+    }
+
+    .rating-bar-bg {
+      flex: 1;
+      height: 10px;
+      background: var(--neutral-100);
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .rating-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #fbbf24, #f59e0b);
+      border-radius: 5px;
+      transition: width 0.6s ease-out;
+    }
+
+    .rating-count {
+      width: 60px;
+      text-align: right;
+      font-size: 0.85rem;
+      color: var(--neutral-500);
+    }
+
+    /* Keywords */
+    .keywords-section {
+      margin-bottom: 24px;
+    }
+
+    .keywords-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .keyword-group {
+      padding: 20px;
+      border-radius: 16px;
+    }
+
+    .keyword-group.positive {
+      background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+      border: 1px solid #a7f3d0;
+    }
+
+    .keyword-group.negative {
+      background: linear-gradient(135deg, #fef2f2 0%, #fecaca 100%);
+      border: 1px solid #fca5a5;
+    }
+
+    .keyword-group-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .keyword-group.positive .keyword-group-header { color: #059669; }
+    .keyword-group.negative .keyword-group-header { color: #dc2626; }
+
+    .keyword-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .keyword-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      background: white;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .keyword-group.positive .keyword-tag { color: #047857; }
+    .keyword-group.negative .keyword-tag { color: #b91c1c; }
+
+    .keyword-tag .count {
+      font-size: 0.75rem;
+      padding: 2px 8px;
+      border-radius: 10px;
+      background: rgba(0, 0, 0, 0.06);
+    }
+
+    /* Categories */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .category-card {
+      padding: 18px;
+      background: var(--neutral-50);
+      border-radius: 14px;
+      border: 1px solid var(--neutral-200);
+    }
+
+    .category-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--neutral-700);
+    }
+
+    .category-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .category-tag {
+      padding: 5px 10px;
+      background: white;
+      border-radius: 8px;
+      font-size: 0.75rem;
+      color: var(--neutral-600);
+      border: 1px solid var(--neutral-200);
+    }
+
+    /* Improvements */
+    .improvements-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .improvement-card {
+      padding: 20px;
+      background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+      border: 1px solid #fde68a;
+      border-radius: 14px;
+    }
+
+    .improvement-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .improvement-icon {
+      width: 28px;
+      height: 28px;
+      background: #fbbf24;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+    }
+
+    .improvement-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #92400e;
+    }
+
+    .improvement-desc {
+      font-size: 0.85rem;
+      color: #a16207;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    .improvement-stat {
+      font-size: 0.75rem;
+      color: #b45309;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* Skin Stats */
+    .skin-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .skin-stat-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 16px;
+      background: var(--neutral-50);
+      border-radius: 10px;
+      font-size: 0.85rem;
+    }
+
+    .skin-stat-item .label {
+      color: var(--neutral-600);
+    }
+
+    .skin-stat-item .value {
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    /* Quotes */
+    .quotes-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .quote-item {
+      padding: 16px 20px;
+      background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+      border-left: 4px solid var(--primary);
+      border-radius: 0 12px 12px 0;
+      font-size: 0.9rem;
+      color: var(--neutral-700);
+      line-height: 1.6;
+      font-style: italic;
+    }
+
+    /* Low Rating Reviews */
+    .review-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-height: 400px;
+      overflow-y: auto;
+    }
+
+    .review-item {
+      padding: 16px;
+      background: var(--neutral-50);
+      border-radius: 12px;
+      border: 1px solid var(--neutral-200);
+    }
+
+    .review-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .review-rating {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.8rem;
+    }
+
+    .review-rating .star { color: #fbbf24; }
+    .review-rating .star.empty { color: var(--neutral-300); }
+
+    .review-meta {
+      font-size: 0.75rem;
+      color: var(--neutral-500);
+    }
+
+    .review-content {
+      font-size: 0.85rem;
+      color: var(--neutral-700);
+      line-height: 1.6;
+    }
+
+    /* Responsive */
+    @media (max-width: 1200px) {
+      .grid-4 { grid-template-columns: repeat(2, 1fr); }
+      .grid-3 { grid-template-columns: repeat(2, 1fr); }
+      .category-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .container { padding: 16px; }
+      .grid-4, .grid-3, .grid-2 { grid-template-columns: 1fr; }
+      .keywords-grid { grid-template-columns: 1fr; }
+      .improvements-grid { grid-template-columns: 1fr; }
+      .category-grid { grid-template-columns: 1fr; }
+      .dashboard-header { flex-direction: column; gap: 20px; text-align: center; }
+      .header-actions { justify-content: center; }
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .animate-in {
+      animation: fadeIn 0.4s ease-out forwards;
+    }
+
+    .delay-1 { animation-delay: 0.05s; }
+    .delay-2 { animation-delay: 0.1s; }
+    .delay-3 { animation-delay: 0.15s; }
+    .delay-4 { animation-delay: 0.2s; }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--neutral-100); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb { background: var(--neutral-300); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--neutral-400); }
+  </style>
+</head>
+<body>
+  <div class="bg-pattern"></div>
+
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <div class="logo">
+        <div class="logo-icon">💄</div>
+        <span class="logo-text">Beauty Review Analyzer</span>
+      </div>
+      <p class="header-subtitle">Oliveyoung Product Review Intelligence Platform</p>
+    </div>
+
+    <!-- Input Card -->
+    <div class="card input-card" id="inputCard">
+      <div class="card-body">
+        <div class="input-header">
+          <h2>상품 리뷰 분석 시작 (Start Review Analysis)</h2>
+          <p>올리브영 상품 URL 또는 상품번호를 입력하세요</p>
+        </div>
+
+        <div class="input-wrapper">
+          <input
+            type="text"
+            id="urlInput"
+            placeholder="https://www.oliveyoung.co.kr/... or A000000235842"
+          >
+          <button class="btn btn-primary" id="analyzeBtn">
+            <span>분석</span>
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="help-box">
+          <svg class="help-box-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <div class="help-box-content">
+            <strong>How to use:</strong> 올리브영 상품 페이지 URL을 복사해서 붙여넣거나, 상품번호를 입력하세요.<br>
+            Example: <code>A000000235842</code>
+          </div>
+        </div>
+
+        <div class="progress-section" id="progressSection">
+          <div class="progress-header">
+            <span>분석 진행 중 (Analyzing...)</span>
+            <span id="progressPercent">0%</span>
+          </div>
+          <div class="progress-bar-wrapper">
+            <div class="progress-bar" id="progressBar"></div>
+          </div>
+          <div class="progress-status" id="progressText">준비 중...</div>
+        </div>
+
+        <div class="error-message" id="errorMessage">
+          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <span id="errorText"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dashboard -->
+    <div class="dashboard" id="dashboard">
+      <!-- Dashboard Header -->
+      <div class="dashboard-header">
+        <div class="product-info">
+          <div class="product-badge">✓</div>
+          <div class="product-details">
+            <h1 id="productName">상품명</h1>
+            <div class="product-meta">
+              <span>📅 <span id="analysisDate"></span></span>
+              <span>📊 Analysis Complete</span>
+            </div>
+          </div>
+        </div>
+        <div class="header-actions">
+          <button class="btn btn-ghost" id="openReportBtn">📄 Report</button>
+          <button class="btn btn-ghost" id="openFolderBtn">📁 Folder</button>
+          <button class="btn btn-accent" id="resetBtn">🔄 New Analysis</button>
+        </div>
+      </div>
+
+      <!-- Key Metrics -->
+      <div class="metrics-row grid-4">
+        <div class="metric-card highlight animate-in delay-1">
+          <div class="metric-label">Total Reviews (총 리뷰)</div>
+          <div class="metric-value" id="totalReviews">0</div>
+          <div class="metric-sublabel">collected reviews</div>
+        </div>
+        <div class="metric-card animate-in delay-2">
+          <div class="metric-label">Average Rating (평균 평점)</div>
+          <div class="metric-value" id="avgRating">0.0</div>
+          <div class="metric-sublabel">out of 5.0</div>
+        </div>
+        <div class="metric-card animate-in delay-3">
+          <div class="metric-label">Repurchase Rate (재구매율)</div>
+          <div class="metric-value" id="repurchaseRate">0%</div>
+          <div class="metric-sublabel">would buy again</div>
+        </div>
+        <div class="metric-card animate-in delay-4">
+          <div class="metric-label">Photo Reviews (사진 리뷰)</div>
+          <div class="metric-value" id="photoRate">0%</div>
+          <div class="metric-sublabel">with images</div>
+        </div>
+      </div>
+
+      <!-- Charts Row -->
+      <div class="grid-2" style="margin-bottom: 24px;">
+        <!-- Rating Distribution -->
+        <div class="section-card">
+          <div class="section-header">
+            <div class="section-title">
+              <div class="section-title-icon yellow">⭐</div>
+              Rating Distribution (평점 분포)
+            </div>
+          </div>
+          <div class="section-content">
+            <div class="rating-bars" id="ratingBars"></div>
+          </div>
+        </div>
+
+        <!-- Sentiment Analysis -->
+        <div class="section-card">
+          <div class="section-header">
+            <div class="section-title">
+              <div class="section-title-icon purple">📊</div>
+              Sentiment Analysis (감성 분석)
+            </div>
+          </div>
+          <div class="section-content">
+            <div class="chart-container">
+              <canvas id="sentimentChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Keywords -->
+      <div class="section-card keywords-section">
+        <div class="section-header">
+          <div class="section-title">
+            <div class="section-title-icon pink">🏷️</div>
+            Keyword Analysis (키워드 분석)
+          </div>
+        </div>
+        <div class="section-content">
+          <div class="keywords-grid">
+            <div class="keyword-group positive">
+              <div class="keyword-group-header">
+                ✅ Positive Keywords (긍정 키워드)
+              </div>
+              <div class="keyword-tags" id="positiveKeywords"></div>
+            </div>
+            <div class="keyword-group negative">
+              <div class="keyword-group-header">
+                ⚠️ Negative Keywords (부정 키워드)
+              </div>
+              <div class="keyword-tags" id="negativeKeywords"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category Keywords -->
+      <div class="section-card" style="margin-bottom: 24px;">
+        <div class="section-header">
+          <div class="section-title">
+            <div class="section-title-icon blue">📂</div>
+            Keywords by Category (카테고리별 키워드)
+          </div>
+        </div>
+        <div class="section-content">
+          <div class="category-grid" id="categoryGrid"></div>
+        </div>
+      </div>
+
+      <!-- Skin Analysis -->
+      <div class="grid-2" style="margin-bottom: 24px;">
+        <div class="section-card">
+          <div class="section-header">
+            <div class="section-title">
+              <div class="section-title-icon green">👤</div>
+              Skin Type Distribution (피부타입 분포)
+            </div>
+          </div>
+          <div class="section-content">
+            <div class="chart-container">
+              <canvas id="skinTypeChart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-card">
+          <div class="section-header">
+            <div class="section-title">
+              <div class="section-title-icon orange">💧</div>
+              Skin Concerns (피부 고민 분포)
+            </div>
+          </div>
+          <div class="section-content">
+            <div class="chart-container">
+              <canvas id="skinConcernChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Improvements -->
+      <div class="section-card" style="margin-bottom: 24px;">
+        <div class="section-header">
+          <div class="section-title">
+            <div class="section-title-icon yellow">💡</div>
+            Improvement Opportunities (개선 기회)
+          </div>
+        </div>
+        <div class="section-content">
+          <div class="improvements-grid" id="improvementsGrid"></div>
+        </div>
+      </div>
+
+      <!-- Highlight Quotes -->
+      <div class="section-card" style="margin-bottom: 24px;">
+        <div class="section-header">
+          <div class="section-title">
+            <div class="section-title-icon purple">💬</div>
+            Highlight Quotes (하이라이트 문구)
+          </div>
+        </div>
+        <div class="section-content">
+          <div class="quotes-list" id="quotesList"></div>
+        </div>
+      </div>
+
+      <!-- Low Rating Reviews -->
+      <div class="section-card">
+        <div class="section-header">
+          <div class="section-title">
+            <div class="section-title-icon pink">📝</div>
+            Low Rating Reviews (저평점 리뷰)
+          </div>
+        </div>
+        <div class="section-content">
+          <div class="review-list" id="lowRatingReviews"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const { ipcRenderer } = require('electron');
+
+    const urlInput = document.getElementById('urlInput');
+    const analyzeBtn = document.getElementById('analyzeBtn');
+    const progressSection = document.getElementById('progressSection');
+    const progressBar = document.getElementById('progressBar');
+    const progressText = document.getElementById('progressText');
+    const progressPercent = document.getElementById('progressPercent');
+    const errorMessage = document.getElementById('errorMessage');
+    const errorText = document.getElementById('errorText');
+    const inputCard = document.getElementById('inputCard');
+    const dashboard = document.getElementById('dashboard');
+
+    let currentReportPath = '';
+    let currentFolderPath = '';
+    let sentimentChart = null;
+    let skinTypeChart = null;
+    let skinConcernChart = null;
+
+    // Progress update
+    ipcRenderer.on('progress', (event, data) => {
+      progressBar.style.width = `${data.percent}%`;
+      progressPercent.textContent = `${data.percent}%`;
+      progressText.textContent = data.message;
+    });
+
+    // Start analysis
+    analyzeBtn.addEventListener('click', async () => {
+      const input = urlInput.value.trim();
+      if (!input) {
+        showError('Please enter URL or product number.');
+        return;
+      }
+
+      analyzeBtn.disabled = true;
+      progressSection.classList.add('active');
+      dashboard.classList.remove('active');
+      errorMessage.classList.remove('active');
+      progressBar.style.width = '0%';
+      progressPercent.textContent = '0%';
+      progressText.textContent = 'Starting...';
+
+      try {
+        const result = await ipcRenderer.invoke('analyze', input);
+        if (result.success) {
+          showDashboard(result.data);
+        } else {
+          showError(result.error);
+        }
+      } catch (error) {
+        showError(error.message || 'Unknown error occurred.');
+      } finally {
+        analyzeBtn.disabled = false;
+        progressSection.classList.remove('active');
+      }
+    });
+
+    // Show dashboard
+    function showDashboard(data) {
+      document.getElementById('productName').textContent = data.productName;
+      document.getElementById('analysisDate').textContent = new Date().toLocaleDateString('ko-KR');
+
+      document.getElementById('totalReviews').textContent = data.totalReviews.toLocaleString();
+      document.getElementById('avgRating').textContent = parseFloat(data.averageRating).toFixed(1);
+      document.getElementById('repurchaseRate').textContent = data.analysis.stats.repurchaseRate + '%';
+      document.getElementById('photoRate').textContent = data.analysis.stats.photoRate + '%';
+
+      renderRatingBars(data.analysis.ratingDistribution);
+      renderSentimentChart(data.analysis.sentiment);
+      renderKeywords('positiveKeywords', data.analysis.keywords.positive, 'positive');
+      renderKeywords('negativeKeywords', data.analysis.keywords.negative, 'negative');
+      renderCategories(data.analysis.categories);
+      renderSkinTypeChart(data.analysis.skinTypes);
+      renderSkinConcernChart(data.analysis.skinConcerns);
+      renderImprovements(data.analysis.improvements);
+      renderQuotes(data.analysis.quotes || []);
+      renderLowRatingReviews(data.analysis.lowRatingReviews || []);
+
+      currentReportPath = data.paths.reportPath;
+      currentFolderPath = data.paths.reportPath;
+
+      inputCard.style.display = 'none';
+      dashboard.classList.add('active');
+    }
+
+    // Rating bars
+    function renderRatingBars(distribution) {
+      const container = document.getElementById('ratingBars');
+      const total = Object.values(distribution || {}).reduce((a, b) => a + b, 0) || 1;
+
+      container.innerHTML = [5, 4, 3, 2, 1].map(star => {
+        const count = distribution?.[star] || 0;
+        const percent = ((count / total) * 100).toFixed(1);
+        return `
+          <div class="rating-row">
+            <div class="rating-stars">
+              <span class="star">★</span> ${star}
+            </div>
+            <div class="rating-bar-bg">
+              <div class="rating-bar-fill" style="width: ${percent}%"></div>
+            </div>
+            <div class="rating-count">${percent}%</div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Sentiment chart
+    function renderSentimentChart(sentiment) {
+      const ctx = document.getElementById('sentimentChart').getContext('2d');
+      if (sentimentChart) sentimentChart.destroy();
+
+      sentimentChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+          labels: ['Positive (긍정)', 'Neutral (중립)', 'Negative (부정)'],
+          datasets: [{
+            data: [sentiment?.positive || 0, sentiment?.neutral || 0, sentiment?.negative || 0],
+            backgroundColor: ['#10b981', '#9ca3af', '#ef4444'],
+            borderWidth: 0,
+            cutout: '65%'
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { position: 'bottom', labels: { padding: 16, usePointStyle: true } }
+          }
+        }
+      });
+    }
+
+    // Keywords
+    function renderKeywords(containerId, keywords, type) {
+      const container = document.getElementById(containerId);
+      container.innerHTML = (keywords || []).slice(0, 12).map(kw => `
+        <span class="keyword-tag">
+          ${kw.formatted}
+          <span class="count">${kw.count}</span>
+        </span>
+      `).join('');
+    }
+
+    // Categories
+    function renderCategories(categories) {
+      const container = document.getElementById('categoryGrid');
+      const icons = { texture: '🧴', effect: '✨', irritation: '⚠️', usability: '👍', smell: '🌸', price: '💰', satisfaction: '😊', makeup: '💄', skincare: '🧪' };
+
+      container.innerHTML = Object.entries(categories || {}).map(([cat, data]) => `
+        <div class="category-card">
+          <div class="category-header">
+            ${icons[cat] || '📌'} ${data.name || cat}
+          </div>
+          <div class="category-tags">
+            ${(data.items || []).slice(0, 5).map(k => `<span class="category-tag">${k.formatted} (${k.count})</span>`).join('')}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Skin type chart
+    function renderSkinTypeChart(skinTypes) {
+      const ctx = document.getElementById('skinTypeChart').getContext('2d');
+      if (skinTypeChart) skinTypeChart.destroy();
+
+      const labels = Object.keys(skinTypes || {});
+      const values = Object.values(skinTypes || {});
+
+      skinTypeChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels,
+          datasets: [{ label: 'Reviews', data: values, backgroundColor: 'rgba(99, 102, 241, 0.8)', borderRadius: 6 }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: { y: { beginAtZero: true, grid: { display: false } }, x: { grid: { display: false } } }
+        }
+      });
+    }
+
+    // Skin concern chart
+    function renderSkinConcernChart(skinConcerns) {
+      const ctx = document.getElementById('skinConcernChart').getContext('2d');
+      if (skinConcernChart) skinConcernChart.destroy();
+
+      const labels = Object.keys(skinConcerns || {});
+      const values = Object.values(skinConcerns || {});
+
+      skinConcernChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels,
+          datasets: [{ label: 'Reviews', data: values, backgroundColor: 'rgba(236, 72, 153, 0.8)', borderRadius: 6 }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          indexAxis: 'y',
+          plugins: { legend: { display: false } },
+          scales: { x: { beginAtZero: true, grid: { display: false } }, y: { grid: { display: false } } }
+        }
+      });
+    }
+
+    // Improvements
+    function renderImprovements(improvements) {
+      const container = document.getElementById('improvementsGrid');
+      if (!improvements || improvements.length === 0) {
+        container.innerHTML = '<div class="improvement-card"><div class="improvement-header"><div class="improvement-icon">💡</div><div class="improvement-title">분석 중...</div></div><div class="improvement-desc">충분한 데이터가 수집되면 개선 기회가 표시됩니다.</div></div>';
+        return;
+      }
+      container.innerHTML = improvements.slice(0, 4).map(imp => `
+        <div class="improvement-card">
+          <div class="improvement-header">
+            <div class="improvement-icon">💡</div>
+            <div class="improvement-title">${imp.title}</div>
+          </div>
+          <div class="improvement-desc">${imp.description}</div>
+          <div class="improvement-stat">📊 Related reviews: ${imp.count || 0}</div>
+        </div>
+      `).join('');
+    }
+
+    // Quotes
+    function renderQuotes(quotes) {
+      const container = document.getElementById('quotesList');
+      if (!quotes || quotes.length === 0) {
+        container.innerHTML = '<div class="quote-item">하이라이트 문구가 없습니다.</div>';
+        return;
+      }
+      container.innerHTML = quotes.slice(0, 5).map(q => `<div class="quote-item">"${q}"</div>`).join('');
+    }
+
+    // Low rating reviews
+    function renderLowRatingReviews(reviews) {
+      const container = document.getElementById('lowRatingReviews');
+      if (!reviews || reviews.length === 0) {
+        container.innerHTML = '<div class="review-item"><div class="review-content">저평점 리뷰가 없습니다.</div></div>';
+        return;
+      }
+      container.innerHTML = reviews.slice(0, 10).map(r => `
+        <div class="review-item">
+          <div class="review-header">
+            <div class="review-rating">
+              ${'<span class="star">★</span>'.repeat(r.rating)}${'<span class="star empty">☆</span>'.repeat(5 - r.rating)}
+            </div>
+            <div class="review-meta">${r.option || ''}</div>
+          </div>
+          <div class="review-content">${r.content?.slice(0, 200) || ''}${r.content?.length > 200 ? '...' : ''}</div>
+        </div>
+      `).join('');
+    }
+
+    // Error
+    function showError(msg) {
+      errorText.textContent = msg;
+      errorMessage.classList.add('active');
+    }
+
+    // Button handlers
+    document.getElementById('openReportBtn').addEventListener('click', () => {
+      if (currentReportPath) ipcRenderer.invoke('open-file', currentReportPath);
+    });
+
+    document.getElementById('openFolderBtn').addEventListener('click', () => {
+      if (currentFolderPath) ipcRenderer.invoke('open-folder', currentFolderPath);
+    });
+
+    document.getElementById('resetBtn').addEventListener('click', () => {
+      urlInput.value = '';
+      inputCard.style.display = 'block';
+      dashboard.classList.remove('active');
+      errorMessage.classList.remove('active');
+      urlInput.focus();
+    });
+
+    urlInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter' && !analyzeBtn.disabled) analyzeBtn.click();
+    });
+  </script>
+</body>
+</html>

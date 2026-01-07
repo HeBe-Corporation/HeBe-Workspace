@@ -1,0 +1,32 @@
+ID,Name,Department,Team,Role,Reports To,Email,Phone,Birthday,Brand 1,Brand 2,Brand 3,Platform 1,Platform 2,Platform 3,Slack,Start Date,Days,Status,Notes
+VN-001,Nguyen Anna,Executive,Leadership,CEO,-,anna@hebe.vn,,,All Brands,,,,,,@anna,,=IF(Q2="","",DATEDIF(Q2,TODAY(),"D")),Active,
+KR-001,Kim Jin,Executive,Leadership,CEO,-,jin@hebe.kr,,,All Brands,,,,,,@jin,,=IF(Q3="","",DATEDIF(Q3,TODAY(),"D")),Active,HEBE KR
+KR-002,Park Jun,Executive,Leadership,Assistant Manager,KR-001,jun@hebe.kr,,,All Brands,,,,,,@jun,,=IF(Q4="","",DATEDIF(Q4,TODAY(),"D")),Active,HEBE KR
+VN-101,-,Operations,Warehouse,Warehouse Staff,VN-001,email,phone,yyyy-mm-dd,-,-,-,,,,slack,yyyy-mm-dd,=IF(Q5="","",DATEDIF(Q5,TODAY(),"D")),Pending,
+VN-102,-,Operations,Warehouse,Warehouse Staff,VN-001,email,phone,yyyy-mm-dd,-,-,-,,,,slack,yyyy-mm-dd,=IF(Q6="","",DATEDIF(Q6,TODAY(),"D")),Pending,
+VN-103,Nguyen My,Finance,Accounting,Accountant,VN-001,email,phone,yyyy-mm-dd,-,-,-,,,,slack,yyyy-mm-dd,=IF(Q7="","",DATEDIF(Q7,TODAY(),"D")),Pending,
+VN-104,Tran Uyen,Finance,Accounting,Accountant,VN-001,email,phone,yyyy-mm-dd,-,-,-,,,,slack,yyyy-mm-dd,=IF(Q8="","",DATEDIF(Q8,TODAY(),"D")),Pending,
+VN-105,Le Tam,Finance,Accounting,Accountant,VN-001,email,phone,yyyy-mm-dd,-,-,-,,,,slack,yyyy-mm-dd,=IF(Q9="","",DATEDIF(Q9,TODAY(),"D")),Pending,
+VN-106,Nguyen Kim,Finance,Accounting,Accountant,VN-001,email,phone,yyyy-mm-dd,-,-,-,,,,slack,yyyy-mm-dd,=IF(Q10="","",DATEDIF(Q10,TODAY(),"D")),Pending,
+VN-201,Nguyen Giang,Commercial,Sales,Sales Executive,VN-001,email,phone,yyyy-mm-dd,-,-,-,,,,slack,yyyy-mm-dd,=IF(Q11="","",DATEDIF(Q11,TODAY(),"D")),Pending,Commission
+VN-202,Tran Chau,Commercial,Sales,Sales Executive,VN-001,email,phone,yyyy-mm-dd,-,-,-,,,,slack,yyyy-mm-dd,=IF(Q12="","",DATEDIF(Q12,TODAY(),"D")),Pending,Commission
+VN-203,Le Tu Anh,Commercial,Sales,Sales Executive,VN-001,email,phone,yyyy-mm-dd,-,-,-,,,,slack,yyyy-mm-dd,=IF(Q13="","",DATEDIF(Q13,TODAY(),"D")),Pending,Commission
+VN-301,Nguyen Thoai,Commercial,E-Commerce,E-Commerce Lead,VN-001,thoai@hebe.vn,,,,,Shopee,TikTok Shop,Lazada,@thoai,,=IF(Q14="","",DATEDIF(Q14,TODAY(),"D")),Active,
+VN-302,Tran Nguyen,Commercial,E-Commerce,E-Commerce Specialist,VN-301,email,phone,yyyy-mm-dd,-,-,-,Shopee,TikTok Shop,Lazada,slack,yyyy-mm-dd,=IF(Q15="","",DATEDIF(Q15,TODAY(),"D")),Pending,
+VN-303,Le Loc,Commercial,E-Commerce,E-Commerce Specialist,VN-301,email,phone,yyyy-mm-dd,-,-,-,Shopee,TikTok Shop,Lazada,slack,yyyy-mm-dd,=IF(Q16="","",DATEDIF(Q16,TODAY(),"D")),Pending,
+VN-304,Nguyen Trinh,Commercial,E-Commerce,E-Commerce Specialist,VN-301,email,phone,yyyy-mm-dd,-,-,-,Shopee,TikTok Shop,Lazada,slack,yyyy-mm-dd,=IF(Q17="","",DATEDIF(Q17,TODAY(),"D")),Pending,
+VN-305,Tran Duyen,Commercial,E-Commerce,E-Commerce Specialist,VN-301,email,phone,yyyy-mm-dd,-,-,-,Shopee,TikTok Shop,Lazada,slack,yyyy-mm-dd,=IF(Q18="","",DATEDIF(Q18,TODAY(),"D")),Pending,
+VN-306,Le Tai,Commercial,E-Commerce,E-Commerce Specialist,VN-301,email,phone,yyyy-mm-dd,-,-,-,Shopee,TikTok Shop,Lazada,slack,yyyy-mm-dd,=IF(Q19="","",DATEDIF(Q19,TODAY(),"D")),Pending,
+VN-307,Nguyen Nhi,Commercial,E-Commerce,E-Commerce Specialist,VN-301,email,phone,yyyy-mm-dd,-,-,-,Shopee,TikTok Shop,Lazada,slack,yyyy-mm-dd,=IF(Q20="","",DATEDIF(Q20,TODAY(),"D")),Pending,
+VN-401,Tran Huy,Marketing,Digital,Digital Executive,VN-001,huy@hebe.vn,,,,,Instagram,Facebook,TikTok,@huy,,=IF(Q21="","",DATEDIF(Q21,TODAY(),"D")),Active,
+VN-500,TBD,Marketing,Marketing,Marketing Manager,VN-001,email,phone,yyyy-mm-dd,-,-,-,Instagram,Facebook,TikTok,slack,2026-03-01,=IF(Q22="","",DATEDIF(Q22,TODAY(),"D")),Upcoming,Joining Mar 2026
+VN-501,Nguyen Ly,Marketing,ABM,Account Manager,VN-500,email,phone,yyyy-mm-dd,-,-,-,Instagram,Facebook,TikTok,slack,yyyy-mm-dd,=IF(Q23="","",DATEDIF(Q23,TODAY(),"D")),Pending,
+VN-502,Tran Van,Marketing,ABM,Account Manager,VN-500,email,phone,yyyy-mm-dd,-,-,-,Instagram,Facebook,TikTok,slack,yyyy-mm-dd,=IF(Q24="","",DATEDIF(Q24,TODAY(),"D")),Pending,
+VN-503,Le Tram,Marketing,ABM,Account Manager,VN-500,email,phone,yyyy-mm-dd,-,-,-,Instagram,Facebook,TikTok,slack,yyyy-mm-dd,=IF(Q25="","",DATEDIF(Q25,TODAY(),"D")),Pending,
+VN-504,Nguyen Uyen,Marketing,ABM,Account Manager,VN-500,email,phone,yyyy-mm-dd,-,-,-,Instagram,Facebook,TikTok,slack,yyyy-mm-dd,=IF(Q26="","",DATEDIF(Q26,TODAY(),"D")),Pending,
+VN-505,Tran Bong,Marketing,Media,Media Specialist,VN-500,email,phone,yyyy-mm-dd,-,-,-,Instagram,Facebook,TikTok,slack,yyyy-mm-dd,=IF(Q27="","",DATEDIF(Q27,TODAY(),"D")),Pending,
+VN-506,Le Duy,Marketing,Media,Media Specialist,VN-500,email,phone,yyyy-mm-dd,-,-,-,Instagram,Facebook,TikTok,slack,yyyy-mm-dd,=IF(Q28="","",DATEDIF(Q28,TODAY(),"D")),Pending,
+VN-507,Nguyen Hoa,Marketing,Design,Graphic Designer,VN-500,email,phone,yyyy-mm-dd,-,-,-,Instagram,Facebook,TikTok,slack,yyyy-mm-dd,=IF(Q29="","",DATEDIF(Q29,TODAY(),"D")),Pending,
+VN-508,Tran Vy,Marketing,Design,Graphic Designer,VN-500,email,phone,yyyy-mm-dd,-,-,-,Instagram,Facebook,TikTok,slack,yyyy-mm-dd,=IF(Q30="","",DATEDIF(Q30,TODAY(),"D")),Pending,
+VN-509,Le Mai,Marketing,Content,Content Creator,VN-500,email,phone,yyyy-mm-dd,-,-,-,Instagram,Facebook,TikTok,slack,yyyy-mm-dd,=IF(Q31="","",DATEDIF(Q31,TODAY(),"D")),Pending,
+VN-510,Nguyen Khue,Marketing,Content,Content Creator,VN-500,email,phone,yyyy-mm-dd,-,-,-,Instagram,Facebook,TikTok,slack,yyyy-mm-dd,=IF(Q32="","",DATEDIF(Q32,TODAY(),"D")),Pending,

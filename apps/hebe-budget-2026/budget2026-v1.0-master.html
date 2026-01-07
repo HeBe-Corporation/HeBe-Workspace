@@ -1,0 +1,2544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026 Brand Marketing Allocation | HeBe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #F5F7FA;
+      min-height: 100vh;
+      padding: 24px;
+      color: #1A2B48;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* Header - Beauty Industry Style */
+    .header {
+      background: linear-gradient(135deg, #FEFDFB 0%, #FAF7F2 100%);
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin-bottom: 28px;
+      box-shadow: 0 4px 20px rgba(193, 154, 91, 0.12);
+      border: 1px solid #E8DCC8;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .header-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .header-logo img {
+      height: 40px;
+      width: auto;
+    }
+
+    .header-logo h1 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #1A2B48;
+      letter-spacing: -0.5px;
+    }
+
+    .header .subtitle {
+      font-size: 0.9rem;
+      color: #92400E;
+      margin-top: 4px;
+    }
+
+    .header-badge {
+      background: linear-gradient(135deg, #C19A5B 0%, #D4AF61 100%);
+      padding: 10px 20px;
+      border-radius: 8px;
+      color: white;
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+
+    /* Category Navigation */
+    .category-nav {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+
+    .category-btn {
+      padding: 8px 20px;
+      border: 2px solid #E8ECF0;
+      background: white;
+      color: #6B7B8F;
+      font-size: 0.8rem;
+      font-weight: 600;
+      border-radius: 100px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      font-family: inherit;
+    }
+
+    .category-btn:hover {
+      border-color: #C5CBD3;
+      transform: translateY(-1px);
+    }
+
+    .category-btn.active {
+      background: #1A2B48;
+      border-color: #1A2B48;
+      color: white;
+    }
+
+    .category-btn.active[data-cat="COLOUR"] {
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      border-color: #f093fb;
+    }
+
+    .category-btn.active[data-cat="SKIN"] {
+      background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+      border-color: #43e97b;
+      color: #0d5a3a;
+    }
+
+    .category-btn.active[data-cat="INTIMATE"] {
+      background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+      border-color: #fa709a;
+      color: #6b2040;
+    }
+
+    /* Tab Navigation */
+    .tab-nav {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+
+    .tab-btn {
+      padding: 12px 28px;
+      border: none;
+      background: white;
+      color: #6B7B8F;
+      font-size: 0.875rem;
+      font-weight: 500;
+      border-radius: 100px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      font-family: inherit;
+    }
+
+    .tab-btn:hover {
+      background: #f0f0f0;
+      transform: translateY(-1px);
+    }
+
+    .tab-btn.active {
+      background: linear-gradient(135deg, #1A2B48 0%, #34495e 100%);
+      color: white;
+      box-shadow: 0 4px 12px rgba(26, 43, 72, 0.25);
+    }
+
+    .tab-btn.active.vn {
+      background: linear-gradient(135deg, #DA251D 0%, #C41E17 100%);
+      box-shadow: 0 4px 12px rgba(218, 37, 29, 0.3);
+    }
+
+    .tab-btn.active.kh {
+      background: linear-gradient(135deg, #032EA1 0%, #022580 100%);
+      box-shadow: 0 4px 12px rgba(3, 46, 161, 0.3);
+    }
+
+    /* Flag badges */
+    .flag-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 16px;
+      border-radius: 3px;
+      margin-right: 8px;
+      font-size: 0.6rem;
+      font-weight: 700;
+      color: white;
+      flex-shrink: 0;
+    }
+
+    .flag-vn {
+      background: linear-gradient(180deg, #DA251D 0%, #DA251D 100%);
+      position: relative;
+    }
+
+    .flag-vn::after {
+      content: "★";
+      color: #FFCD00;
+      font-size: 0.7rem;
+    }
+
+    .flag-kh {
+      background: linear-gradient(180deg, #032EA1 0%, #032EA1 35%, #E00025 35%, #E00025 65%, #032EA1 65%, #032EA1 100%);
+    }
+
+    .flag-kh::after {
+      content: "🏛";
+      font-size: 0.5rem;
+    }
+
+    /* Inline segment flag for bar labels */
+    .seg-flag {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 16px;
+      height: 11px;
+      border-radius: 2px;
+      font-size: 0.45rem;
+      font-weight: 700;
+      color: white;
+      vertical-align: middle;
+      margin-left: 2px;
+    }
+
+    .seg-flag-vn {
+      background: #DA251D;
+    }
+
+    .seg-flag-vn::after {
+      content: "★";
+      color: #FFCD00;
+      font-size: 0.5rem;
+    }
+
+    .seg-flag-kh {
+      background: linear-gradient(180deg, #032EA1 0%, #032EA1 35%, #E00025 35%, #E00025 65%, #032EA1 65%, #032EA1 100%);
+    }
+
+    /* Cards */
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+    }
+
+    .card-title {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #6B7B8F;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 20px;
+    }
+
+    /* Summary Cards */
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .summary-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .summary-card {
+      background: white;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+      border: 1px solid #E8ECF0;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .summary-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+
+    .summary-card.total {
+      border-top: 4px solid #1A2B48;
+    }
+
+    .summary-card.vn {
+      border-top: 4px solid #DA251D;
+    }
+
+    .summary-card.kh {
+      border-top: 4px solid #032EA1;
+    }
+
+    .summary-card .card-label {
+      font-size: 0.75rem;
+      color: #6B7B8F;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+
+    .summary-card .card-value {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1A2B48;
+      margin-bottom: 4px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .summary-card .card-subvalue {
+      font-size: 0.8rem;
+      color: #9AA5B1;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .summary-breakdown {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid #E8ECF0;
+    }
+
+    .breakdown-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 6px 0;
+      font-size: 0.8rem;
+    }
+
+    .breakdown-label {
+      color: #6B7B8F;
+    }
+
+    .breakdown-value {
+      font-weight: 600;
+      color: #1A2B48;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Progress Bar */
+    .progress-container {
+      margin-top: 12px;
+    }
+
+    .progress-bar {
+      height: 8px;
+      background: #E8ECF0;
+      border-radius: 100px;
+      overflow: hidden;
+      display: flex;
+    }
+
+    .progress-segment {
+      height: 100%;
+      transition: width 0.4s ease;
+    }
+
+    .progress-segment.cash {
+      background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    }
+
+    .progress-segment.foc {
+      background: linear-gradient(90deg, #D4A5D5 0%, #B57EDC 100%);
+    }
+
+    .progress-segment.cash-vn {
+      background: linear-gradient(90deg, #DA251D 0%, #C41E17 100%);
+    }
+
+    .progress-segment.foc-vn {
+      background: linear-gradient(90deg, #FFCD00 0%, #FFD633 100%);
+    }
+
+    .progress-segment.cash-kh {
+      background: linear-gradient(90deg, #032EA1 0%, #0438C4 100%);
+    }
+
+    .progress-segment.foc-kh {
+      background: linear-gradient(90deg, #E00025 0%, #FF3350 100%);
+    }
+
+    .progress-legend {
+      display: flex;
+      gap: 16px;
+      margin-top: 10px;
+      font-size: 0.75rem;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: #6B7B8F;
+    }
+
+    .legend-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    .legend-dot.cash { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+    .legend-dot.foc { background: linear-gradient(135deg, #D4A5D5 0%, #B57EDC 100%); }
+    .legend-dot.cash-vn { background: linear-gradient(135deg, #DA251D 0%, #C41E17 100%); }
+    .legend-dot.foc-vn { background: linear-gradient(135deg, #FFCD00 0%, #FFD633 100%); }
+    .legend-dot.cash-kh { background: linear-gradient(135deg, #032EA1 0%, #0438C4 100%); }
+    .legend-dot.foc-kh { background: linear-gradient(135deg, #E00025 0%, #FF3350 100%); }
+
+    /* Brand Progress Bars */
+    .brand-bars {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .brand-bar-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-bar-label {
+      width: 130px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #1A2B48;
+      flex-shrink: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .brand-bar-track {
+      flex: 1;
+      height: 28px;
+      background: #E8ECF0;
+      border-radius: 100px;
+      overflow: hidden;
+      display: flex;
+      position: relative;
+    }
+
+    .brand-bar-segment {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: width 0.5s ease;
+      position: relative;
+    }
+
+    .brand-bar-segment span {
+      font-size: 0.65rem;
+      font-weight: 600;
+      color: white;
+      white-space: nowrap;
+      padding: 0 4px;
+    }
+
+    /* Brand Colors */
+    .brand-drmelaxin { background: linear-gradient(90deg, #667eea 0%, #764ba2 100%); }
+    .brand-age20s { background: linear-gradient(90deg, #f093fb 0%, #f5576c 100%); }
+    .brand-medianswer { background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%); }
+    .brand-isoi { background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%); }
+    .brand-innergarm { background: linear-gradient(90deg, #fa709a 0%, #fee140 100%); }
+    .brand-marymay { background: linear-gradient(90deg, #a8edea 0%, #fed6e3 100%); }
+    .brand-dasique { background: linear-gradient(90deg, #ffecd2 0%, #fcb69f 100%); }
+    .brand-unleashia { background: linear-gradient(90deg, #a18cd1 0%, #fbc2eb 100%); }
+
+    /* Brand-specific gradient colors */
+    /* Dr.Melaxin - Blue Purple */
+    .brand-drmelaxin-cash-vn { background: linear-gradient(90deg, #667eea 0%, #764ba2 100%); }
+    .brand-drmelaxin-foc-vn { background: linear-gradient(90deg, #a8b4f0 0%, #b89ad4 100%); }
+    .brand-drmelaxin-cash-kh { background: linear-gradient(90deg, #5a6fd6 0%, #6a4291 100%); border: 2px solid rgba(255,255,255,0.5); }
+    .brand-drmelaxin-foc-kh { background: linear-gradient(90deg, #9aa6e6 0%, #a88bc5 100%); border: 2px solid rgba(255,255,255,0.5); }
+
+    /* AGE20'S - Pink Coral */
+    .brand-age20s-cash-vn { background: linear-gradient(90deg, #f093fb 0%, #f5576c 100%); }
+    .brand-age20s-foc-vn { background: linear-gradient(90deg, #f6c4fd 0%, #f9a8b5 100%); }
+    .brand-age20s-cash-kh { background: linear-gradient(90deg, #e080eb 0%, #e5475c 100%); border: 2px solid rgba(255,255,255,0.5); }
+    .brand-age20s-foc-kh { background: linear-gradient(90deg, #f0b5f7 0%, #f399a6 100%); border: 2px solid rgba(255,255,255,0.5); }
+
+    /* Medianswer - Cyan Teal */
+    .brand-medianswer-cash-vn { background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%); }
+    .brand-medianswer-foc-vn { background: linear-gradient(90deg, #9dd4fe 0%, #80f8fe 100%); }
+    .brand-medianswer-cash-kh { background: linear-gradient(90deg, #3f9cee 0%, #00e2ee 100%); border: 2px solid rgba(255,255,255,0.5); }
+    .brand-medianswer-foc-kh { background: linear-gradient(90deg, #8dc4ee 0%, #70e8ee 100%); border: 2px solid rgba(255,255,255,0.5); }
+
+    /* ISOI - Green Mint */
+    .brand-isoi-cash-vn { background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%); }
+    .brand-isoi-foc-vn { background: linear-gradient(90deg, #96f3b8 0%, #94fce8 100%); }
+    .brand-isoi-cash-kh { background: linear-gradient(90deg, #33d96b 0%, #28e9c7 100%); border: 2px solid rgba(255,255,255,0.5); }
+    .brand-isoi-foc-kh { background: linear-gradient(90deg, #86e3a8 0%, #84ecd8 100%); border: 2px solid rgba(255,255,255,0.5); }
+
+    /* Innergarm - Pink Orange Coral */
+    .brand-innergarm-cash-vn { background: linear-gradient(90deg, #fa709a 0%, #fee140 100%); }
+    .brand-innergarm-foc-vn { background: linear-gradient(90deg, #fcadc5 0%, #fef095 100%); }
+    .brand-innergarm-cash-kh { background: linear-gradient(90deg, #ea608a 0%, #eed130 100%); border: 2px solid rgba(255,255,255,0.5); }
+    .brand-innergarm-foc-kh { background: linear-gradient(90deg, #ec9db5 0%, #eee085 100%); border: 2px solid rgba(255,255,255,0.5); }
+
+    /* Mary&May - Pastel Pink Lavender */
+    .brand-marymay-cash-vn { background: linear-gradient(90deg, #a8edea 0%, #fed6e3 100%); }
+    .brand-marymay-foc-vn { background: linear-gradient(90deg, #d4f6f4 0%, #fee9f0 100%); }
+    .brand-marymay-cash-kh { background: linear-gradient(90deg, #98ddda 0%, #eec6d3 100%); border: 2px solid rgba(255,255,255,0.5); }
+    .brand-marymay-foc-kh { background: linear-gradient(90deg, #c4e6e4 0%, #eed9e0 100%); border: 2px solid rgba(255,255,255,0.5); }
+
+    /* dasique - Peach Cream */
+    .brand-dasique-cash-vn { background: linear-gradient(90deg, #ffecd2 0%, #fcb69f 100%); }
+    .brand-dasique-foc-vn { background: linear-gradient(90deg, #fff5eb 0%, #fdd8c5 100%); }
+    .brand-dasique-cash-kh { background: linear-gradient(90deg, #efdcc2 0%, #eca68f 100%); border: 2px solid rgba(255,255,255,0.5); }
+    .brand-dasique-foc-kh { background: linear-gradient(90deg, #efe5db 0%, #edc8b5 100%); border: 2px solid rgba(255,255,255,0.5); }
+
+    /* Unleashia - Lavender Purple */
+    .brand-unleashia-cash-vn { background: linear-gradient(90deg, #a18cd1 0%, #fbc2eb 100%); }
+    .brand-unleashia-foc-vn { background: linear-gradient(90deg, #c5b8e0 0%, #fdd8f0 100%); }
+    .brand-unleashia-cash-kh { background: linear-gradient(90deg, #917cc1 0%, #ebb2db 100%); border: 2px solid rgba(255,255,255,0.5); }
+    .brand-unleashia-foc-kh { background: linear-gradient(90deg, #b5a8d0 0%, #edc8e0 100%); border: 2px solid rgba(255,255,255,0.5); }
+
+    /* Segment text color adjustment for readability */
+    /* Dr.Melaxin - white text on dark purple/blue */
+    .brand-drmelaxin-cash-vn span, .brand-drmelaxin-cash-kh span { color: #ffffff; text-shadow: 0 1px 2px rgba(0,0,0,0.3); }
+    .brand-drmelaxin-foc-vn span, .brand-drmelaxin-foc-kh span { color: #3d2066; }
+
+    /* AGE20'S - white text on vibrant pink */
+    .brand-age20s-cash-vn span, .brand-age20s-cash-kh span { color: #ffffff; text-shadow: 0 1px 2px rgba(0,0,0,0.2); }
+    .brand-age20s-foc-vn span, .brand-age20s-foc-kh span { color: #8b2346; }
+
+    /* Medianswer - dark teal text on bright cyan, white on light KH */
+    .brand-medianswer-cash-vn span { color: #0d4f6e; text-shadow: 0 1px 1px rgba(255,255,255,0.3); }
+    .brand-medianswer-cash-kh span { color: #ffffff; text-shadow: 0 1px 2px rgba(0,80,100,0.5); }
+    .brand-medianswer-foc-vn span, .brand-medianswer-foc-kh span { color: #0a5a5a; }
+
+    /* ISOI - dark green text on bright mint */
+    .brand-isoi-cash-vn span, .brand-isoi-cash-kh span { color: #0d5a3a; text-shadow: 0 1px 1px rgba(255,255,255,0.3); }
+    .brand-isoi-foc-vn span, .brand-isoi-foc-kh span { color: #0a6a5a; }
+
+    /* Innergarm - contrasting text */
+    .brand-innergarm-cash-vn span, .brand-innergarm-cash-kh span { color: #6b2040; text-shadow: 0 1px 1px rgba(255,255,255,0.2); }
+    .brand-innergarm-foc-vn span, .brand-innergarm-foc-kh span { color: #8b5a10; }
+
+    /* Mary&May - dark text on light pastel */
+    .brand-marymay-cash-vn span, .brand-marymay-foc-vn span,
+    .brand-marymay-cash-kh span, .brand-marymay-foc-kh span { color: #2d5a5a; }
+
+    /* dasique - dark peach text on light peach */
+    .brand-dasique-cash-vn span, .brand-dasique-foc-vn span,
+    .brand-dasique-cash-kh span, .brand-dasique-foc-kh span { color: #8b4a2a; }
+
+    /* Unleashia - dark purple text on light lavender */
+    .brand-unleashia-cash-vn span, .brand-unleashia-cash-kh span { color: #ffffff; text-shadow: 0 1px 2px rgba(0,0,0,0.2); }
+    .brand-unleashia-foc-vn span, .brand-unleashia-foc-kh span { color: #5a3d6a; }
+
+    .brand-bar-amount {
+      width: 120px;
+      text-align: right;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #1A2B48;
+      flex-shrink: 0;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Expandable Table */
+    .table-wrap {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.875rem;
+      table-layout: fixed;
+    }
+
+    thead th {
+      text-align: left;
+      padding: 14px 16px;
+      font-weight: 600;
+      color: #6B7B8F;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 2px solid #E8ECF0;
+      background: #FAFBFC;
+    }
+
+    .brand-row {
+      cursor: pointer;
+      transition: background 0.15s ease;
+    }
+
+    .brand-row:hover {
+      background: #F8FAFC;
+    }
+
+    .brand-row td {
+      padding: 16px;
+      border-bottom: 1px solid #E8ECF0;
+      vertical-align: middle;
+    }
+
+    .brand-row .expand-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 6px;
+      background: #E8ECF0;
+      margin-right: 12px;
+      font-size: 0.75rem;
+      color: #6B7B8F;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .brand-row.expanded .expand-icon {
+      background: #1A2B48;
+      color: white;
+    }
+
+    .brand-row .brand-name {
+      font-weight: 600;
+      color: #1A2B48;
+    }
+
+    .brand-row .brand-total {
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      text-align: right;
+    }
+
+    .detail-row {
+      display: none;
+    }
+
+    .detail-row.show {
+      display: table-row;
+    }
+
+    .detail-row td {
+      padding: 12px 16px 12px 52px;
+      background: #FAFBFC;
+      border-bottom: 1px solid #E8ECF0;
+      font-size: 0.8rem;
+    }
+
+    .detail-row:last-child td {
+      border-bottom: 2px solid #E8ECF0;
+    }
+
+    .country-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 12px;
+      border-radius: 100px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .country-badge.vn {
+      background: #FFF8E1;
+      color: #B8860B;
+    }
+
+    .country-badge.kh {
+      background: #E8EDF8;
+      color: #032EA1;
+    }
+
+    .type-badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .type-badge.cash {
+      background: #EBF5FF;
+      color: #2980B9;
+    }
+
+    .type-badge.foc {
+      background: #FFF5EB;
+      color: #E67E22;
+    }
+
+    .detail-amount {
+      font-weight: 600;
+      font-variant-numeric: tabular-nums;
+      text-align: right;
+    }
+
+    .detail-converted {
+      font-size: 0.75rem;
+      color: #9AA5B1;
+      margin-top: 2px;
+    }
+
+    .detail-remark {
+      color: #9AA5B1;
+      font-size: 0.75rem;
+      max-width: 140px;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 24px;
+      color: #9AA5B1;
+      font-size: 0.75rem;
+    }
+
+    .footer .rates {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+
+    .footer .rate-badge {
+      background: #E8ECF0;
+      padding: 6px 14px;
+      border-radius: 100px;
+      font-size: 0.75rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      body {
+        padding: 16px;
+      }
+
+      .header {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .header-left {
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .header-logo h1 {
+        font-size: 1.5rem;
+      }
+
+      .header .subtitle {
+        font-size: 0.8rem;
+      }
+
+      .tab-btn {
+        padding: 10px 16px;
+        font-size: 0.8rem;
+      }
+
+      .brand-bar-label {
+        width: 80px;
+        font-size: 0.75rem;
+      }
+
+      .brand-bar-amount {
+        width: 90px;
+        font-size: 0.75rem;
+      }
+
+      .summary-card .card-value {
+        font-size: 1.25rem;
+      }
+    }
+
+    /* Category Section Styles */
+    .category-section {
+      margin-bottom: 20px;
+    }
+
+    .category-section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 16px;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .category-section-header.colour {
+      background: linear-gradient(135deg, #fef2f8 0%, #fce7f3 100%);
+      color: #a8326e;
+    }
+
+    .category-section-header.skin {
+      background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+      color: #047857;
+    }
+
+    .category-section-header.intimate {
+      background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+      color: #c2410c;
+    }
+
+    .category-section-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
+    }
+
+    .category-section-total {
+      font-size: 0.9rem;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Table Category Styles */
+    .table-category-header td {
+      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+      padding: 14px 16px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      border-bottom: 2px solid #E8ECF0;
+    }
+
+    .table-category-header.colour td {
+      background: linear-gradient(135deg, #fef2f8 0%, #fce7f3 100%);
+      color: #a8326e;
+    }
+
+    .table-category-header.skin td {
+      background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+      color: #047857;
+    }
+
+    .table-category-header.intimate td {
+      background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+      color: #c2410c;
+    }
+
+    .table-subtotal-row td {
+      background: #f8fafc;
+      padding: 10px 16px;
+      font-size: 0.8rem;
+      color: #6B7B8F;
+      border-bottom: 2px solid #E8ECF0;
+    }
+
+    .table-subtotal-row .subtotal-amount {
+      font-weight: 700;
+      color: #1A2B48;
+      font-variant-numeric: tabular-nums;
+      text-align: right;
+    }
+
+    /* Net Budget Cards */
+    .net-budget-section {
+      margin-bottom: 20px;
+    }
+
+    .net-budget-label {
+      background: linear-gradient(135deg, #FEFDFB 0%, #FAF7F2 100%);
+      color: #92400E;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      padding: 14px 24px;
+      border-radius: 12px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      box-shadow: 0 4px 12px rgba(193, 154, 91, 0.12);
+      border: 1px solid #E8DCC8;
+    }
+
+    .net-budget-label .label-icon {
+      font-size: 1.2rem;
+    }
+
+    .net-budget-label .label-badge {
+      background: linear-gradient(135deg, #C19A5B 0%, #D4AF61 100%);
+      color: white;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+
+    .net-budget-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    @media (max-width: 768px) {
+      .net-budget-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .net-budget-card {
+      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+      border-radius: 16px;
+      padding: 20px;
+      border: 1px solid #e2e8f0;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .net-budget-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(245, 158, 11, 0.15);
+    }
+
+    .net-budget-card.total {
+      border-left: 4px solid #F59E0B;
+      background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
+      border-color: #FDE68A;
+    }
+
+    .net-budget-card.vn {
+      border-left: 4px solid #10B981;
+      background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%);
+      border-color: #A7F3D0;
+    }
+
+    .net-budget-card.kh {
+      border-left: 4px solid #3B82F6;
+      background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+      border-color: #BFDBFE;
+    }
+
+    .net-budget-card .card-label {
+      font-size: 0.7rem;
+      color: #92400e;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .net-budget-card.vn .card-label {
+      color: #047857;
+    }
+
+    .net-budget-card.kh .card-label {
+      color: #2563eb;
+    }
+
+    .net-budget-card .card-value {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #B45309;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .net-budget-card.vn .card-value {
+      color: #059669;
+    }
+
+    .net-budget-card.kh .card-value {
+      color: #3B82F6;
+    }
+
+    .net-budget-card .card-subvalue {
+      font-size: 0.75rem;
+      color: #D97706;
+      margin-top: 4px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .net-budget-card.vn .card-subvalue {
+      color: #10B981;
+    }
+
+    .net-budget-card.kh .card-subvalue {
+      color: #60A5FA;
+    }
+
+    .reserve-badge {
+      display: inline-block;
+      background: #fef3c7;
+      color: #92400e;
+      font-size: 0.65rem;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    /* Net Budget Card inner styles */
+    .net-budget-card .summary-breakdown {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .net-budget-card .breakdown-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4px 0;
+      font-size: 0.75rem;
+    }
+
+    .net-budget-card .breakdown-label {
+      color: rgba(0,0,0,0.5);
+    }
+
+    .net-budget-card .breakdown-value {
+      font-weight: 600;
+      color: rgba(0,0,0,0.7);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .net-budget-card .progress-container {
+      margin-top: 10px;
+    }
+
+    .net-budget-card .progress-bar {
+      height: 6px;
+      background: rgba(0,0,0,0.1);
+      border-radius: 100px;
+      overflow: hidden;
+      display: flex;
+    }
+
+    .net-budget-card .progress-legend {
+      display: flex;
+      gap: 12px;
+      margin-top: 6px;
+      font-size: 0.65rem;
+    }
+
+    .net-budget-card .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      color: rgba(0,0,0,0.5);
+    }
+
+    .net-budget-card .legend-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+
+    /* Amount Breakdown (세로 표시) */
+    .amount-breakdown {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .amount-gross {
+      font-size: 0.8rem;
+      color: #6B7B8F;
+    }
+
+    .amount-reserve {
+      font-size: 0.7rem;
+      color: #ef4444;
+    }
+
+    .amount-divider {
+      border-top: 1px dashed #d1d5db;
+      margin: 2px 0;
+    }
+
+    .amount-net {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #166534;
+    }
+
+    .amount-secondary {
+      font-size: 0.7rem;
+      color: #6B7B8F;
+      margin-top: 2px;
+    }
+
+    /* Animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .animate-in {
+      animation: fadeIn 0.3s ease forwards;
+    }
+
+    /* ===== 4계절 애니메이션 시스템 ===== */
+
+    /* 파티클 컨테이너 */
+    .seasonal-particles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* 파티클 공통 */
+    .particle {
+      position: absolute;
+      pointer-events: none;
+    }
+
+    /* 봄 - 벚꽃 */
+    .sakura {
+      width: 12px;
+      height: 12px;
+      background: radial-gradient(ellipse at 30% 30%, #FFB7C5 0%, #FF69B4 60%, transparent 70%);
+      border-radius: 50% 0 50% 50%;
+      opacity: 0.85;
+      animation: sakura-fall 8s linear infinite, sakura-sway 3s ease-in-out infinite;
+    }
+
+    @keyframes sakura-fall {
+      0% {
+        transform: translateY(-20px) rotate(0deg);
+        opacity: 0;
+      }
+      10% { opacity: 0.85; }
+      90% { opacity: 0.85; }
+      100% {
+        transform: translateY(120px) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    @keyframes sakura-sway {
+      0%, 100% { margin-left: 0; }
+      50% { margin-left: 15px; }
+    }
+
+    /* 여름 - 파도 */
+    .wave-container {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 200%;
+      height: 25px;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .wave {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120'%3E%3Cpath fill='%2306b6d4' fill-opacity='0.3' d='M0,60 C300,100 400,20 600,60 C800,100 900,20 1200,60 L1200,120 L0,120 Z'/%3E%3C/svg%3E") repeat-x;
+      background-size: 600px 100%;
+      animation: wave-move 6s linear infinite;
+    }
+
+    .wave:nth-child(2) {
+      bottom: 5px;
+      animation-delay: -2s;
+      opacity: 0.5;
+    }
+
+    .wave:nth-child(3) {
+      bottom: 10px;
+      animation-delay: -4s;
+      opacity: 0.3;
+    }
+
+    @keyframes wave-move {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* 가을 - 단풍 */
+    .maple {
+      width: 14px;
+      height: 14px;
+      opacity: 0.9;
+      animation: maple-fall 10s linear infinite;
+    }
+
+    .maple::before {
+      content: '🍁';
+      font-size: 14px;
+      display: block;
+    }
+
+    @keyframes maple-fall {
+      0% {
+        transform: translateY(-20px) rotate(0deg);
+        opacity: 0;
+      }
+      10% { opacity: 0.9; }
+      90% { opacity: 0.9; }
+      100% {
+        transform: translateY(120px) rotate(720deg);
+        opacity: 0;
+      }
+    }
+
+    /* 겨울 - 눈꽃송이 */
+    .snowflake {
+      font-size: 16px;
+      opacity: 0;
+      animation: snow-fall 3s linear infinite;
+      filter: drop-shadow(0 0 4px rgba(56, 189, 248, 0.8));
+    }
+
+    .snowflake::before {
+      content: '❄';
+      color: #7DD3FC;
+    }
+
+    /* 다양한 눈꽃 모양 */
+    .snowflake.type-2::before { content: '❅'; color: #BAE6FD; }
+    .snowflake.type-3::before { content: '❆'; color: #E0F2FE; }
+    .snowflake.type-4::before { content: '✻'; color: #A5F3FC; }
+    .snowflake.type-5::before { content: '✼'; color: #67E8F9; }
+
+    @keyframes snow-fall {
+      0% {
+        transform: translateY(-10px) translateX(0) rotate(0deg);
+        opacity: 0;
+      }
+      5% { opacity: 0.95; }
+      95% { opacity: 0.95; }
+      100% {
+        transform: translateY(100px) translateX(20px) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    /* 계절별 배경색 */
+    .header.season-spring,
+    .net-budget-label.season-spring {
+      background: linear-gradient(135deg, #FFF5F7 0%, #FFEEF2 100%);
+      border-color: #FECDD3;
+    }
+
+    .header.season-summer,
+    .net-budget-label.season-summer {
+      background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%);
+      border-color: #BAE6FD;
+    }
+
+    .header.season-fall,
+    .net-budget-label.season-fall {
+      background: linear-gradient(135deg, #FFF7ED 0%, #FFEDD5 100%);
+      border-color: #FED7AA;
+    }
+
+    .header.season-winter,
+    .net-budget-label.season-winter {
+      background: linear-gradient(135deg, #FEFDFB 0%, #FAF7F2 100%);
+      border-color: #E8DCC8;
+    }
+
+    /* Segment Tooltip */
+    .segment-tooltip {
+      position: fixed;
+      z-index: 9999;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.15s ease;
+      background: white;
+      border-radius: 12px;
+      padding: 12px 16px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.18), 0 2px 8px rgba(0,0,0,0.08);
+      border: 1px solid #E8ECF0;
+      min-width: 180px;
+      font-size: 0.85rem;
+    }
+
+    .segment-tooltip.visible {
+      opacity: 1;
+    }
+
+    .segment-tooltip .tooltip-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #E8ECF0;
+    }
+
+    .segment-tooltip .tooltip-flag {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 20px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: white;
+      flex-shrink: 0;
+    }
+
+    .segment-tooltip .tooltip-flag.vn {
+      background: linear-gradient(180deg, #DA251D 0%, #DA251D 100%);
+    }
+
+    .segment-tooltip .tooltip-flag.vn::after {
+      content: "★";
+      color: #FFCD00;
+      font-size: 0.85rem;
+    }
+
+    .segment-tooltip .tooltip-flag.kh {
+      background: linear-gradient(180deg, #032EA1 0%, #032EA1 35%, #E00025 35%, #E00025 65%, #032EA1 65%, #032EA1 100%);
+    }
+
+    .segment-tooltip .tooltip-flag.kh::after {
+      content: "🏛";
+      font-size: 0.6rem;
+    }
+
+    .segment-tooltip .tooltip-type {
+      font-weight: 600;
+      color: #1A2B48;
+    }
+
+    .segment-tooltip .tooltip-type.cash {
+      color: #047857;
+    }
+
+    .segment-tooltip .tooltip-type.foc {
+      color: #7C3AED;
+    }
+
+    .segment-tooltip .tooltip-amount {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .segment-tooltip .tooltip-krw {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1A2B48;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .segment-tooltip .tooltip-converted {
+      font-size: 0.8rem;
+      color: #6B7B8F;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Make segments interactive */
+    .brand-bar-segment {
+      cursor: pointer;
+      transition: opacity 0.15s ease, transform 0.15s ease;
+    }
+
+    .brand-bar-segment:hover {
+      opacity: 0.85;
+      transform: scaleY(1.05);
+    }
+  </style>
+</head>
+<body>
+  <!-- Segment Tooltip -->
+  <div id="segmentTooltip" class="segment-tooltip">
+    <div class="tooltip-header">
+      <span class="tooltip-flag"></span>
+      <span class="tooltip-type"></span>
+    </div>
+    <div class="tooltip-amount">
+      <div class="tooltip-krw"></div>
+      <div class="tooltip-converted"></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-left">
+        <div class="header-logo">
+          <img src="file:///e:/Business/HeBe Korea/Logo/1. Loud Competition/HeBE-Korea-(Gold).gif" alt="HeBe Logo" onerror="this.style.display='none'">
+          <h1>HeBe</h1>
+        </div>
+        <p class="subtitle">2026 Marketing Budget Dashboard</p>
+      </div>
+      <div class="header-badge">FY 2026</div>
+    </header>
+
+    <!-- Tab Navigation -->
+    <nav class="tab-nav">
+      <button class="tab-btn active" data-tab="total" onclick="switchTab('total')">📊 Total Summary</button>
+      <button class="tab-btn" data-tab="VN" onclick="switchTab('VN')"><span class="flag-badge flag-vn"></span>HeBe VN</button>
+      <button class="tab-btn" data-tab="KH" onclick="switchTab('KH')"><span class="flag-badge flag-kh"></span>HeBe Khmer Beauty</button>
+    </nav>
+
+    <!-- Summary Cards (Gross Budget) -->
+    <div class="summary-grid" id="summaryCards"></div>
+
+    <!-- Brand Budget Distribution (Gross - Before 20% Deduction) -->
+    <div class="card">
+      <div class="card-title">Brand Budget Distribution <span style="font-size: 0.65rem; color: #1a365d; margin-left: 8px;">(Gross Budget)</span></div>
+      <div class="brand-bars" id="brandBarsGross"></div>
+    </div>
+
+    <!-- Available Budget Cards (After 20% Ops & Tax) -->
+    <div class="net-budget-section" id="netBudgetSection">
+      <div class="net-budget-label">
+        <span class="label-icon">💵</span>
+        <span>Available Budget</span>
+        <span class="label-badge">After 20% Ops & Tax</span>
+      </div>
+      <div class="net-budget-grid" id="netBudgetCards"></div>
+    </div>
+
+    <!-- Brand Budget Distribution (Available Net) -->
+    <div class="card">
+      <div class="card-title">Brand Budget Distribution <span style="font-size: 0.65rem; color: #F59E0B; margin-left: 8px;">(Available Net)</span></div>
+      <div class="brand-bars" id="brandBars"></div>
+    </div>
+
+    <!-- Budget Details Table -->
+    <div class="card">
+      <div class="card-title">Budget Details</div>
+      <div class="table-wrap">
+        <table>
+          <thead id="tableHead"></thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div id="exchangeRateTitle">Exchange Rates (January 2026)</div>
+      <div class="rates" id="exchangeRates">
+        <span class="rate-badge">1 KRW = 18.23 VND</span>
+        <span class="rate-badge">1 USD = 1,448 KRW</span>
+      </div>
+      <div style="font-size: 0.7rem; color: #9AA5B1; margin-top: 8px;">* 매월 초 환율 업데이트</div>
+    </footer>
+  </div>
+
+  <script>
+    // Monthly Exchange Rates (updated monthly)
+    const MONTHLY_EXCHANGE = {
+      '2026-01': { VND_PER_KRW: 18.23, KRW_PER_USD: 1448 },
+      '2026-02': { VND_PER_KRW: null, KRW_PER_USD: null },
+      '2026-03': { VND_PER_KRW: null, KRW_PER_USD: null },
+      '2026-04': { VND_PER_KRW: null, KRW_PER_USD: null },
+      '2026-05': { VND_PER_KRW: null, KRW_PER_USD: null },
+      '2026-06': { VND_PER_KRW: null, KRW_PER_USD: null },
+      '2026-07': { VND_PER_KRW: null, KRW_PER_USD: null },
+      '2026-08': { VND_PER_KRW: null, KRW_PER_USD: null },
+      '2026-09': { VND_PER_KRW: null, KRW_PER_USD: null },
+      '2026-10': { VND_PER_KRW: null, KRW_PER_USD: null },
+      '2026-11': { VND_PER_KRW: null, KRW_PER_USD: null },
+      '2026-12': { VND_PER_KRW: null, KRW_PER_USD: null }
+    };
+
+    // Get current month's exchange rate
+    function getCurrentExchange() {
+      const now = new Date();
+      const yearMonth = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
+      const monthRate = MONTHLY_EXCHANGE[yearMonth];
+      if (monthRate && monthRate.VND_PER_KRW && monthRate.KRW_PER_USD) {
+        return monthRate;
+      }
+      return MONTHLY_EXCHANGE['2026-01']; // fallback to January
+    }
+
+    // Exchange Rates (current month)
+    const EXCHANGE = getCurrentExchange();
+
+    // Reserve Rate (20% for operations, tax, exchange buffer, influencer withholding)
+    const RESERVE_RATE = 0.20;
+
+    function calculateNet(gross) {
+      return gross * (1 - RESERVE_RATE);
+    }
+
+    function calculateReserve(gross) {
+      return gross * RESERVE_RATE;
+    }
+
+    // Budget Data with Categories
+    const budgetData = [
+      // COLOUR (Make-up)
+      { brand: "dasique", category: "COLOUR", type: "Cash", country: "VN", krw: 0, remark: "TBD" },
+      { brand: "Unleashia", category: "COLOUR", type: "Cash", country: "VN", krw: 18000000, remark: "Monthly allocation" },
+      { brand: "AGE20'S", category: "COLOUR", type: "Cash", country: "VN", krw: 210000000, remark: "Monthly Cash KRW 17.5M" },
+      { brand: "AGE20'S", category: "COLOUR", type: "FOC", country: "VN", krw: 90000000, remark: "Monthly FOC KRW 7.5M" },
+      // SKIN (Skincare)
+      { brand: "Dr.Melaxin", category: "SKIN", type: "Cash", country: "VN", krw: 300000000, remark: "Monthly payment based on usage" },
+      { brand: "Medianswer", category: "SKIN", type: "Cash", country: "VN", krw: 150000000, remark: "Monthly payment based on usage" },
+      { brand: "Medianswer", category: "SKIN", type: "Cash", country: "KH", krw: 50000000, remark: "Monthly payment based on usage" },
+      { brand: "ISOI", category: "SKIN", type: "Cash", country: "VN", krw: 100000000, remark: "Monthly payment based on usage" },
+      { brand: "ISOI", category: "SKIN", type: "FOC", country: "VN", krw: 20000000, remark: "Monthly payment based on usage" },
+      { brand: "Mary&May", category: "SKIN", type: "Cash", country: "VN", krw: 20000000, remark: "Monthly payment based on usage" },
+      { brand: "Mary&May", category: "SKIN", type: "Cash", country: "KH", krw: 80000000, remark: "Monthly payment based on usage" },
+      // INTIMATE (Feminine Care)
+      { brand: "Innergarm (Inclear)", category: "INTIMATE", type: "FOC", country: "VN", krw: 100000000, remark: "Monthly payment based on usage" }
+    ];
+
+    // Current state
+    let currentTab = 'total';
+    let expandedBrands = new Set();
+
+    // Utility functions
+    function formatNumber(num) {
+      return num.toLocaleString('en-US');
+    }
+
+    function formatKRW(num) {
+      return '₩' + formatNumber(num);
+    }
+
+    function formatVND(krw) {
+      return formatNumber(krw * EXCHANGE.VND_PER_KRW) + ' ₫';
+    }
+
+    function formatUSD(krw) {
+      const usd = krw / EXCHANGE.KRW_PER_USD;
+      return '$' + formatNumber(Math.round(usd * 100) / 100);
+    }
+
+    // Format based on current tab (main currency)
+    function formatPrimary(krw) {
+      if (currentTab === 'VN') {
+        return formatVND(krw);  // VND가 메인
+      } else if (currentTab === 'KH') {
+        return formatUSD(krw);  // USD가 메인
+      }
+      return formatKRW(krw);    // Total은 KRW 메인
+    }
+
+    // Format secondary currency (KRW for country views)
+    function formatSecondary(krw) {
+      if (currentTab === 'VN' || currentTab === 'KH') {
+        return formatKRW(krw);  // 국가뷰에서 KRW는 서브
+      }
+      return null;              // Total은 서브 없음
+    }
+
+    function getBrandClass(brand) {
+      const map = {
+        "Dr.Melaxin": "brand-drmelaxin",
+        "AGE20'S": "brand-age20s",
+        "Medianswer": "brand-medianswer",
+        "ISOI": "brand-isoi",
+        "Innergarm (Inclear)": "brand-innergarm",
+        "Mary&May": "brand-marymay",
+        "dasique": "brand-dasique",
+        "Unleashia": "brand-unleashia"
+      };
+      return map[brand] || "brand-drmelaxin";
+    }
+
+    function getBrandKey(brand) {
+      const map = {
+        "Dr.Melaxin": "drmelaxin",
+        "AGE20'S": "age20s",
+        "Medianswer": "medianswer",
+        "ISOI": "isoi",
+        "Innergarm (Inclear)": "innergarm",
+        "Mary&May": "marymay",
+        "dasique": "dasique",
+        "Unleashia": "unleashia"
+      };
+      return map[brand] || "drmelaxin";
+    }
+
+    // Calculate functions
+    function getFilteredData(tab) {
+      let data = budgetData;
+
+      // Filter by country
+      if (tab !== 'total') {
+        data = data.filter(item => item.country === tab);
+      }
+
+      return data;
+    }
+
+    function calculateTotals(data) {
+      const total = data.reduce((sum, item) => sum + item.krw, 0);
+      const cashTotal = data.filter(i => i.type === 'Cash').reduce((sum, item) => sum + item.krw, 0);
+      const focTotal = data.filter(i => i.type === 'FOC').reduce((sum, item) => sum + item.krw, 0);
+      const vnTotal = data.filter(i => i.country === 'VN').reduce((sum, item) => sum + item.krw, 0);
+      const khTotal = data.filter(i => i.country === 'KH').reduce((sum, item) => sum + item.krw, 0);
+
+      // VN breakdown
+      const vnCash = data.filter(i => i.country === 'VN' && i.type === 'Cash').reduce((sum, item) => sum + item.krw, 0);
+      const vnFoc = data.filter(i => i.country === 'VN' && i.type === 'FOC').reduce((sum, item) => sum + item.krw, 0);
+
+      // KH breakdown
+      const khCash = data.filter(i => i.country === 'KH' && i.type === 'Cash').reduce((sum, item) => sum + item.krw, 0);
+      const khFoc = data.filter(i => i.country === 'KH' && i.type === 'FOC').reduce((sum, item) => sum + item.krw, 0);
+
+      return { total, cashTotal, focTotal, vnTotal, khTotal, vnCash, vnFoc, khCash, khFoc };
+    }
+
+    function calculateBrandData(data) {
+      const brands = {};
+      data.forEach(item => {
+        if (!brands[item.brand]) {
+          brands[item.brand] = {
+            total: 0,
+            segments: []
+          };
+        }
+        brands[item.brand].total += item.krw;
+        brands[item.brand].segments.push({
+          country: item.country,
+          type: item.type,
+          amount: item.krw,
+          remark: item.remark
+        });
+      });
+
+      return Object.entries(brands)
+        .map(([brand, data]) => ({ brand, ...data }))
+        .sort((a, b) => b.total - a.total);
+    }
+
+    // Render Summary Cards
+    function renderSummaryCards() {
+      const data = getFilteredData(currentTab);
+      const totals = calculateTotals(data);
+      const allTotals = calculateTotals(budgetData);
+
+      let html = '';
+
+      if (currentTab === 'total') {
+        const cashPercent = totals.total > 0 ? Math.round((totals.cashTotal / totals.total) * 100) : 0;
+        const focPercent = 100 - cashPercent;
+
+        html = `
+          <div class="summary-card total animate-in">
+            <div class="card-label">Total Budget</div>
+            <div class="card-value">${formatKRW(totals.total)}</div>
+            <div class="card-subvalue">Monthly Avg: ${formatKRW(Math.round(totals.total / 12))}</div>
+            <div class="summary-breakdown">
+              <div class="breakdown-row">
+                <span class="breakdown-label">Cash</span>
+                <span class="breakdown-value">${formatKRW(totals.cashTotal)}</span>
+              </div>
+              <div class="breakdown-row">
+                <span class="breakdown-label">FOC</span>
+                <span class="breakdown-value">${formatKRW(totals.focTotal)}</span>
+              </div>
+            </div>
+            <div class="progress-container">
+              <div class="progress-bar">
+                <div class="progress-segment cash" style="width: ${cashPercent}%"></div>
+                <div class="progress-segment foc" style="width: ${focPercent}%"></div>
+              </div>
+              <div class="progress-legend">
+                <div class="legend-item"><div class="legend-dot cash"></div>Cash ${cashPercent}%</div>
+                <div class="legend-item"><div class="legend-dot foc"></div>FOC ${focPercent}%</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="summary-card vn animate-in" style="animation-delay: 0.1s">
+            <div class="card-label">HeBe VN (Vietnam)</div>
+            <div class="card-value">${formatKRW(allTotals.vnTotal)}</div>
+            <div class="card-subvalue">${formatVND(allTotals.vnTotal)}</div>
+            <div class="summary-breakdown">
+              <div class="breakdown-row">
+                <span class="breakdown-label">Share</span>
+                <span class="breakdown-value">${Math.round((allTotals.vnTotal / allTotals.total) * 100)}%</span>
+              </div>
+              <div class="breakdown-row">
+                <span class="breakdown-label">Cash</span>
+                <span class="breakdown-value">${formatKRW(allTotals.vnCash)}</span>
+              </div>
+              <div class="breakdown-row">
+                <span class="breakdown-label">FOC</span>
+                <span class="breakdown-value">${formatKRW(allTotals.vnFoc)}</span>
+              </div>
+            </div>
+            <div class="progress-container">
+              <div class="progress-bar">
+                <div class="progress-segment cash-vn" style="width: ${allTotals.vnTotal > 0 ? Math.round((allTotals.vnCash / allTotals.vnTotal) * 100) : 0}%"></div>
+                <div class="progress-segment foc-vn" style="width: ${allTotals.vnTotal > 0 ? Math.round((allTotals.vnFoc / allTotals.vnTotal) * 100) : 0}%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="summary-card kh animate-in" style="animation-delay: 0.2s">
+            <div class="card-label">HeBe Khmer Beauty (Cambodia)</div>
+            <div class="card-value">${formatKRW(allTotals.khTotal)}</div>
+            <div class="card-subvalue">${formatUSD(allTotals.khTotal)}</div>
+            <div class="summary-breakdown">
+              <div class="breakdown-row">
+                <span class="breakdown-label">Share</span>
+                <span class="breakdown-value">${Math.round((allTotals.khTotal / allTotals.total) * 100)}%</span>
+              </div>
+              <div class="breakdown-row">
+                <span class="breakdown-label">Cash</span>
+                <span class="breakdown-value">${formatKRW(allTotals.khCash)}</span>
+              </div>
+              <div class="breakdown-row">
+                <span class="breakdown-label">FOC</span>
+                <span class="breakdown-value">${formatKRW(allTotals.khFoc)}</span>
+              </div>
+            </div>
+            <div class="progress-container">
+              <div class="progress-bar">
+                <div class="progress-segment cash-kh" style="width: ${allTotals.khTotal > 0 ? Math.round((allTotals.khCash / allTotals.khTotal) * 100) : 0}%"></div>
+                <div class="progress-segment foc-kh" style="width: ${allTotals.khTotal > 0 ? Math.round((allTotals.khFoc / allTotals.khTotal) * 100) : 0}%"></div>
+              </div>
+            </div>
+          </div>
+        `;
+      } else {
+        // Single country view - 3 column layout with local currency as main
+        const countryData = currentTab === 'VN'
+          ? { name: 'HeBe VN', fullName: 'Vietnam', cash: allTotals.vnCash, foc: allTotals.vnFoc, total: allTotals.vnTotal, flag: 'flag-vn' }
+          : { name: 'HeBe Khmer Beauty', fullName: 'Cambodia', cash: allTotals.khCash, foc: allTotals.khFoc, total: allTotals.khTotal, flag: 'flag-kh' };
+
+        const cashPercent = countryData.total > 0 ? Math.round((countryData.cash / countryData.total) * 100) : 0;
+        const focPercent = 100 - cashPercent;
+        const segClass = currentTab === 'VN' ? 'vn' : 'kh';
+
+        html = `
+          <!-- Card 1: Total Budget -->
+          <div class="summary-card ${segClass} animate-in">
+            <div class="card-label">
+              <span class="flag-badge ${countryData.flag}"></span>
+              ${countryData.name} Total
+            </div>
+            <div class="card-value">${formatPrimary(countryData.total)}</div>
+            <div class="card-subvalue">${formatSecondary(countryData.total)}</div>
+            <div class="summary-breakdown">
+              <div class="breakdown-row">
+                <span class="breakdown-label">Monthly Avg</span>
+                <span class="breakdown-value">${formatPrimary(Math.round(countryData.total / 12))}</span>
+              </div>
+            </div>
+            <div class="progress-container">
+              <div class="progress-bar">
+                <div class="progress-segment cash-${segClass}" style="width: ${cashPercent}%"></div>
+                <div class="progress-segment foc-${segClass}" style="width: ${focPercent}%"></div>
+              </div>
+              <div class="progress-legend">
+                <div class="legend-item"><div class="legend-dot cash-${segClass}"></div>Cash ${cashPercent}%</div>
+                <div class="legend-item"><div class="legend-dot foc-${segClass}"></div>FOC ${focPercent}%</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Cash -->
+          <div class="summary-card ${segClass} animate-in" style="animation-delay: 0.1s">
+            <div class="card-label">💵 Cash</div>
+            <div class="card-value">${formatPrimary(countryData.cash)}</div>
+            <div class="card-subvalue">${formatSecondary(countryData.cash)}</div>
+            <div class="summary-breakdown">
+              <div class="breakdown-row">
+                <span class="breakdown-label">Share</span>
+                <span class="breakdown-value">${cashPercent}%</span>
+              </div>
+              <div class="breakdown-row">
+                <span class="breakdown-label">Monthly Avg</span>
+                <span class="breakdown-value">${formatPrimary(Math.round(countryData.cash / 12))}</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: FOC -->
+          <div class="summary-card ${segClass} animate-in" style="animation-delay: 0.2s">
+            <div class="card-label">🎁 FOC</div>
+            <div class="card-value">${formatPrimary(countryData.foc)}</div>
+            <div class="card-subvalue">${formatSecondary(countryData.foc)}</div>
+            <div class="summary-breakdown">
+              <div class="breakdown-row">
+                <span class="breakdown-label">Share</span>
+                <span class="breakdown-value">${focPercent}%</span>
+              </div>
+              <div class="breakdown-row">
+                <span class="breakdown-label">Monthly Avg</span>
+                <span class="breakdown-value">${formatPrimary(Math.round(countryData.foc / 12))}</span>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      document.getElementById('summaryCards').innerHTML = html;
+    }
+
+    // Render Net Budget Cards
+    function renderNetBudgetCards() {
+      const allTotals = calculateTotals(budgetData);
+
+      // Calculate Net values
+      const totalNet = calculateNet(allTotals.total);
+      const totalCashNet = calculateNet(allTotals.cashTotal);
+      const totalFocNet = calculateNet(allTotals.focTotal);
+
+      const vnNet = calculateNet(allTotals.vnTotal);
+      const vnCashNet = calculateNet(allTotals.vnCash);
+      const vnFocNet = calculateNet(allTotals.vnFoc);
+
+      const khNet = calculateNet(allTotals.khTotal);
+      const khCashNet = calculateNet(allTotals.khCash);
+      const khFocNet = calculateNet(allTotals.khFoc);
+
+      let html = '';
+
+      if (currentTab === 'total') {
+        const cashPercent = totalNet > 0 ? Math.round((totalCashNet / totalNet) * 100) : 0;
+        const focPercent = 100 - cashPercent;
+
+        const vnCashPercent = vnNet > 0 ? Math.round((vnCashNet / vnNet) * 100) : 0;
+        const vnFocPercent = 100 - vnCashPercent;
+
+        const khCashPercent = khNet > 0 ? Math.round((khCashNet / khNet) * 100) : 0;
+        const khFocPercent = 100 - khCashPercent;
+
+        html = `
+          <div class="net-budget-card total animate-in">
+            <div class="card-label">
+              <span>💰 Total Available</span>
+              <span class="reserve-badge">Ops & Tax -20%</span>
+            </div>
+            <div class="card-value">${formatKRW(totalNet)}</div>
+            <div class="card-subvalue">Monthly Avg: ${formatKRW(Math.round(totalNet / 12))}</div>
+            <div class="summary-breakdown">
+              <div class="breakdown-row">
+                <span class="breakdown-label">Cash</span>
+                <span class="breakdown-value">${formatKRW(totalCashNet)}</span>
+              </div>
+              <div class="breakdown-row">
+                <span class="breakdown-label">FOC</span>
+                <span class="breakdown-value">${formatKRW(totalFocNet)}</span>
+              </div>
+            </div>
+            <div class="progress-container">
+              <div class="progress-bar">
+                <div class="progress-segment cash" style="width: ${cashPercent}%"></div>
+                <div class="progress-segment foc" style="width: ${focPercent}%"></div>
+              </div>
+              <div class="progress-legend">
+                <div class="legend-item"><div class="legend-dot cash"></div>Cash ${cashPercent}%</div>
+                <div class="legend-item"><div class="legend-dot foc"></div>FOC ${focPercent}%</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="net-budget-card vn animate-in" style="animation-delay: 0.1s">
+            <div class="card-label">
+              <span class="flag-badge flag-vn"></span>
+              <span>VN Available</span>
+              <span class="reserve-badge">Ops & Tax -20%</span>
+            </div>
+            <div class="card-value">${formatKRW(vnNet)}</div>
+            <div class="card-subvalue">${formatVND(vnNet)}</div>
+            <div class="summary-breakdown">
+              <div class="breakdown-row">
+                <span class="breakdown-label">Share</span>
+                <span class="breakdown-value">${Math.round((vnNet / totalNet) * 100)}%</span>
+              </div>
+              <div class="breakdown-row">
+                <span class="breakdown-label">Cash</span>
+                <span class="breakdown-value">${formatKRW(vnCashNet)}</span>
+              </div>
+              <div class="breakdown-row">
+                <span class="breakdown-label">FOC</span>
+                <span class="breakdown-value">${formatKRW(vnFocNet)}</span>
+              </div>
+            </div>
+            <div class="progress-container">
+              <div class="progress-bar">
+                <div class="progress-segment cash-vn" style="width: ${vnCashPercent}%"></div>
+                <div class="progress-segment foc-vn" style="width: ${vnFocPercent}%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="net-budget-card kh animate-in" style="animation-delay: 0.2s">
+            <div class="card-label">
+              <span class="flag-badge flag-kh"></span>
+              <span>KH Available</span>
+              <span class="reserve-badge">Ops & Tax -20%</span>
+            </div>
+            <div class="card-value">${formatKRW(khNet)}</div>
+            <div class="card-subvalue">${formatUSD(khNet)}</div>
+            <div class="summary-breakdown">
+              <div class="breakdown-row">
+                <span class="breakdown-label">Share</span>
+                <span class="breakdown-value">${Math.round((khNet / totalNet) * 100)}%</span>
+              </div>
+              <div class="breakdown-row">
+                <span class="breakdown-label">Cash</span>
+                <span class="breakdown-value">${formatKRW(khCashNet)}</span>
+              </div>
+              <div class="breakdown-row">
+                <span class="breakdown-label">FOC</span>
+                <span class="breakdown-value">${formatKRW(khFocNet)}</span>
+              </div>
+            </div>
+            <div class="progress-container">
+              <div class="progress-bar">
+                <div class="progress-segment cash-kh" style="width: ${khCashPercent}%"></div>
+                <div class="progress-segment foc-kh" style="width: ${khFocPercent}%"></div>
+              </div>
+            </div>
+          </div>
+        `;
+      } else {
+        // Single country view - 3 column layout with local currency as main
+        const countryNet = currentTab === 'VN' ? vnNet : khNet;
+        const countryCashNet = currentTab === 'VN' ? vnCashNet : khCashNet;
+        const countryFocNet = currentTab === 'VN' ? vnFocNet : khFocNet;
+        const segClass = currentTab === 'VN' ? 'vn' : 'kh';
+        const countryName = currentTab === 'VN' ? 'HeBe VN' : 'HeBe Khmer Beauty';
+
+        const cashPercent = countryNet > 0 ? Math.round((countryCashNet / countryNet) * 100) : 0;
+        const focPercent = 100 - cashPercent;
+
+        html = `
+          <!-- Card 1: Total Available -->
+          <div class="net-budget-card ${segClass} animate-in">
+            <div class="card-label">
+              <span class="flag-badge flag-${segClass}"></span>
+              <span>${countryName} Available</span>
+              <span class="reserve-badge">-20%</span>
+            </div>
+            <div class="card-value">${formatPrimary(countryNet)}</div>
+            <div class="card-subvalue">${formatSecondary(countryNet)}</div>
+            <div class="summary-breakdown">
+              <div class="breakdown-row">
+                <span class="breakdown-label">Monthly Avg</span>
+                <span class="breakdown-value">${formatPrimary(Math.round(countryNet / 12))}</span>
+              </div>
+            </div>
+            <div class="progress-container">
+              <div class="progress-bar">
+                <div class="progress-segment cash-${segClass}" style="width: ${cashPercent}%"></div>
+                <div class="progress-segment foc-${segClass}" style="width: ${focPercent}%"></div>
+              </div>
+              <div class="progress-legend">
+                <div class="legend-item"><div class="legend-dot cash-${segClass}"></div>Cash ${cashPercent}%</div>
+                <div class="legend-item"><div class="legend-dot foc-${segClass}"></div>FOC ${focPercent}%</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Cash Available -->
+          <div class="net-budget-card ${segClass} animate-in" style="animation-delay: 0.1s">
+            <div class="card-label">
+              <span>💵 Cash Available</span>
+              <span class="reserve-badge">-20%</span>
+            </div>
+            <div class="card-value">${formatPrimary(countryCashNet)}</div>
+            <div class="card-subvalue">${formatSecondary(countryCashNet)}</div>
+            <div class="summary-breakdown">
+              <div class="breakdown-row">
+                <span class="breakdown-label">Share</span>
+                <span class="breakdown-value">${cashPercent}%</span>
+              </div>
+              <div class="breakdown-row">
+                <span class="breakdown-label">Monthly Avg</span>
+                <span class="breakdown-value">${formatPrimary(Math.round(countryCashNet / 12))}</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: FOC Available -->
+          <div class="net-budget-card ${segClass} animate-in" style="animation-delay: 0.2s">
+            <div class="card-label">
+              <span>🎁 FOC Available</span>
+              <span class="reserve-badge">-20%</span>
+            </div>
+            <div class="card-value">${formatPrimary(countryFocNet)}</div>
+            <div class="card-subvalue">${formatSecondary(countryFocNet)}</div>
+            <div class="summary-breakdown">
+              <div class="breakdown-row">
+                <span class="breakdown-label">Share</span>
+                <span class="breakdown-value">${focPercent}%</span>
+              </div>
+              <div class="breakdown-row">
+                <span class="breakdown-label">Monthly Avg</span>
+                <span class="breakdown-value">${formatPrimary(Math.round(countryFocNet / 12))}</span>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      document.getElementById('netBudgetCards').innerHTML = html;
+    }
+
+    // Category definitions
+    const CATEGORIES = [
+      { key: 'COLOUR', emoji: '💄', label: 'COLOUR' },
+      { key: 'SKIN', emoji: '✨', label: 'SKIN' },
+      { key: 'INTIMATE', emoji: '🌸', label: 'INTIMATE' }
+    ];
+
+    // Render Brand Bars with category grouping (Net amounts)
+    function renderBrandBars() {
+      const data = getFilteredData(currentTab);
+      const brandData = calculateBrandData(data);
+
+      // Find max NET total across all brands for consistent bar widths
+      const brandsWithBudget = brandData.filter(b => b.total > 0);
+      const maxNetTotal = brandsWithBudget.length > 0 ? Math.max(...brandsWithBudget.map(b => calculateNet(b.total))) : 1;
+
+      // Helper function to render a single brand bar
+      function renderBrandBar(item) {
+        if (item.total === 0) {
+          return `
+            <div class="brand-bar-item animate-in">
+              <div class="brand-bar-label" title="${item.brand}">${item.brand}</div>
+              <div class="brand-bar-track" style="width: 30%; background: #E8ECF0;"></div>
+              <div class="brand-bar-amount" style="color: #9AA5B1;">TBD</div>
+            </div>
+          `;
+        }
+
+        const netTotal = calculateNet(item.total);
+        const totalWidth = (netTotal / maxNetTotal) * 100;
+        const brandKey = getBrandKey(item.brand);
+        const segmentsHtml = item.segments.map(seg => {
+          if (seg.amount === 0) return '';
+          const segWidth = (seg.amount / item.total) * 100;
+          const segClass = `brand-${brandKey}-${seg.type.toLowerCase()}-${seg.country.toLowerCase()}`;
+          const typeEmoji = seg.type === 'Cash' ? '💵' : '🎁';
+          const countryFlagHtml = seg.country === 'VN'
+            ? '<span class="seg-flag seg-flag-vn"></span>'
+            : '<span class="seg-flag seg-flag-kh"></span>';
+          const label = seg.amount >= item.total * 0.15 ? `${typeEmoji} ${seg.type} · ${countryFlagHtml}` : '';
+          // Data attributes for tooltip
+          const netAmount = calculateNet(seg.amount);
+          return `<div class="brand-bar-segment ${segClass}" style="width: ${segWidth}%"
+            data-country="${seg.country}"
+            data-type="${seg.type}"
+            data-amount="${seg.amount}"
+            data-net="${netAmount}"
+          ><span>${label}</span></div>`;
+        }).join('');
+
+        return `
+          <div class="brand-bar-item animate-in">
+            <div class="brand-bar-label" title="${item.brand}">${item.brand}</div>
+            <div class="brand-bar-track" style="width: calc(${totalWidth}% + (100% - ${totalWidth}%) * 0.3)">
+              <div style="display: flex; width: ${(totalWidth / (totalWidth + (100 - totalWidth) * 0.3)) * 100}%; height: 100%;">
+                ${segmentsHtml}
+              </div>
+            </div>
+            <div class="brand-bar-amount">${formatPrimary(netTotal)}</div>
+          </div>
+        `;
+      }
+
+      let html = '';
+
+      // Group by category with section headers
+      CATEGORIES.forEach(cat => {
+        const categoryBrands = brandData.filter(b => {
+          // Find category from original data
+          const brandItems = data.filter(d => d.brand === b.brand);
+          return brandItems.length > 0 && brandItems[0].category === cat.key;
+        });
+
+        if (categoryBrands.length === 0) return;
+
+        const categoryGrossTotal = categoryBrands.reduce((sum, b) => sum + b.total, 0);
+        const categoryNetTotal = calculateNet(categoryGrossTotal);
+
+        html += `
+          <div class="category-section">
+            <div class="category-section-header ${cat.key.toLowerCase()}">
+              <div class="category-section-title">
+                <span>${cat.emoji}</span>
+                <span>${cat.label}</span>
+              </div>
+              <div class="category-section-total">${formatPrimary(categoryNetTotal)}</div>
+            </div>
+            <div class="brand-bars-group">
+              ${categoryBrands.map(renderBrandBar).join('')}
+            </div>
+          </div>
+        `;
+      });
+
+      document.getElementById('brandBars').innerHTML = html;
+    }
+
+    // Render Brand Bars with category grouping (Gross amounts - before 20% deduction)
+    function renderBrandBarsGross() {
+      const data = getFilteredData(currentTab);
+      const brandData = calculateBrandData(data);
+
+      // Find max GROSS total across all brands for consistent bar widths
+      const brandsWithBudget = brandData.filter(b => b.total > 0);
+      const maxGrossTotal = brandsWithBudget.length > 0 ? Math.max(...brandsWithBudget.map(b => b.total)) : 1;
+
+      // Helper function to render a single brand bar (Gross)
+      function renderBrandBarGross(item) {
+        if (item.total === 0) {
+          return `
+            <div class="brand-bar-item animate-in">
+              <div class="brand-bar-label" title="${item.brand}">${item.brand}</div>
+              <div class="brand-bar-track" style="width: 30%; background: #E8ECF0;"></div>
+              <div class="brand-bar-amount" style="color: #9AA5B1;">TBD</div>
+            </div>
+          `;
+        }
+
+        const grossTotal = item.total;
+        const totalWidth = (grossTotal / maxGrossTotal) * 100;
+        const brandKey = getBrandKey(item.brand);
+        const segmentsHtml = item.segments.map(seg => {
+          if (seg.amount === 0) return '';
+          const segWidth = (seg.amount / item.total) * 100;
+          const segClass = `brand-${brandKey}-${seg.type.toLowerCase()}-${seg.country.toLowerCase()}`;
+          const typeEmoji = seg.type === 'Cash' ? '💵' : '🎁';
+          const countryFlagHtml = seg.country === 'VN'
+            ? '<span class="seg-flag seg-flag-vn"></span>'
+            : '<span class="seg-flag seg-flag-kh"></span>';
+          const label = seg.amount >= item.total * 0.15 ? `${typeEmoji} ${seg.type} · ${countryFlagHtml}` : '';
+          // Data attributes for tooltip - use gross amount
+          return `<div class="brand-bar-segment ${segClass}" style="width: ${segWidth}%"
+            data-country="${seg.country}"
+            data-type="${seg.type}"
+            data-amount="${seg.amount}"
+            data-net="${seg.amount}"
+            data-is-gross="true"
+          ><span>${label}</span></div>`;
+        }).join('');
+
+        return `
+          <div class="brand-bar-item animate-in">
+            <div class="brand-bar-label" title="${item.brand}">${item.brand}</div>
+            <div class="brand-bar-track" style="width: calc(${totalWidth}% + (100% - ${totalWidth}%) * 0.3)">
+              <div style="display: flex; width: ${(totalWidth / (totalWidth + (100 - totalWidth) * 0.3)) * 100}%; height: 100%;">
+                ${segmentsHtml}
+              </div>
+            </div>
+            <div class="brand-bar-amount">${formatPrimary(grossTotal)}</div>
+          </div>
+        `;
+      }
+
+      let html = '';
+
+      // Group by category with section headers
+      CATEGORIES.forEach(cat => {
+        const categoryBrands = brandData.filter(b => {
+          // Find category from original data
+          const brandItems = data.filter(d => d.brand === b.brand);
+          return brandItems.length > 0 && brandItems[0].category === cat.key;
+        });
+
+        if (categoryBrands.length === 0) return;
+
+        const categoryGrossTotal = categoryBrands.reduce((sum, b) => sum + b.total, 0);
+
+        html += `
+          <div class="category-section">
+            <div class="category-section-header ${cat.key.toLowerCase()}">
+              <div class="category-section-title">
+                <span>${cat.emoji}</span>
+                <span>${cat.label}</span>
+              </div>
+              <div class="category-section-total">${formatPrimary(categoryGrossTotal)}</div>
+            </div>
+            <div class="brand-bars-group">
+              ${categoryBrands.map(renderBrandBarGross).join('')}
+            </div>
+          </div>
+        `;
+      });
+
+      document.getElementById('brandBarsGross').innerHTML = html;
+    }
+
+    // Render expandable table with category grouping
+    function renderTable() {
+      const data = getFilteredData(currentTab);
+      const brandData = calculateBrandData(data);
+
+      // Table header
+      const showCountry = currentTab === 'total';
+      const colCount = showCountry ? 5 : 4;
+      document.getElementById('tableHead').innerHTML = `
+        <tr>
+          <th style="width: 180px">Brand</th>
+          ${showCountry ? '<th style="width: 180px">Country</th>' : ''}
+          <th style="width: 100px">Allocation</th>
+          <th style="width: 180px; text-align: right">Amount (Gross → Net)</th>
+          <th style="width: 140px">Remark</th>
+        </tr>
+      `;
+
+      // Helper function to render brand rows
+      function renderBrandRows(brands, startIndex = 0) {
+        let html = '';
+        brands.forEach((brand, idx) => {
+          const brandIndex = startIndex + idx;
+          const isExpanded = expandedBrands.has(brand.brand);
+          const hasMultiple = brand.segments.length > 1;
+          const countries = [...new Set(brand.segments.map(s => s.country))];
+          const hasMultipleCountries = countries.length > 1;
+          const safeBrandName = brand.brand.replace(/'/g, "\\'");
+
+          const brandReserve = calculateReserve(brand.total);
+          const brandNet = calculateNet(brand.total);
+          const amountHtml = brand.total === 0
+            ? '<span style="color: #9AA5B1;">TBD</span>'
+            : `<div class="amount-breakdown">
+                <div class="amount-gross">${formatPrimary(brand.total)}</div>
+                <div class="amount-reserve">-${formatPrimary(brandReserve)}</div>
+                <div class="amount-divider"></div>
+                <div class="amount-net">${formatPrimary(brandNet)}</div>
+                ${formatSecondary(brandNet) ? `<div class="amount-secondary">${formatSecondary(brandNet)}</div>` : ''}
+              </div>`;
+
+          html += `
+            <tr class="brand-row ${isExpanded ? 'expanded' : ''}" onclick="toggleBrand('${safeBrandName}')" style="animation-delay: ${brandIndex * 0.05}s">
+              <td>
+                ${hasMultiple ? `<span class="expand-icon">${isExpanded ? '▼' : '▶'}</span>` : '<span style="display:inline-block;width:36px"></span>'}
+                <span class="brand-name">${brand.brand}</span>
+              </td>
+              ${showCountry ? `<td>${countries.map(c => `<span class="country-badge ${c.toLowerCase()}"><span class="flag-badge flag-${c.toLowerCase()}"></span></span>`).join(' ')}</td>` : ''}
+              <td>${[...new Set(brand.segments.map(s => s.type))].map(t => `<span class="type-badge ${t.toLowerCase()}">${t}</span>`).join(' ')}</td>
+              <td class="brand-total">${amountHtml}</td>
+              <td></td>
+            </tr>
+          `;
+
+          if (hasMultiple) {
+            brand.segments.forEach((seg) => {
+              const segReserve = calculateReserve(seg.amount);
+              const segNet = calculateNet(seg.amount);
+              const countryCell = `<span class="country-badge ${seg.country.toLowerCase()}"><span class="flag-badge flag-${seg.country.toLowerCase()}"></span>${seg.country === 'VN' ? 'HeBe VN' : 'HeBe Cambodia'}</span>`;
+              html += `
+                <tr class="detail-row ${isExpanded ? 'show' : ''}" data-brand="${brand.brand}">
+                  <td></td>
+                  ${showCountry ? `<td>${countryCell}</td>` : ''}
+                  <td><span class="type-badge ${seg.type.toLowerCase()}">${seg.type}</span></td>
+                  <td class="detail-amount">
+                    <div class="amount-breakdown">
+                      <div class="amount-gross">${formatPrimary(seg.amount)}</div>
+                      <div class="amount-reserve">-${formatPrimary(segReserve)}</div>
+                      <div class="amount-divider"></div>
+                      <div class="amount-net">${formatPrimary(segNet)}</div>
+                      ${formatSecondary(segNet) ? `<div class="amount-secondary">${formatSecondary(segNet)}</div>` : ''}
+                    </div>
+                  </td>
+                  <td class="detail-remark">${seg.remark}</td>
+                </tr>
+              `;
+            });
+          }
+        });
+        return html;
+      }
+
+      let bodyHtml = '';
+      let globalIndex = 0;
+
+      // Group by category with section headers and subtotals
+      CATEGORIES.forEach(cat => {
+        const categoryBrands = brandData.filter(b => {
+          const brandItems = data.filter(d => d.brand === b.brand);
+          return brandItems.length > 0 && brandItems[0].category === cat.key;
+        });
+
+        if (categoryBrands.length === 0) return;
+
+        const categoryTotal = categoryBrands.reduce((sum, b) => sum + b.total, 0);
+
+        // Category header row
+        bodyHtml += `
+          <tr class="table-category-header ${cat.key.toLowerCase()}">
+            <td colspan="${colCount}">
+              <span style="margin-right: 8px;">${cat.emoji}</span>
+              ${cat.label}
+            </td>
+          </tr>
+        `;
+
+        // Brand rows for this category
+        bodyHtml += renderBrandRows(categoryBrands, globalIndex);
+        globalIndex += categoryBrands.length;
+
+        // Subtotal row - colspan covers Brand + (Country if shown) + Allocation
+        const subtotalColspan = showCountry ? 3 : 2;
+        const categoryNet = calculateNet(categoryTotal);
+        bodyHtml += `
+          <tr class="table-subtotal-row">
+            <td colspan="${subtotalColspan}">Subtotal</td>
+            <td class="subtotal-amount">
+              <div class="amount-breakdown">
+                <div class="amount-gross">${formatPrimary(categoryTotal)}</div>
+                <div class="amount-net" style="font-size: 0.8rem;">${formatPrimary(categoryNet)}</div>
+                ${formatSecondary(categoryNet) ? `<div class="amount-secondary">${formatSecondary(categoryNet)}</div>` : ''}
+              </div>
+            </td>
+            <td></td>
+          </tr>
+        `;
+      });
+
+      document.getElementById('tableBody').innerHTML = bodyHtml;
+    }
+
+    // Toggle brand expansion
+    function toggleBrand(brandName) {
+      if (expandedBrands.has(brandName)) {
+        expandedBrands.delete(brandName);
+      } else {
+        expandedBrands.add(brandName);
+      }
+      renderTable();
+    }
+
+    // Switch tab
+    function switchTab(tab) {
+      currentTab = tab;
+      expandedBrands.clear();
+
+      // Update tab buttons
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active', 'vn', 'kh');
+        if (btn.dataset.tab === tab) {
+          btn.classList.add('active');
+          if (tab === 'VN') btn.classList.add('vn');
+          if (tab === 'KH') btn.classList.add('kh');
+        }
+      });
+
+      // Re-render all components
+      renderSummaryCards();
+      renderBrandBarsGross();
+      renderNetBudgetCards();
+      renderBrandBars();
+      renderTable();
+    }
+
+    // ===== 4계절 애니메이션 시스템 =====
+
+    // 현재 계절 감지
+    function getCurrentSeason() {
+      const month = new Date().getMonth() + 1;
+      if ([3, 4, 5].includes(month)) return 'spring';
+      if ([6, 7, 8].includes(month)) return 'summer';
+      if ([9, 10, 11].includes(month)) return 'fall';
+      return 'winter';
+    }
+
+    // 개별 파티클 생성
+    function createParticle(season, index) {
+      const particle = document.createElement('div');
+      const delay = Math.random() * 3; // 더 짧은 딜레이
+      const left = Math.random() * 100;
+      const duration = 2 + Math.random() * 3; // 더 빠른 속도
+      const size = 0.5 + Math.random() * 0.8;
+
+      particle.className = 'particle';
+
+      switch(season) {
+        case 'spring':
+          particle.classList.add('sakura');
+          particle.style.animationDuration = `${duration + 3}s, 3s`;
+          break;
+        case 'fall':
+          particle.classList.add('maple');
+          particle.style.animationDuration = `${duration + 5}s`;
+          break;
+        case 'winter':
+          particle.classList.add('snowflake');
+          // 다양한 눈꽃 타입
+          const snowType = Math.floor(Math.random() * 5) + 1;
+          if (snowType > 1) particle.classList.add('type-' + snowType);
+          particle.style.animationDuration = `${duration}s`;
+          break;
+      }
+
+      particle.style.left = left + '%';
+      particle.style.animationDelay = delay + 's';
+      particle.style.transform = `scale(${size})`;
+
+      return particle;
+    }
+
+    // 파티클 컨테이너 생성
+    function createParticles(container, season, count = 12) {
+      if (season === 'summer') return; // 여름은 파도 사용
+
+      const particleContainer = document.createElement('div');
+      particleContainer.className = 'seasonal-particles';
+
+      for (let i = 0; i < count; i++) {
+        const particle = createParticle(season, i);
+        particleContainer.appendChild(particle);
+      }
+
+      container.style.position = 'relative';
+      container.style.overflow = 'hidden';
+      container.appendChild(particleContainer);
+    }
+
+    // 파도 생성 (여름 전용)
+    function createWaves(container) {
+      const waveContainer = document.createElement('div');
+      waveContainer.className = 'wave-container';
+
+      for (let i = 0; i < 3; i++) {
+        const wave = document.createElement('div');
+        wave.className = 'wave';
+        waveContainer.appendChild(wave);
+      }
+
+      container.style.position = 'relative';
+      container.style.overflow = 'hidden';
+      container.appendChild(waveContainer);
+    }
+
+    // 계절 효과 초기화
+    function initSeasonalEffects() {
+      const season = getCurrentSeason();
+      const header = document.querySelector('.header');
+      const banner = document.querySelector('.net-budget-label');
+
+      // 계절별 배경색 클래스 추가
+      if (header) {
+        header.classList.add('season-' + season);
+      }
+      if (banner) {
+        banner.classList.add('season-' + season);
+      }
+
+      // 파티클 또는 파도 추가
+      if (season === 'summer') {
+        if (header) createWaves(header);
+        if (banner) createWaves(banner);
+      } else if (season === 'winter') {
+        // 겨울은 눈꽃 많이
+        if (header) createParticles(header, season, 30);
+        if (banner) createParticles(banner, season, 15);
+      } else {
+        if (header) createParticles(header, season, 15);
+        if (banner) createParticles(banner, season, 8);
+      }
+    }
+
+    // Tooltip functionality
+    function initTooltip() {
+      const tooltip = document.getElementById('segmentTooltip');
+      if (!tooltip) return;
+
+      const tooltipFlag = tooltip.querySelector('.tooltip-flag');
+      const tooltipType = tooltip.querySelector('.tooltip-type');
+      const tooltipKrw = tooltip.querySelector('.tooltip-krw');
+      const tooltipConverted = tooltip.querySelector('.tooltip-converted');
+
+      // Event delegation for segment hover
+      document.addEventListener('mousemove', (e) => {
+        const segment = e.target.closest('.brand-bar-segment');
+
+        if (segment) {
+          const country = segment.dataset.country;
+          const type = segment.dataset.type;
+          const amount = parseInt(segment.dataset.amount);
+          const netAmount = parseInt(segment.dataset.net);
+
+          // Update tooltip content
+          tooltipFlag.className = 'tooltip-flag ' + country.toLowerCase();
+          tooltipType.textContent = type === 'Cash' ? '💵 Cash' : '🎁 FOC';
+          tooltipType.className = 'tooltip-type ' + type.toLowerCase();
+
+          // Show currency based on current tab (primary on top)
+          if (currentTab === 'VN') {
+            tooltipKrw.textContent = formatVND(netAmount);
+            tooltipConverted.textContent = formatKRW(netAmount);
+          } else if (currentTab === 'KH') {
+            tooltipKrw.textContent = formatUSD(netAmount);
+            tooltipConverted.textContent = formatKRW(netAmount);
+          } else {
+            // Total view - show KRW as main, local currency as secondary
+            tooltipKrw.textContent = formatKRW(netAmount);
+            if (country === 'VN') {
+              tooltipConverted.textContent = formatVND(netAmount);
+            } else {
+              tooltipConverted.textContent = formatUSD(netAmount);
+            }
+          }
+
+          // Position tooltip to follow cursor
+          const tooltipWidth = tooltip.offsetWidth;
+          const tooltipHeight = tooltip.offsetHeight;
+          let x = e.clientX + 15;
+          let y = e.clientY + 15;
+
+          // Keep tooltip within viewport
+          if (x + tooltipWidth > window.innerWidth) {
+            x = e.clientX - tooltipWidth - 15;
+          }
+          if (y + tooltipHeight > window.innerHeight) {
+            y = e.clientY - tooltipHeight - 15;
+          }
+
+          tooltip.style.left = x + 'px';
+          tooltip.style.top = y + 'px';
+          tooltip.classList.add('visible');
+        } else {
+          tooltip.classList.remove('visible');
+        }
+      });
+
+      // Hide tooltip when leaving brand bars area
+      document.addEventListener('mouseleave', (e) => {
+        if (e.target.closest && !e.target.closest('.brand-bars')) {
+          tooltip.classList.remove('visible');
+        }
+      }, true);
+    }
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      switchTab('total');
+      initSeasonalEffects();
+      initTooltip();
+    });
+  </script>
+</body>
+</html>

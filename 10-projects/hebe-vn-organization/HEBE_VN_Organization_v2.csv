@@ -1,0 +1,32 @@
+ID,Name,Department,Team,Role,Level,Reports To,Email,Phone,Brand 1,Brand 2,Brand 3,Profile Link,Slack,Start Date,Status,Notes
+VN-001,Nguyen Anna,Executive,Leadership,CEO,Executive,-,anna@hebe.vn,,All Brands,,,Link,@anna,,Active,
+KR-001,Kim Jin,Executive,Leadership,CEO,Executive,-,jin@hebe.kr,,All Brands,,,Link,@jin,,Active,HEBE KR
+KR-002,Park Jun,Executive,Leadership,Assistant Manager,Executive,KR-001,jun@hebe.kr,,All Brands,,,Link,@jun,,Active,HEBE KR
+VN-101,-,Operations,Warehouse,Warehouse Staff,Member,VN-001,email,phone,-,-,-,Link,slack,yyyy-mm-dd,Pending,
+VN-102,-,Operations,Warehouse,Warehouse Staff,Member,VN-001,email,phone,-,-,-,Link,slack,yyyy-mm-dd,Pending,
+VN-103,Nguyen My,Finance,Accounting,Accountant,Member,VN-001,email,phone,-,-,-,Link,slack,yyyy-mm-dd,Pending,
+VN-104,Tran Uyen,Finance,Accounting,Accountant,Member,VN-001,email,phone,-,-,-,Link,slack,yyyy-mm-dd,Pending,
+VN-105,Le Tam,Finance,Accounting,Accountant,Member,VN-001,email,phone,-,-,-,Link,slack,yyyy-mm-dd,Pending,
+VN-106,Nguyen Kim,Finance,Accounting,Accountant,Member,VN-001,email,phone,-,-,-,Link,slack,yyyy-mm-dd,Pending,
+VN-201,Nguyen Giang,Commercial,Sales,Sales Executive,Member,VN-001,email,phone,-,-,-,Link,slack,yyyy-mm-dd,Pending,Commission
+VN-202,Tran Chau,Commercial,Sales,Sales Executive,Member,VN-001,email,phone,-,-,-,Link,slack,yyyy-mm-dd,Pending,Commission
+VN-203,Le Tu Anh,Commercial,Sales,Sales Executive,Member,VN-001,email,phone,-,-,-,Link,slack,yyyy-mm-dd,Pending,Commission
+VN-301,Nguyen Thoai,Commercial,E-Commerce,E-Commerce Lead,Lead,VN-001,thoai@hebe.vn,,,,Link,@thoai,,Active,
+VN-302,Tran Nguyen,Commercial,E-Commerce,E-Commerce Specialist,Member,VN-301,email,phone,-,-,-,Link,slack,yyyy-mm-dd,Pending,
+VN-303,Le Loc,Commercial,E-Commerce,E-Commerce Specialist,Member,VN-301,email,phone,-,-,-,Link,slack,yyyy-mm-dd,Pending,
+VN-304,Nguyen Trinh,Commercial,E-Commerce,E-Commerce Specialist,Member,VN-301,email,phone,-,-,-,Link,slack,yyyy-mm-dd,Pending,
+VN-305,Tran Duyen,Commercial,E-Commerce,E-Commerce Specialist,Member,VN-301,email,phone,-,-,-,Link,slack,yyyy-mm-dd,Pending,
+VN-306,Le Tai,Commercial,E-Commerce,E-Commerce Specialist,Member,VN-301,email,phone,-,-,-,Link,slack,yyyy-mm-dd,Pending,
+VN-307,Nguyen Nhi,Commercial,E-Commerce,E-Commerce Specialist,Member,VN-301,email,phone,-,-,-,Link,slack,yyyy-mm-dd,Pending,
+VN-401,Tran Huy,Marketing,Digital,Digital Executive,Member,VN-001,huy@hebe.vn,,,,Link,@huy,,Active,
+VN-500,TBD,Marketing,Marketing,Marketing Manager,Lead,VN-001,email,phone,-,-,-,Link,slack,2026-03-01,Upcoming,Joining Mar 2026
+VN-501,Nguyen Ly,Marketing,ABM,Account Manager,Member,VN-500,email,phone,-,-,-,Link,slack,yyyy-mm-dd,Pending,
+VN-502,Tran Van,Marketing,ABM,Account Manager,Member,VN-500,email,phone,-,-,-,Link,slack,yyyy-mm-dd,Pending,
+VN-503,Le Tram,Marketing,ABM,Account Manager,Member,VN-500,email,phone,-,-,-,Link,slack,yyyy-mm-dd,Pending,
+VN-504,Nguyen Uyen,Marketing,ABM,Account Manager,Member,VN-500,email,phone,-,-,-,Link,slack,yyyy-mm-dd,Pending,
+VN-505,Tran Bong,Marketing,Media,Media Specialist,Member,VN-500,email,phone,-,-,-,Link,slack,yyyy-mm-dd,Pending,
+VN-506,Le Duy,Marketing,Media,Media Specialist,Member,VN-500,email,phone,-,-,-,Link,slack,yyyy-mm-dd,Pending,
+VN-507,Nguyen Hoa,Marketing,Design,Graphic Designer,Member,VN-500,email,phone,-,-,-,Link,slack,yyyy-mm-dd,Pending,
+VN-508,Tran Vy,Marketing,Design,Graphic Designer,Member,VN-500,email,phone,-,-,-,Link,slack,yyyy-mm-dd,Pending,
+VN-509,Le Mai,Marketing,Content,Content Creator,Member,VN-500,email,phone,-,-,-,Link,slack,yyyy-mm-dd,Pending,
+VN-510,Nguyen Khue,Marketing,Content,Content Creator,Member,VN-500,email,phone,-,-,-,Link,slack,yyyy-mm-dd,Pending,

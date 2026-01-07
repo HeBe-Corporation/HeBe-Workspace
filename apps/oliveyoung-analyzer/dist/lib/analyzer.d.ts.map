@@ -1,0 +1,1 @@
+{"version":3,"file":"analyzer.d.ts","sourceRoot":"","sources":["../../src/lib/analyzer.ts"],"names":[],"mappings":"AAAA;;GAEG;AAEH,OAAO,EAAU,WAAW,EAAE,aAAa,EAAmC,sBAAsB,EAAE,MAAM,SAAS,CAAC;AAWtH,wBAAgB,cAAc,CAAC,WAAW,EAAE,WAAW,GAAG,aAAa,CA0BtE;AAyJD,wBAAgB,+BAA+B,CAAC,WAAW,EAAE,WAAW,EAAE,QAAQ,EAAE,aAAa,GAAG,sBAAsB,EAAE,CAmE3H"}

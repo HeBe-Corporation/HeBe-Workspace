@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026 Brand Marketing Allocation | HeBe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Pastel Colors */
+      --bg: #F8FAFC;
+      --card: #FFFFFF;
+      --text-primary: #1E293B;
+      --text-secondary: #64748B;
+      --text-muted: #94A3B8;
+
+      /* Vietnam - Pastel Mint */
+      --vn-light: #A8E6CF;
+      --vn-dark: #56C596;
+      --vn-bg: #ECFDF5;
+
+      /* Cambodia - Pastel Peach */
+      --kh-light: #FFD3B6;
+      --kh-dark: #FF8B67;
+      --kh-bg: #FFF7ED;
+
+      /* Cash - Pastel Blue */
+      --cash-light: #A8D8EA;
+      --cash-dark: #6BB9F0;
+      --cash-bg: #EFF6FF;
+
+      /* FOC - Pastel Lavender */
+      --foc-light: #D4A5D5;
+      --foc-dark: #B57EDC;
+      --foc-bg: #FAF5FF;
+
+      /* Brand Colors */
+      --brand-gold: #C19A5B;
+
+      /* Brand-specific Gradients */
+      --brand-drmelaxin-start: #667eea;
+      --brand-drmelaxin-end: #764ba2;
+      --brand-age20s-start: #f093fb;
+      --brand-age20s-end: #f5576c;
+      --brand-medianswer-start: #4facfe;
+      --brand-medianswer-end: #00f2fe;
+      --brand-isoi-start: #43e97b;
+      --brand-isoi-end: #38f9d7;
+      --brand-innergarm-start: #fa709a;
+      --brand-innergarm-end: #fee140;
+      --brand-marymay-start: #a8edea;
+      --brand-marymay-end: #fed6e3;
+
+      /* Shadows */
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+      --shadow-lg: 0 8px 24px rgba(0,0,0,0.08);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.5;
+      min-height: 100vh;
+      padding: 24px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      padding: 20px 24px;
+      background: var(--card);
+      border-radius: 20px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .logo {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+    }
+
+    .header-text h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .header-text .subtitle {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+    }
+
+    .header-badge {
+      background: linear-gradient(135deg, var(--brand-gold) 0%, #D4AF61 100%);
+      color: white;
+      padding: 8px 20px;
+      border-radius: 100px;
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+
+    /* Summary Grid */
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 900px) {
+      .summary-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .summary-card {
+      background: var(--card);
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .summary-card.total {
+      border-top: 4px solid var(--brand-gold);
+    }
+
+    .summary-card.vn {
+      border-top: 4px solid var(--vn-dark);
+    }
+
+    .summary-card.kh {
+      border-top: 4px solid var(--kh-dark);
+    }
+
+    .summary-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .summary-icon {
+      font-size: 1.25rem;
+    }
+
+    .summary-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .summary-value {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .summary-subvalue {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .summary-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid #E2E8F0;
+    }
+
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .stat-label {
+      font-size: 0.6875rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+
+    .stat-value {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Cash/FOC Progress */
+    .cash-foc-section {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid #E2E8F0;
+    }
+
+    .cash-foc-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      font-size: 0.8125rem;
+    }
+
+    .cash-foc-label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-secondary);
+    }
+
+    .cash-foc-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+
+    .cash-foc-dot.cash { background: var(--cash-dark); }
+    .cash-foc-dot.foc { background: var(--foc-dark); }
+
+    .cash-foc-value {
+      font-weight: 600;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .cash-foc-bar {
+      height: 8px;
+      background: #E2E8F0;
+      border-radius: 100px;
+      overflow: hidden;
+      display: flex;
+    }
+
+    .cash-foc-bar .segment {
+      height: 100%;
+      transition: width 0.5s ease;
+    }
+
+    .cash-foc-bar .segment.cash {
+      background: linear-gradient(90deg, var(--cash-light), var(--cash-dark));
+    }
+
+    .cash-foc-bar .segment.foc {
+      background: linear-gradient(90deg, var(--foc-light), var(--foc-dark));
+    }
+
+    /* Tab Navigation */
+    .tab-nav {
+      display: inline-flex;
+      gap: 4px;
+      background: var(--card);
+      padding: 6px;
+      border-radius: 16px;
+      margin-bottom: 16px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .tab-btn {
+      padding: 10px 20px;
+      border: none;
+      background: transparent;
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+      font-weight: 500;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: inherit;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .tab-btn:hover {
+      background: #F1F5F9;
+    }
+
+    .tab-btn.active {
+      background: var(--text-primary);
+      color: white;
+    }
+
+    .tab-btn.active.vn {
+      background: linear-gradient(135deg, var(--vn-light), var(--vn-dark));
+    }
+
+    .tab-btn.active.kh {
+      background: linear-gradient(135deg, var(--kh-light), var(--kh-dark));
+    }
+
+    /* Cards */
+    .card {
+      background: var(--card);
+      border-radius: 20px;
+      padding: 24px;
+      margin-bottom: 16px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .card-title {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 20px;
+    }
+
+    /* Brand Distribution */
+    .brand-bars {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .brand-bar-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand-bar-label {
+      width: 120px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      flex-shrink: 0;
+    }
+
+    .brand-bar-track {
+      flex: 1;
+      height: 28px;
+      background: #F1F5F9;
+      border-radius: 14px;
+      overflow: hidden;
+      display: flex;
+    }
+
+    .brand-bar-segment {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: width 0.5s ease;
+      position: relative;
+    }
+
+    .brand-bar-segment span {
+      font-size: 0.625rem;
+      font-weight: 600;
+      color: white;
+      white-space: nowrap;
+      padding: 0 4px;
+    }
+
+    /* Brand-specific Bar Colors */
+    .brand-bar-drmelaxin { background: linear-gradient(90deg, var(--brand-drmelaxin-start), var(--brand-drmelaxin-end)); }
+    .brand-bar-drmelaxin.foc { background: linear-gradient(90deg, #8B9BF0, #9B74C0); opacity: 0.8; }
+    .brand-bar-age20s { background: linear-gradient(90deg, var(--brand-age20s-start), var(--brand-age20s-end)); }
+    .brand-bar-age20s.foc { background: linear-gradient(90deg, #F5B8FC, #F89098); opacity: 0.8; }
+    .brand-bar-medianswer { background: linear-gradient(90deg, var(--brand-medianswer-start), var(--brand-medianswer-end)); }
+    .brand-bar-medianswer.foc { background: linear-gradient(90deg, #8FD1FE, #66F5FE); opacity: 0.8; }
+    .brand-bar-isoi { background: linear-gradient(90deg, var(--brand-isoi-start), var(--brand-isoi-end)); }
+    .brand-bar-isoi.foc { background: linear-gradient(90deg, #7BF0A7, #7BFBE5); opacity: 0.8; }
+    .brand-bar-innergarm { background: linear-gradient(90deg, var(--brand-innergarm-start), var(--brand-innergarm-end)); }
+    .brand-bar-innergarm.foc { background: linear-gradient(90deg, #FB9DB5, #FEE87A); opacity: 0.8; }
+    .brand-bar-marymay { background: linear-gradient(90deg, var(--brand-marymay-start), var(--brand-marymay-end)); }
+    .brand-bar-marymay.foc { background: linear-gradient(90deg, #C5F0EE, #FEDFE8); opacity: 0.8; }
+
+    /* Country indicator dots */
+    .country-dot {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .country-dot.vn { background: var(--vn-dark); left: 4px; }
+    .country-dot.kh { background: var(--kh-dark); right: 4px; }
+
+    /* Segment label with country indicator */
+    .segment-label {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.625rem;
+      font-weight: 600;
+      color: white;
+      white-space: nowrap;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    }
+    .segment-country-badge {
+      background: rgba(255,255,255,0.3);
+      padding: 1px 4px;
+      border-radius: 3px;
+      font-size: 0.5625rem;
+    }
+
+    .brand-bar-amount {
+      width: 100px;
+      text-align: right;
+      font-size: 0.875rem;
+      font-weight: 600;
+      font-variant-numeric: tabular-nums;
+      color: var(--text-primary);
+      flex-shrink: 0;
+    }
+
+    /* Table */
+    .table-wrap {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    thead th {
+      text-align: left;
+      padding: 14px 16px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 2px solid #E2E8F0;
+      background: #FAFBFC;
+    }
+
+    tbody tr {
+      border-bottom: 1px solid #F1F5F9;
+    }
+
+    tbody tr:hover {
+      background: #FAFBFC;
+    }
+
+    tbody td {
+      padding: 16px;
+      vertical-align: middle;
+    }
+
+    .td-brand {
+      font-weight: 600;
+      color: var(--text-primary);
+      font-size: 0.9375rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-color-indicator {
+      width: 4px;
+      height: 28px;
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    .brand-color-drmelaxin { background: linear-gradient(180deg, var(--brand-drmelaxin-start), var(--brand-drmelaxin-end)); }
+    .brand-color-age20s { background: linear-gradient(180deg, var(--brand-age20s-start), var(--brand-age20s-end)); }
+    .brand-color-medianswer { background: linear-gradient(180deg, var(--brand-medianswer-start), var(--brand-medianswer-end)); }
+    .brand-color-isoi { background: linear-gradient(180deg, var(--brand-isoi-start), var(--brand-isoi-end)); }
+    .brand-color-innergarm { background: linear-gradient(180deg, var(--brand-innergarm-start), var(--brand-innergarm-end)); }
+    .brand-color-marymay { background: linear-gradient(180deg, var(--brand-marymay-start), var(--brand-marymay-end)); }
+
+    .td-breakdown {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .breakdown-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 10px;
+      background: #F8FAFC;
+      border-radius: 8px;
+      font-size: 0.8125rem;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 2px 8px;
+      border-radius: 100px;
+      font-size: 0.6875rem;
+      font-weight: 600;
+    }
+
+    .badge-vn {
+      background: var(--vn-bg);
+      color: var(--vn-dark);
+    }
+
+    .badge-kh {
+      background: var(--kh-bg);
+      color: var(--kh-dark);
+    }
+
+    .badge-cash {
+      background: var(--cash-bg);
+      color: var(--cash-dark);
+    }
+
+    .badge-foc {
+      background: var(--foc-bg);
+      color: var(--foc-dark);
+    }
+
+    .breakdown-amount {
+      font-weight: 600;
+      color: var(--text-primary);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .td-total {
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      text-align: right;
+      font-size: 0.9375rem;
+    }
+
+    .td-converted {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 20px;
+      color: var(--text-muted);
+      font-size: 0.75rem;
+    }
+
+    .footer .rates {
+      display: inline-flex;
+      gap: 20px;
+      margin-top: 8px;
+    }
+
+    .footer .rate {
+      background: #F1F5F9;
+      padding: 4px 12px;
+      border-radius: 100px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      body { padding: 16px; }
+      .header { flex-direction: column; gap: 16px; text-align: center; }
+      .header-left { flex-direction: column; }
+      .brand-bar-label { width: 80px; font-size: 0.75rem; }
+      .brand-bar-amount { width: 70px; font-size: 0.75rem; }
+      .tab-nav { width: 100%; }
+      .tab-btn { flex: 1; justify-content: center; font-size: 0.8125rem; padding: 8px 12px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-left">
+        <img src="data:image/gif;base64,R0lGODlh6APoA8QQAPDk0NOuc+HJociaUPv48+nWuc+nZ9q8ivTr3MuhW/jx6OzdxOXQrde1f97ClsSTRP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAABAALAAAAADoA+gDAAX/ICSOZGmeaKqubOu+cCzPdG3feK7vfO//wKBwSCwaj8ikcslsOp/QqHRKrVqv2Kx2y+16v+CweEwum8/otHrNbrvf8Lh8Tq/b7/i8fs/v+/+AgYKDhIWGh4iJiouMjY6PkJGSk5SVlpeYmZqbnJ2en6ChoqOkpaanqKmqq6ytrq+wsbKztLW2t7i5uru8vb6/wMHCw8TFxsfIycrLzM3Oz9DR0tPU1dbX2Nna29zd3t/g4eLj5OXm5+jp6uvs7e7v8PHy8/T19vf4+fr7/P3+/wADChxIsKDBgwgTKlzIsKHDhxAjSpxIsaLFixgzatzIsaPHjyBDihxJsqTJkyhT/6pcybKly5cwY8qcSbOmzZs4c+rcybOnz59AgwodSrSo0aNIkypdyrSp06dQo0qdSrWq1atYs2rdyrWr169gw4odS7as2bNo06pdy7at27dw48qdS7eu3bt48+rdy7ev37+AAwseTLiw4cOIEytezLix48eQI0ueTLmy5cuYM2vezLmz58+gQ4seTbq06dOoU6tezbq169ewY8ueTbu27du4c+vezbu379/AgwsfTry48ePIkytfzry58+fQo0ufTr269evYs2vfzr279+/gw4sfT768+fPo06tfz769+/fw48ufT7+///8ABijggAQWaOCBCCao4P+CDK5AAAAQRijhhBRWaOGFGGao4YYcdujhhyCGKOKIJJZoIoQINLgOAA+06OKLMMYo44w01mjjjTjmqOOOPPbo449ABinkkDQmEMCRATggwJIRKqDiNSwSKeWUVFZp5ZVYZqkllUYGsGQBED7JTJRblmnmmWimqeaaQx6p5AIAiDkMmWzWaeedeOap544DBHCAAAukKKcudO5p6KGIJqoolQY0AKigg8pS6KKUVmrppZb6yUCckbYyKaaghirqqGcacEABkHZayqekturqq7Dy6CUABKgqCqux5qrrrrAa4MACtdrKCa68FmvssZT6uoCwmRCL7LPQRltnAAykyiz/JM5Kq+223FqZwAHL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" alt="HeBe Logo" class="logo">
+        <div class="header-text">
+          <h1>HeBe</h1>
+          <p class="subtitle">2026 Brand Marketing Allocation</p>
+        </div>
+      </div>
+      <div class="header-badge">FY 2026</div>
+    </header>
+
+    <!-- Summary Cards -->
+    <div class="summary-grid" id="summary-cards"></div>
+
+    <!-- Tab Navigation -->
+    <nav class="tab-nav">
+      <button class="tab-btn active" data-tab="total" onclick="switchTab('total')">📊 Total Summary</button>
+      <button class="tab-btn" data-tab="VN" onclick="switchTab('VN')">🇻🇳 HeBe VN</button>
+      <button class="tab-btn" data-tab="KH" onclick="switchTab('KH')">🇰🇭 HeBe Khmer Beauty</button>
+    </nav>
+
+    <!-- Brand Distribution -->
+    <div class="card">
+      <div class="card-title">Brand Budget Distribution</div>
+      <div class="brand-bars" id="brand-bars"></div>
+    </div>
+
+    <!-- Data Table -->
+    <div class="card">
+      <div class="card-title">Budget Details</div>
+      <div class="table-wrap">
+        <table>
+          <thead id="table-head"></thead>
+          <tbody id="table-body"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div>Exchange Rates (Fixed)</div>
+      <div class="rates">
+        <span class="rate">1 KRW = 18 VND</span>
+        <span class="rate">1 USD = 1,450 KRW</span>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Data
+    const budgetData = [
+      { brand: "Dr.Melaxin", type: "Cash", country: "VN", amount: 300000000, remark: "Monthly allocation" },
+      { brand: "AGE20'S", type: "Cash", country: "VN", amount: 210000000, remark: "Monthly 17.5M KRW" },
+      { brand: "AGE20'S", type: "FOC", country: "VN", amount: 90000000, remark: "Monthly 7.5M KRW (product)" },
+      { brand: "Medianswer", type: "Cash", country: "VN", amount: 150000000, remark: "Monthly allocation" },
+      { brand: "Medianswer", type: "Cash", country: "KH", amount: 50000000, remark: "Monthly allocation" },
+      { brand: "ISOI", type: "Cash", country: "VN", amount: 100000000, remark: "Monthly allocation" },
+      { brand: "ISOI", type: "FOC", country: "VN", amount: 20000000, remark: "Monthly allocation" },
+      { brand: "Innergarm", type: "FOC", country: "VN", amount: 100000000, remark: "Formerly Wettrust" },
+      { brand: "Mary&May", type: "Cash", country: "VN", amount: 20000000, remark: "Monthly allocation" },
+      { brand: "Mary&May", type: "Cash", country: "KH", amount: 80000000, remark: "Monthly allocation" }
+    ];
+
+    // Exchange rates
+    const EXCHANGE = {
+      KRW_TO_VND: 18,
+      KRW_TO_USD: 1 / 1450
+    };
+
+    // Current tab
+    let currentTab = 'total';
+
+    // Utility functions
+    function formatNumber(num) {
+      return num.toLocaleString('en-US');
+    }
+
+    function formatKRW(num) {
+      return '₩' + formatNumber(num);
+    }
+
+    function formatVND(krw) {
+      return formatNumber(Math.round(krw * EXCHANGE.KRW_TO_VND)) + ' ₫';
+    }
+
+    function formatUSD(krw) {
+      return '$' + formatNumber(Math.round(krw * EXCHANGE.KRW_TO_USD * 100) / 100);
+    }
+
+    // Calculate totals
+    function getFilteredData(country = null) {
+      return country ? budgetData.filter(d => d.country === country) : budgetData;
+    }
+
+    function getTotal(data) {
+      return data.reduce((sum, d) => sum + d.amount, 0);
+    }
+
+    function getCashTotal(data) {
+      return data.filter(d => d.type === 'Cash').reduce((sum, d) => sum + d.amount, 0);
+    }
+
+    function getFocTotal(data) {
+      return data.filter(d => d.type === 'FOC').reduce((sum, d) => sum + d.amount, 0);
+    }
+
+    // Group by brand
+    function groupByBrand(data) {
+      const brands = {};
+      data.forEach(d => {
+        if (!brands[d.brand]) {
+          brands[d.brand] = { total: 0, segments: [] };
+        }
+        brands[d.brand].total += d.amount;
+        brands[d.brand].segments.push(d);
+      });
+      return Object.entries(brands)
+        .map(([brand, info]) => ({ brand, ...info }))
+        .sort((a, b) => b.total - a.total);
+    }
+
+    // Render summary cards
+    function renderSummaryCards() {
+      const totalData = budgetData;
+      const vnData = getFilteredData('VN');
+      const khData = getFilteredData('KH');
+
+      const total = getTotal(totalData);
+      const vnTotal = getTotal(vnData);
+      const khTotal = getTotal(khData);
+
+      const totalCash = getCashTotal(totalData);
+      const totalFoc = getFocTotal(totalData);
+      const vnCash = getCashTotal(vnData);
+      const vnFoc = getFocTotal(vnData);
+      const khCash = getCashTotal(khData);
+      const khFoc = getFocTotal(khData);
+
+      const cashPercent = (cash, foc) => Math.round((cash / (cash + foc)) * 100) || 0;
+      const focPercent = (cash, foc) => 100 - cashPercent(cash, foc);
+
+      const html = `
+        <div class="summary-card total">
+          <div class="summary-header">
+            <span class="summary-icon">📊</span>
+            <span class="summary-label">Total Budget</span>
+          </div>
+          <div class="summary-value">${formatKRW(total)}</div>
+          <div class="summary-subvalue">Monthly Avg: ${formatKRW(Math.round(total / 12))}</div>
+          <div class="cash-foc-section">
+            <div class="cash-foc-row">
+              <span class="cash-foc-label"><span class="cash-foc-dot cash"></span>Cash</span>
+              <span class="cash-foc-value">${formatKRW(totalCash)}</span>
+            </div>
+            <div class="cash-foc-row">
+              <span class="cash-foc-label"><span class="cash-foc-dot foc"></span>FOC</span>
+              <span class="cash-foc-value">${formatKRW(totalFoc)}</span>
+            </div>
+            <div class="cash-foc-bar">
+              <div class="segment cash" style="width: ${cashPercent(totalCash, totalFoc)}%"></div>
+              <div class="segment foc" style="width: ${focPercent(totalCash, totalFoc)}%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="summary-card vn">
+          <div class="summary-header">
+            <span class="summary-icon">🇻🇳</span>
+            <span class="summary-label">HeBe VN (Vietnam)</span>
+          </div>
+          <div class="summary-value">${formatKRW(vnTotal)}</div>
+          <div class="summary-subvalue">${formatVND(vnTotal)}</div>
+          <div class="summary-stats">
+            <div class="stat-item">
+              <span class="stat-label">Share of Total</span>
+              <span class="stat-value">${Math.round((vnTotal / total) * 100)}%</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Monthly Avg</span>
+              <span class="stat-value">${formatKRW(Math.round(vnTotal / 12))}</span>
+            </div>
+          </div>
+          <div class="cash-foc-section">
+            <div class="cash-foc-row">
+              <span class="cash-foc-label"><span class="cash-foc-dot cash"></span>Cash</span>
+              <span class="cash-foc-value">${formatKRW(vnCash)}</span>
+            </div>
+            <div class="cash-foc-row">
+              <span class="cash-foc-label"><span class="cash-foc-dot foc"></span>FOC</span>
+              <span class="cash-foc-value">${formatKRW(vnFoc)}</span>
+            </div>
+            <div class="cash-foc-bar">
+              <div class="segment cash" style="width: ${cashPercent(vnCash, vnFoc)}%"></div>
+              <div class="segment foc" style="width: ${focPercent(vnCash, vnFoc)}%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="summary-card kh">
+          <div class="summary-header">
+            <span class="summary-icon">🇰🇭</span>
+            <span class="summary-label">HeBe Khmer Beauty (Cambodia)</span>
+          </div>
+          <div class="summary-value">${formatKRW(khTotal)}</div>
+          <div class="summary-subvalue">${formatUSD(khTotal)}</div>
+          <div class="summary-stats">
+            <div class="stat-item">
+              <span class="stat-label">Share of Total</span>
+              <span class="stat-value">${Math.round((khTotal / total) * 100)}%</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Monthly Avg</span>
+              <span class="stat-value">${formatKRW(Math.round(khTotal / 12))}</span>
+            </div>
+          </div>
+          <div class="cash-foc-section">
+            <div class="cash-foc-row">
+              <span class="cash-foc-label"><span class="cash-foc-dot cash"></span>Cash</span>
+              <span class="cash-foc-value">${formatKRW(khCash)}</span>
+            </div>
+            <div class="cash-foc-row">
+              <span class="cash-foc-label"><span class="cash-foc-dot foc"></span>FOC</span>
+              <span class="cash-foc-value">${formatKRW(khFoc)}</span>
+            </div>
+            <div class="cash-foc-bar">
+              <div class="segment cash" style="width: ${cashPercent(khCash, khFoc)}%"></div>
+              <div class="segment foc" style="width: ${khFoc > 0 ? focPercent(khCash, khFoc) : 0}%"></div>
+            </div>
+          </div>
+        </div>
+      `;
+
+      document.getElementById('summary-cards').innerHTML = html;
+    }
+
+    // Brand name to CSS class mapping
+    function getBrandClass(brand) {
+      const mapping = {
+        "Dr.Melaxin": "drmelaxin",
+        "AGE20'S": "age20s",
+        "Medianswer": "medianswer",
+        "ISOI": "isoi",
+        "Innergarm": "innergarm",
+        "Mary&May": "marymay"
+      };
+      return mapping[brand] || "drmelaxin";
+    }
+
+    // Render brand bars with segments
+    function renderBrandBars(data) {
+      const brands = groupByBrand(data);
+      const maxTotal = Math.max(...brands.map(b => b.total));
+      const overallTotal = getTotal(data);
+
+      const html = brands.map(brand => {
+        const widthPercent = (brand.total / maxTotal) * 100;
+        const brandClass = getBrandClass(brand.brand);
+
+        // Sort segments: VN first, then KH; Cash first, then FOC within each country
+        const sortedSegments = brand.segments.sort((a, b) => {
+          if (a.country !== b.country) return a.country === 'VN' ? -1 : 1;
+          return a.type === 'Cash' ? -1 : 1;
+        });
+
+        const segmentHtml = sortedSegments.map(seg => {
+          const segWidth = (seg.amount / brand.total) * 100;
+          const focClass = seg.type === 'FOC' ? 'foc' : '';
+          const label = segWidth > 12 ? `
+            <span class="segment-label">
+              <span class="segment-country-badge">${seg.country}</span>
+              ${seg.type}
+            </span>
+          ` : '';
+          return `<div class="brand-bar-segment brand-bar-${brandClass} ${focClass}" style="width: ${segWidth}%">${label}</div>`;
+        }).join('');
+
+        return `
+          <div class="brand-bar-item">
+            <div class="brand-bar-label">${brand.brand}</div>
+            <div class="brand-bar-track" style="width: ${widthPercent}%">
+              ${segmentHtml}
+            </div>
+            <div class="brand-bar-amount">${formatKRW(brand.total)}</div>
+          </div>
+        `;
+      }).join('');
+
+      document.getElementById('brand-bars').innerHTML = html;
+    }
+
+    // Render table with nested badges
+    function renderTable(data, tab) {
+      const brands = groupByBrand(data);
+      const total = getTotal(data);
+
+      // Header
+      let headerHtml = `
+        <tr>
+          <th>Brand</th>
+          <th>Breakdown</th>
+          <th style="text-align: right">Total</th>
+        </tr>
+      `;
+      document.getElementById('table-head').innerHTML = headerHtml;
+
+      // Body
+      let bodyHtml = brands.map(brand => {
+        const breakdownHtml = brand.segments.map(seg => {
+          let convertedAmount = '';
+          if (seg.country === 'VN') {
+            convertedAmount = formatVND(seg.amount);
+          } else {
+            convertedAmount = formatUSD(seg.amount);
+          }
+
+          return `
+            <div class="breakdown-item">
+              <span class="badge badge-${seg.country.toLowerCase()}">${seg.country}</span>
+              <span class="badge badge-${seg.type.toLowerCase()}">${seg.type}</span>
+              <span class="breakdown-amount">${formatKRW(seg.amount)}</span>
+            </div>
+          `;
+        }).join('');
+
+        let totalConverted = '';
+        const hasVN = brand.segments.some(s => s.country === 'VN');
+        const hasKH = brand.segments.some(s => s.country === 'KH');
+        if (hasVN && !hasKH) {
+          totalConverted = formatVND(brand.total);
+        } else if (hasKH && !hasVN) {
+          totalConverted = formatUSD(brand.total);
+        }
+
+        const brandClass = getBrandClass(brand.brand);
+        return `
+          <tr>
+            <td class="td-brand">
+              <div class="brand-color-indicator brand-color-${brandClass}"></div>
+              ${brand.brand}
+            </td>
+            <td class="td-breakdown">${breakdownHtml}</td>
+            <td class="td-total">
+              ${formatKRW(brand.total)}
+              ${totalConverted ? `<div class="td-converted">${totalConverted}</div>` : ''}
+            </td>
+          </tr>
+        `;
+      }).join('');
+
+      // Total row
+      bodyHtml += `
+        <tr style="background: #FAFBFC; border-top: 2px solid #E2E8F0;">
+          <td class="td-brand">Total</td>
+          <td></td>
+          <td class="td-total">${formatKRW(total)}</td>
+        </tr>
+      `;
+
+      document.getElementById('table-body').innerHTML = bodyHtml;
+    }
+
+    // Switch tab
+    function switchTab(tab) {
+      currentTab = tab;
+
+      // Update tab buttons
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active', 'vn', 'kh');
+        if (btn.dataset.tab === tab) {
+          btn.classList.add('active');
+          if (tab === 'VN') btn.classList.add('vn');
+          if (tab === 'KH') btn.classList.add('kh');
+        }
+      });
+
+      // Get filtered data
+      const data = tab === 'total' ? budgetData : getFilteredData(tab);
+
+      // Render
+      renderBrandBars(data);
+      renderTable(data, tab);
+    }
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      renderSummaryCards();
+      switchTab('total');
+    });
+  </script>
+</body>
+</html>

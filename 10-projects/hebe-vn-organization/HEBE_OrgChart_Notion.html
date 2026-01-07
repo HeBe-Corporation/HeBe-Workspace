@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HEBE Global Organization</title>
+  <link href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .header h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #E91E63, #FF6B9D, #E91E63);
+      background-size: 200% 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: gradient 3s ease infinite;
+      margin-bottom: 8px;
+    }
+
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .header p {
+      color: #888;
+      font-size: 0.95rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    /* CEO Section */
+    .ceo-section {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+
+    .ceo-card {
+      background: white;
+      border-radius: 24px;
+      padding: 32px 48px;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(233, 30, 99, 0.15);
+      border: 2px solid rgba(233, 30, 99, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ceo-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, #E91E63, #FF6B9D, #E91E63);
+      background-size: 200% 100%;
+      animation: gradient 3s ease infinite;
+    }
+
+    .ceo-avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #FCE4EC, #F8BBD9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+      margin: 0 auto 16px;
+      border: 4px solid white;
+      box-shadow: 0 8px 24px rgba(233, 30, 99, 0.2);
+    }
+
+    .ceo-name {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 4px;
+    }
+
+    .ceo-title {
+      color: #E91E63;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    /* Connection Line */
+    .connector {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+
+    .connector-line {
+      width: 3px;
+      height: 40px;
+      background: linear-gradient(to bottom, #E91E63, #ddd);
+      border-radius: 2px;
+    }
+
+    /* Countries Grid */
+    .countries {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 1024px) {
+      .countries {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Country Card */
+    .country-card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .country-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+    }
+
+    .country-header {
+      padding: 24px;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .country-header::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 100%;
+      height: 200%;
+      background: rgba(255,255,255,0.1);
+      transform: rotate(30deg);
+    }
+
+    .korea .country-header {
+      background: linear-gradient(135deg, #667eea 0%, #3949AB 100%);
+    }
+
+    .vietnam .country-header {
+      background: linear-gradient(135deg, #ff6b6b 0%, #C62828 100%);
+    }
+
+    .cambodia .country-header {
+      background: linear-gradient(135deg, #4ecdc4 0%, #00695C 100%);
+    }
+
+    .country-flag {
+      font-size: 2.5rem;
+      margin-bottom: 8px;
+    }
+
+    .country-name {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .country-subtitle {
+      font-size: 0.85rem;
+      opacity: 0.9;
+    }
+
+    .country-count {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(255,255,255,0.2);
+      backdrop-filter: blur(10px);
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+
+    /* Country CEO */
+    .country-ceo {
+      padding: 20px 24px;
+      border-bottom: 1px solid #f0f0f0;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .country-ceo-avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+
+    .korea .country-ceo-avatar {
+      background: linear-gradient(135deg, #E8EAF6, #C5CAE9);
+    }
+
+    .vietnam .country-ceo-avatar {
+      background: linear-gradient(135deg, #FFEBEE, #FFCDD2);
+    }
+
+    .cambodia .country-ceo-avatar {
+      background: linear-gradient(135deg, #E0F2F1, #B2DFDB);
+    }
+
+    .country-ceo-info h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .country-ceo-info p {
+      font-size: 0.8rem;
+      color: #888;
+    }
+
+    /* Departments */
+    .departments {
+      padding: 20px 24px;
+    }
+
+    .dept-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .dept-item {
+      background: #f8f9fa;
+      border-radius: 12px;
+      padding: 16px;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .dept-item:hover {
+      background: #f0f0f0;
+      transform: scale(1.02);
+    }
+
+    .dept-icon {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+
+    .dept-name {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+
+    .dept-count {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #333;
+    }
+
+    .dept-count span {
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: #999;
+    }
+
+    /* Department Colors */
+    .dept-sales { border-left: 4px solid #0277BD; }
+    .dept-ops { border-left: 4px solid #FF8F00; }
+    .dept-ecom { border-left: 4px solid #5E35B1; }
+    .dept-mkt { border-left: 4px solid #C2185B; }
+    .dept-design { border-left: 4px solid #00838F; }
+    .dept-product { border-left: 4px solid #2E7D32; }
+
+    /* Brands Section */
+    .brands-section {
+      margin-top: 60px;
+      text-align: center;
+    }
+
+    .brands-title {
+      font-size: 0.85rem;
+      color: #999;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .brands-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .brand-tag {
+      padding: 12px 24px;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .brand-tag:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+
+    .brand-1 { background: #FCE4EC; color: #C2185B; }
+    .brand-2 { background: #EDE7F6; color: #5E35B1; }
+    .brand-3 { background: #E8F5E9; color: #2E7D32; }
+    .brand-4 { background: #FFF8E1; color: #FF8F00; }
+    .brand-5 { background: #E1F5FE; color: #0277BD; }
+    .brand-6 { background: #E0F7FA; color: #00838F; }
+    .brand-7 { background: #F3E5F5; color: #7B1FA2; }
+    .brand-8 { background: #EFEBE9; color: #5D4037; }
+
+    /* Stats Section */
+    .stats-section {
+      margin-top: 60px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .stats-section {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .stat-card {
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #E91E63, #FF6B9D);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .stat-label {
+      font-size: 0.85rem;
+      color: #888;
+      margin-top: 4px;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      margin-top: 60px;
+      padding: 20px;
+      color: #ccc;
+      font-size: 0.8rem;
+    }
+
+    /* Glassmorphism effect for special elements */
+    .glass {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    /* Notion-style toggle */
+    .team-toggle {
+      padding: 16px 24px;
+      background: #fafafa;
+      border-top: 1px solid #f0f0f0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: #666;
+      transition: background 0.2s ease;
+    }
+
+    .team-toggle:hover {
+      background: #f5f5f5;
+    }
+
+    .team-toggle::before {
+      content: '▶';
+      font-size: 0.7rem;
+      transition: transform 0.2s ease;
+    }
+
+    .team-toggle.open::before {
+      transform: rotate(90deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <h1>HEBE GLOBAL</h1>
+      <p>Beauty Distribution Network</p>
+    </header>
+
+    <!-- CEO Section -->
+    <section class="ceo-section">
+      <div class="ceo-card">
+        <div class="ceo-avatar">👤</div>
+        <h2 class="ceo-name">Kong KYUJIN (Mikael)</h2>
+        <p class="ceo-title">CEO & Founder · HEBE Global</p>
+      </div>
+    </section>
+
+    <!-- Connector -->
+    <div class="connector">
+      <div class="connector-line"></div>
+    </div>
+
+    <!-- Countries Grid -->
+    <section class="countries">
+      <!-- Korea -->
+      <div class="country-card korea">
+        <div class="country-header">
+          <div class="country-flag">🇰🇷</div>
+          <h3 class="country-name">KOREA</h3>
+          <p class="country-subtitle">본사 Headquarters</p>
+          <div class="country-count">4 members</div>
+        </div>
+        <div class="country-ceo">
+          <div class="country-ceo-avatar">👨‍💼</div>
+          <div class="country-ceo-info">
+            <h4>HQ Operations</h4>
+            <p>Strategic Management</p>
+          </div>
+        </div>
+        <div class="departments">
+          <div class="dept-grid">
+            <div class="dept-item dept-ops">
+              <div class="dept-icon">⚙️</div>
+              <div class="dept-name">Operations</div>
+              <div class="dept-count">2 <span>people</span></div>
+            </div>
+            <div class="dept-item dept-product">
+              <div class="dept-icon">📦</div>
+              <div class="dept-name">Product</div>
+              <div class="dept-count">1 <span>person</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vietnam -->
+      <div class="country-card vietnam">
+        <div class="country-header">
+          <div class="country-flag">🇻🇳</div>
+          <h3 class="country-name">VIETNAM</h3>
+          <p class="country-subtitle">Ho Chi Minh City</p>
+          <div class="country-count">30 members</div>
+        </div>
+        <div class="country-ceo">
+          <div class="country-ceo-avatar">👩‍💼</div>
+          <div class="country-ceo-info">
+            <h4>Pham Tien (Anna)</h4>
+            <p>CEO Vietnam</p>
+          </div>
+        </div>
+        <div class="departments">
+          <div class="dept-grid">
+            <div class="dept-item dept-sales">
+              <div class="dept-icon">💼</div>
+              <div class="dept-name">Sales</div>
+              <div class="dept-count">3 <span>people</span></div>
+            </div>
+            <div class="dept-item dept-ops">
+              <div class="dept-icon">⚙️</div>
+              <div class="dept-name">Operations</div>
+              <div class="dept-count">6 <span>people</span></div>
+            </div>
+            <div class="dept-item dept-ecom">
+              <div class="dept-icon">🛒</div>
+              <div class="dept-name">E-Commerce</div>
+              <div class="dept-count">11 <span>people</span></div>
+            </div>
+            <div class="dept-item dept-mkt">
+              <div class="dept-icon">📣</div>
+              <div class="dept-name">Marketing</div>
+              <div class="dept-count">8 <span>people</span></div>
+            </div>
+            <div class="dept-item dept-design">
+              <div class="dept-icon">🎨</div>
+              <div class="dept-name">Design</div>
+              <div class="dept-count">3 <span>people</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cambodia -->
+      <div class="country-card cambodia">
+        <div class="country-header">
+          <div class="country-flag">🇰🇭</div>
+          <h3 class="country-name">CAMBODIA</h3>
+          <p class="country-subtitle">Phnom Penh</p>
+          <div class="country-count">8 members</div>
+        </div>
+        <div class="country-ceo">
+          <div class="country-ceo-avatar">👤</div>
+          <div class="country-ceo-info">
+            <h4>TBD</h4>
+            <p>Country Manager</p>
+          </div>
+        </div>
+        <div class="departments">
+          <div class="dept-grid">
+            <div class="dept-item dept-sales">
+              <div class="dept-icon">💼</div>
+              <div class="dept-name">Sales</div>
+              <div class="dept-count">2 <span>people</span></div>
+            </div>
+            <div class="dept-item dept-ecom">
+              <div class="dept-icon">🛒</div>
+              <div class="dept-name">E-Commerce</div>
+              <div class="dept-count">2 <span>people</span></div>
+            </div>
+            <div class="dept-item dept-mkt">
+              <div class="dept-icon">📣</div>
+              <div class="dept-name">Marketing</div>
+              <div class="dept-count">3 <span>people</span></div>
+            </div>
+            <div class="dept-item dept-design">
+              <div class="dept-icon">🎨</div>
+              <div class="dept-name">Design</div>
+              <div class="dept-count">1 <span>person</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+      <div class="stat-card">
+        <div class="stat-number">42</div>
+        <div class="stat-label">Total Members</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">3</div>
+        <div class="stat-label">Countries</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">8</div>
+        <div class="stat-label">K-Beauty Brands</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">6</div>
+        <div class="stat-label">Platforms</div>
+      </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section class="brands-section">
+      <h3 class="brands-title">Our Brands</h3>
+      <div class="brands-grid">
+        <span class="brand-tag brand-1">Dasique</span>
+        <span class="brand-tag brand-2">Unleashia</span>
+        <span class="brand-tag brand-3">ISOI</span>
+        <span class="brand-tag brand-4">AGE20's</span>
+        <span class="brand-tag brand-5">Dr.Melaxin</span>
+        <span class="brand-tag brand-6">MediAnswer</span>
+        <span class="brand-tag brand-7">MARY & MAY</span>
+        <span class="brand-tag brand-8">Innergarm</span>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      © 2026 HEBE Global · Beauty Distribution Network
+    </footer>
+  </div>
+</body>
+</html>
