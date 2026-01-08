@@ -1502,86 +1502,24 @@
       return gross * RESERVE_RATE;
     }
 
-    // Google Sheets CSV URL
-    const SHEETS_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSAE6vWq95r9xGMZdzurZFQqBxLb1EwMomjsLKuPgbNx28oyHnbFdgJioR9cndBplGTYEoFB21oLlyv/pub?output=csv';
-
-    // Budget Data - loaded from Google Sheets
-    let budgetData = [];
-
-    // Fallback data (used if fetch fails)
-    const fallbackData = [
-      { brand: "Dr.Melaxin", category: "SKIN", type: "Cash", country: "VN", krw: 300000000, remark: "Monthly allocation" },
-      { brand: "AGE20'S", category: "COLOUR", type: "Cash", country: "VN", krw: 210000000, remark: "Monthly 17.5M KRW" },
-      { brand: "AGE20'S", category: "COLOUR", type: "FOC", country: "VN", krw: 90000000, remark: "Monthly 7.5M KRW (product)" },
-      { brand: "Medianswer", category: "SKIN", type: "Cash", country: "VN", krw: 150000000, remark: "Monthly allocation" },
-      { brand: "Medianswer", category: "SKIN", type: "Cash", country: "KH", krw: 50000000, remark: "Monthly allocation" },
-      { brand: "ISOI", category: "SKIN", type: "Cash", country: "VN", krw: 100000000, remark: "Monthly allocation" },
-      { brand: "ISOI", category: "SKIN", type: "FOC", country: "VN", krw: 20000000, remark: "Monthly allocation" },
-      { brand: "Innergarm (Inclear)", category: "INTIMATE", type: "FOC", country: "VN", krw: 100000000, remark: "Formerly Wettrust" },
-      { brand: "Mary&May", category: "SKIN", type: "Cash", country: "VN", krw: 20000000, remark: "Monthly allocation" },
-      { brand: "Mary&May", category: "SKIN", type: "Cash", country: "KH", krw: 80000000, remark: "Monthly allocation" }
+    // Budget Data with Categories
+    const budgetData = [
+      // COLOUR (Make-up)
+      { brand: "dasique", category: "COLOUR", type: "Cash", country: "VN", krw: 0, remark: "TBD" },
+      { brand: "Unleashia", category: "COLOUR", type: "Cash", country: "VN", krw: 18000000, remark: "Monthly allocation" },
+      { brand: "AGE20'S", category: "COLOUR", type: "Cash", country: "VN", krw: 210000000, remark: "Monthly Cash KRW 17.5M" },
+      { brand: "AGE20'S", category: "COLOUR", type: "FOC", country: "VN", krw: 90000000, remark: "Monthly FOC KRW 7.5M" },
+      // SKIN (Skincare)
+      { brand: "Dr.Melaxin", category: "SKIN", type: "Cash", country: "VN", krw: 300000000, remark: "Monthly payment based on usage" },
+      { brand: "Medianswer", category: "SKIN", type: "Cash", country: "VN", krw: 150000000, remark: "Monthly payment based on usage" },
+      { brand: "Medianswer", category: "SKIN", type: "Cash", country: "KH", krw: 50000000, remark: "Monthly payment based on usage" },
+      { brand: "ISOI", category: "SKIN", type: "Cash", country: "VN", krw: 100000000, remark: "Monthly payment based on usage" },
+      { brand: "ISOI", category: "SKIN", type: "FOC", country: "VN", krw: 20000000, remark: "Monthly payment based on usage" },
+      { brand: "Mary&May", category: "SKIN", type: "Cash", country: "VN", krw: 20000000, remark: "Monthly payment based on usage" },
+      { brand: "Mary&May", category: "SKIN", type: "Cash", country: "KH", krw: 80000000, remark: "Monthly payment based on usage" },
+      // INTIMATE (Feminine Care)
+      { brand: "Innergarm (Inclear)", category: "INTIMATE", type: "FOC", country: "VN", krw: 100000000, remark: "Monthly payment based on usage" }
     ];
-
-    // Category mapping based on brand
-    const brandCategories = {
-      "Dr.Melaxin": "SKIN",
-      "Medianswer": "SKIN",
-      "ISOI": "SKIN",
-      "Mary&May": "SKIN",
-      "AGE20'S": "COLOUR",
-      "Unleashia": "COLOUR",
-      "dasique": "COLOUR",
-      "Innergarm": "INTIMATE",
-      "Innergarm (Inclear)": "INTIMATE"
-    };
-
-    // Fetch and parse CSV from Google Sheets
-    async function fetchBudgetData() {
-      try {
-        const response = await fetch(SHEETS_CSV_URL);
-        if (!response.ok) throw new Error('Failed to fetch');
-
-        const csvText = await response.text();
-        const lines = csvText.trim().split('\n');
-
-        // Skip header row
-        const dataRows = lines.slice(1);
-
-        budgetData = dataRows
-          .map(line => {
-            // Handle CSV parsing (respecting commas in quotes)
-            const cols = line.match(/(".*?"|[^",\s]+)(?=\s*,|\s*$)/g) || [];
-            const cleanCols = cols.map(c => c.replace(/^"|"$/g, '').trim());
-
-            if (cleanCols.length < 4) return null;
-
-            const brand = cleanCols[0];
-            const type = cleanCols[1];
-            const country = cleanCols[2];
-            const krw = parseInt(cleanCols[3].replace(/,/g, ''), 10) || 0;
-            const remark = cleanCols[7] || '';
-
-            if (!brand || krw === 0) return null;
-
-            return {
-              brand: brand,
-              category: brandCategories[brand] || "SKIN",
-              type: type,
-              country: country,
-              krw: krw,
-              remark: remark
-            };
-          })
-          .filter(item => item !== null);
-
-        console.log('Loaded from Google Sheets:', budgetData.length, 'items');
-        return true;
-      } catch (error) {
-        console.warn('Using fallback data:', error.message);
-        budgetData = fallbackData;
-        return false;
-      }
-    }
 
     // Current state
     let currentTab = 'total';
@@ -2615,14 +2553,7 @@
     }
 
     // Initialize
-    document.addEventListener('DOMContentLoaded', async () => {
-      // Show loading state
-      document.getElementById('table-body').innerHTML = '<tr><td colspan="5" style="text-align:center;padding:40px;color:#64748B;">Loading data from Google Sheets...</td></tr>';
-
-      // Fetch data from Google Sheets
-      await fetchBudgetData();
-
-      // Render dashboard
+    document.addEventListener('DOMContentLoaded', () => {
       switchTab('total');
       initSeasonalEffects();
       initTooltip();
