@@ -1503,8 +1503,9 @@
     }
 
     // Budget Data with Categories
-    // Google Sheets CSV URL (using allorigins CORS proxy)
-    const SHEETS_CSV_URL = 'https://api.allorigins.win/raw?url=' + encodeURIComponent('https://docs.google.com/spreadsheets/d/e/2PACX-1vSAE6vWq95r9xGMZdzurZFQqBxLb1EwMomjsLKuPgbNx28oyHnbFdgJioR9cndBplGTYEoFB21oLlyv/pub?output=csv');
+    // Google Sheets CSV URLs - 3-layer fallback system
+    const SHEETS_DIRECT_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSAE6vWq95r9xGMZdzurZFQqBxLb1EwMomjsLKuPgbNx28oyHnbFdgJioR9cndBplGTYEoFB21oLlyv/pub?output=csv';
+    const SHEETS_PROXY_URL = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(SHEETS_DIRECT_URL);
 
     // Fallback data (used if Google Sheets fetch fails)
     const FALLBACK_DATA = [
@@ -1547,38 +1548,65 @@
       return result;
     }
 
-    // Fetch budget data from Google Sheets
+    // Parse CSV text to data array
+    function parseCSVToData(csv) {
+      const lines = csv.trim().split('\n');
+      if (lines.length < 2) throw new Error('Empty CSV');
+
+      const data = [];
+      for (let i = 1; i < lines.length; i++) {
+        const values = parseCSVLine(lines[i]);
+        if (values.length >= 5 && values[0]) {
+          data.push({
+            brand: values[0],
+            category: values[1] || 'SKIN',
+            type: values[2] || 'Cash',
+            country: values[3] || 'VN',
+            krw: parseInt(values[4]) || 0,
+            remark: values[5] || ''
+          });
+        }
+      }
+      return data;
+    }
+
+    // Fetch budget data from Google Sheets (3-layer fallback)
     async function fetchBudgetData() {
+      // Layer 1: Direct access (fastest, no proxy)
       try {
-        const response = await fetch(SHEETS_CSV_URL);
+        console.log('[Layer 1] Trying direct Google Sheets access...');
+        const response = await fetch(SHEETS_DIRECT_URL);
         if (!response.ok) throw new Error('HTTP ' + response.status);
         const csv = await response.text();
-
-        const lines = csv.trim().split('\n');
-        if (lines.length < 2) throw new Error('Empty CSV');
-
-        const data = [];
-        for (let i = 1; i < lines.length; i++) {
-          const values = parseCSVLine(lines[i]);
-          if (values.length >= 5 && values[0]) {
-            data.push({
-              brand: values[0],
-              category: values[1] || 'SKIN',
-              type: values[2] || 'Cash',
-              country: values[3] || 'VN',
-              krw: parseInt(values[4]) || 0,
-              remark: values[5] || ''
-            });
-          }
-        }
-
+        const data = parseCSVToData(csv);
         if (data.length > 0) {
           budgetData = data;
-          console.log('Loaded ' + data.length + ' items from Google Sheets');
+          console.log('✓ Loaded ' + data.length + ' items from Google Sheets (direct)');
+          return;
         }
       } catch (error) {
-        console.warn('Using fallback data:', error.message);
+        console.warn('[Layer 1] Direct access failed:', error.message);
       }
+
+      // Layer 2: Proxy fallback (CORS workaround)
+      try {
+        console.log('[Layer 2] Trying via CORS proxy...');
+        const response = await fetch(SHEETS_PROXY_URL);
+        if (!response.ok) throw new Error('HTTP ' + response.status);
+        const csv = await response.text();
+        const data = parseCSVToData(csv);
+        if (data.length > 0) {
+          budgetData = data;
+          console.log('✓ Loaded ' + data.length + ' items from Google Sheets (proxy)');
+          return;
+        }
+      } catch (error) {
+        console.warn('[Layer 2] Proxy access failed:', error.message);
+      }
+
+      // Layer 3: Hardcoded fallback
+      console.log('[Layer 3] Using fallback data');
+      budgetData = [...FALLBACK_DATA];
     }
 
     // Current state
