@@ -1503,7 +1503,11 @@
     }
 
     // Budget Data with Categories
-    const budgetData = [
+    // Google Sheets CSV URL
+    const SHEETS_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSAE6vWq95r9xGMZdzurZFQqBxLb1EwMomjsLKuPgbNx28oyHnbFdgJioR9cndBplGTYEoFB21oLlyv/pub?output=csv';
+
+    // Fallback data (used if Google Sheets fetch fails)
+    const FALLBACK_DATA = [
       // COLOUR (Make-up)
       { brand: "dasique", category: "COLOUR", type: "Cash", country: "VN", krw: 0, remark: "TBD" },
       { brand: "Unleashia", category: "COLOUR", type: "Cash", country: "VN", krw: 18000000, remark: "Monthly allocation" },
@@ -1520,6 +1524,62 @@
       // INTIMATE (Feminine Care)
       { brand: "Innergarm (Inclear)", category: "INTIMATE", type: "FOC", country: "VN", krw: 100000000, remark: "Monthly payment based on usage" }
     ];
+
+    // Budget data - loaded from Google Sheets (fallback if fetch fails)
+    let budgetData = [...FALLBACK_DATA];
+
+    // Parse CSV line handling quoted values
+    function parseCSVLine(line) {
+      const result = [];
+      let current = '';
+      let inQuotes = false;
+      for (let char of line) {
+        if (char === '"') {
+          inQuotes = !inQuotes;
+        } else if (char === ',' && !inQuotes) {
+          result.push(current.trim());
+          current = '';
+        } else {
+          current += char;
+        }
+      }
+      result.push(current.trim());
+      return result;
+    }
+
+    // Fetch budget data from Google Sheets
+    async function fetchBudgetData() {
+      try {
+        const response = await fetch(SHEETS_CSV_URL);
+        if (!response.ok) throw new Error('HTTP ' + response.status);
+        const csv = await response.text();
+
+        const lines = csv.trim().split('\n');
+        if (lines.length < 2) throw new Error('Empty CSV');
+
+        const data = [];
+        for (let i = 1; i < lines.length; i++) {
+          const values = parseCSVLine(lines[i]);
+          if (values.length >= 5 && values[0]) {
+            data.push({
+              brand: values[0],
+              category: values[1] || 'SKIN',
+              type: values[2] || 'Cash',
+              country: values[3] || 'VN',
+              krw: parseInt(values[4]) || 0,
+              remark: values[5] || ''
+            });
+          }
+        }
+
+        if (data.length > 0) {
+          budgetData = data;
+          console.log('Loaded ' + data.length + ' items from Google Sheets');
+        }
+      } catch (error) {
+        console.warn('Using fallback data:', error.message);
+      }
+    }
 
     // Current state
     let currentTab = 'total';
@@ -2553,7 +2613,10 @@
     }
 
     // Initialize
-    document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoaded', async () => {
+      // Load data from Google Sheets first
+      await fetchBudgetData();
+      // Then render UI
       switchTab('total');
       initSeasonalEffects();
       initTooltip();
