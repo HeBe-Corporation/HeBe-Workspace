@@ -766,17 +766,20 @@
       }
 
       .tab-nav {
-        flex-wrap: wrap;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         gap: 8px;
+        width: 100%;
       }
 
       .tab-btn {
         padding: 10px 16px;
         font-size: 0.8rem;
-        flex: 1 1 auto;
-        min-width: 100px;
         text-align: center;
+      }
+
+      .tab-btn[data-tab="total"] {
+        grid-column: 1 / -1;
       }
 
       .brand-bar-label {
@@ -803,15 +806,11 @@
         font-size: 1.25rem;
       }
 
-      /* Summary Grid: Total 전체 너비, VN/KH 나란히 */
+      /* Summary Grid: 세로 나열 */
       .summary-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: flex;
+        flex-direction: column;
         gap: 12px;
-      }
-
-      .summary-card.total {
-        grid-column: 1 / -1;
       }
 
       .summary-card {
