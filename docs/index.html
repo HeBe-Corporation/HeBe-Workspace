@@ -803,19 +803,77 @@
         font-size: 1.25rem;
       }
 
+      /* Summary Grid: Total 전체 너비, VN/KH 나란히 */
+      .summary-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+
+      .summary-card.total {
+        grid-column: 1 / -1;
+      }
+
+      .summary-card {
+        padding: 16px;
+      }
+
+      .summary-card .summary-value {
+        font-size: 1.5rem;
+      }
+
+      .summary-card .summary-subvalue {
+        font-size: 0.75rem;
+      }
+
+      .summary-card .stat-value {
+        font-size: 0.75rem;
+      }
+
       .card {
         padding: 16px;
         margin-bottom: 12px;
         border-radius: 12px;
       }
 
-      .table-container {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
+      /* Budget Details: 모바일 카드 뷰 */
+      .budget-table thead {
+        display: none;
       }
 
-      table {
-        min-width: 600px;
+      .budget-table tbody tr {
+        display: block;
+        margin-bottom: 12px;
+        padding: 12px;
+        border-radius: 12px;
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+      }
+
+      .budget-table tbody td {
+        display: block;
+        padding: 4px 0;
+        text-align: left;
+        border: none;
+      }
+
+      .budget-table .td-brand {
+        font-size: 1rem;
+        margin-bottom: 8px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #e2e8f0;
+      }
+
+      .budget-table .td-breakdown {
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .budget-table .td-total {
+        text-align: left;
+        margin-top: 8px;
+        padding-top: 8px;
+        border-top: 1px solid #e2e8f0;
       }
 
       .net-budget-card {
@@ -1484,7 +1542,7 @@
     <div class="card">
       <div class="card-title" id="budgetDetailsTitle">Budget Details</div>
       <div class="table-wrap">
-        <table>
+        <table class="budget-table">
           <thead id="tableHead"></thead>
           <tbody id="tableBody"></tbody>
         </table>
