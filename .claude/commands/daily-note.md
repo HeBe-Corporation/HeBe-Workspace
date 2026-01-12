@@ -42,3 +42,25 @@ allowed-tools: Read, Write, Edit, Bash
   - TSV 출력을 Markdown 리스트로 변환
 - 일정이 없으면 "일정이 없습니다." 표시
 - **gcalcli 설치 확인**: `which gcalcli`로 먼저 확인
+
+**Git 동기화 (시작/종료 시):**
+
+5. **Daily Note 시작 시 - Pull:**
+   ```bash
+   cd "$(git rev-parse --show-toplevel)" && git pull origin main --rebase
+   ```
+   - 최신 변경사항 가져오기
+   - 충돌 있으면 사용자에게 알림
+
+6. **Daily Note 종료 시 - Commit & Push:**
+   - 사용자에게 "오늘 작업 커밋할까요?" 물어보기
+   - 커밋하겠다고 하면:
+   ```bash
+   cd "$(git rev-parse --show-toplevel)"
+   git add .
+   git status --short
+   # 변경사항 보여주고 확인
+   git commit -m "daily: {{date}} 작업 저장"
+   git push origin main
+   ```
+   - 커밋 메시지는 사용자가 수정 가능
