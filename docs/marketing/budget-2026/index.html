@@ -1668,7 +1668,7 @@
 
     // Budget Data with Categories
     // Google Sheets CSV URLs - 3-layer fallback system
-    const SHEETS_DIRECT_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSAE6vWq95r9xGMZdzurZFQqBxLb1EwMomjsLKuPgbNx28oyHnbFdgJioR9cndBplGTYEoFB21oLlyv/pub?output=csv';
+    const SHEETS_DIRECT_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSAE6vWq95r9xGMZdzurZFQqBxLb1EwMomjsLKuPgbNx28oyHnbFdgJioR9cndBplGTYEoFB21oLlyv/pub?gid=0&single=true&output=csv';
     const SHEETS_PROXY_URL = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(SHEETS_DIRECT_URL);
 
     // Fallback data (used if Google Sheets fetch fails)
