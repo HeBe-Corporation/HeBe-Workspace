@@ -1552,17 +1552,18 @@
     <footer class="footer">
       <div id="exchangeRateTitle">Exchange Rates (January 2026)</div>
       <div class="rates" id="exchangeRates">
-        <span class="rate-badge">1 KRW = 18.23 VND</span>
-        <span class="rate-badge">1 USD = 1,448 KRW</span>
+        <span class="rate-badge">1 KRW = 17.35 VND</span>
+        <span class="rate-badge">1 USD = 1,470 KRW</span>
       </div>
-      <div style="font-size: 0.7rem; color: #9AA5B1; margin-top: 8px;">* 매월 초 환율 업데이트</div>
+      <div style="font-size: 0.7rem; color: #9AA5B1; margin-top: 8px;">* 적용 환율 = (월간최고 + 월평균×1.02) ÷ 2</div>
     </footer>
   </div>
 
   <script>
-    // Monthly Exchange Rates (updated monthly)
+    // Monthly Exchange Rates (중간값 방식: (최고 + 평균×1.02) ÷ 2)
+    // 매월 Google Sheets에서 자동 계산된 값으로 업데이트
     const MONTHLY_EXCHANGE = {
-      '2026-01': { VND_PER_KRW: 18.23, KRW_PER_USD: 1448 },
+      '2026-01': { VND_PER_KRW: 17.35, KRW_PER_USD: 1470 },
       '2026-02': { VND_PER_KRW: null, KRW_PER_USD: null },
       '2026-03': { VND_PER_KRW: null, KRW_PER_USD: null },
       '2026-04': { VND_PER_KRW: null, KRW_PER_USD: null },
