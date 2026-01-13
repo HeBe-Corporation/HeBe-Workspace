@@ -1588,8 +1588,72 @@
       return MONTHLY_EXCHANGE['2026-01']; // fallback to January
     }
 
-    // Exchange Rates (current month)
-    const EXCHANGE = getCurrentExchange();
+    // Exchange Rates (current month) - will be updated from Google Sheets
+    let EXCHANGE = getCurrentExchange();
+
+    // Google Sheets FX Rates CSV URL (웹에 게시된 URL)
+    const FX_RATES_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSAE6vWq95r9xGMZdzurZFQqBxLb1EwMomjsLKuPgbNx28oyHnbFdgJioR9cndBplGTYEoFB21oLlyv/pub?gid=353977353&single=true&output=csv';
+
+    // Fetch exchange rates from Google Sheets
+    async function fetchExchangeRates() {
+      try {
+        const response = await fetch(FX_RATES_CSV_URL);
+        if (!response.ok) throw new Error('Network error');
+        const csv = await response.text();
+
+        // Parse CSV lines
+        const lines = csv.trim().split('\n');
+
+        // Find monthly summary data (starts from row 2, columns G onwards)
+        // CSV structure: A(날짜), B(시간), C(USD/KRW), D(KRW/VND), E(소스), F(empty), G(Month), H(Avg USD/KRW), I(Max USD/KRW), J(★Final USD/KRW), K(Avg KRW/VND), L(Max KRW/VND), M(★Final KRW/VND), N(Count)
+        for (let i = 1; i < lines.length; i++) {
+          const cols = parseCSVLine(lines[i]);
+          const month = cols[6]; // G열: Month (e.g., "2026-01")
+          const finalUsdKrw = parseFloat(cols[9]); // J열: ★Final USD/KRW
+          const finalKrwVnd = parseFloat(cols[12]); // M열: ★Final KRW/VND
+
+          // Update MONTHLY_EXCHANGE if valid data
+          if (month && month.match(/^\d{4}-\d{2}$/) && finalUsdKrw > 0 && finalKrwVnd > 0) {
+            if (MONTHLY_EXCHANGE[month]) {
+              MONTHLY_EXCHANGE[month].KRW_PER_USD = Math.round(finalUsdKrw);
+              MONTHLY_EXCHANGE[month].VND_PER_KRW = Math.round(finalKrwVnd * 100) / 100;
+            }
+          }
+        }
+
+        // Update current EXCHANGE
+        EXCHANGE = getCurrentExchange();
+
+        // Update footer display
+        updateExchangeRateDisplay();
+
+        console.log('✅ Exchange rates loaded from Sheets:', EXCHANGE);
+      } catch (error) {
+        console.warn('⚠️ Failed to load exchange rates, using defaults:', error.message);
+      }
+    }
+
+    // Update footer exchange rate display
+    function updateExchangeRateDisplay() {
+      const now = new Date();
+      const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+                          'July', 'August', 'September', 'October', 'November', 'December'];
+      const monthName = monthNames[now.getMonth()];
+      const year = now.getFullYear();
+
+      const titleEl = document.getElementById('exchangeRateTitle');
+      const ratesEl = document.getElementById('exchangeRates');
+
+      if (titleEl) {
+        titleEl.textContent = `Exchange Rates (${monthName} ${year})`;
+      }
+      if (ratesEl) {
+        ratesEl.innerHTML = `
+          <span class="rate-badge">1 KRW = ${EXCHANGE.VND_PER_KRW} VND</span>
+          <span class="rate-badge">1 USD = ${EXCHANGE.KRW_PER_USD.toLocaleString()} KRW</span>
+        `;
+      }
+    }
 
     // Reserve Rate (20% for operations, tax, exchange buffer, influencer withholding)
     const RESERVE_RATE = 0.20;
@@ -2742,9 +2806,11 @@
 
     // Initialize
     document.addEventListener('DOMContentLoaded', async () => {
-      // Load data from Google Sheets first
+      // 1. Load exchange rates from Google Sheets first
+      await fetchExchangeRates();
+      // 2. Load budget data from Google Sheets
       await fetchBudgetData();
-      // Then render UI
+      // 3. Then render UI
       switchTab('total');
       initSeasonalEffects();
       initTooltip();
