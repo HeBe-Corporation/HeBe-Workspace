@@ -1726,7 +1726,7 @@
             category: values[1] || 'SKIN',
             type: values[2] || 'Cash',
             country: values[3] || 'VN',
-            krw: parseInt(values[4]) || 0,
+            krw: parseInt(String(values[4]).replace(/,/g, '')) || 0,
             remark: values[5] || ''
           });
         }
